@@ -236,7 +236,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var defaultPageSize = 20;
-var sampleDataRoot = '/assets/data';
+var sampleDataRoot = 'assets/data';
 var GridBackendComponent = /** @class */ (function () {
     function GridBackendComponent(http) {
         this.http = http;
@@ -684,7 +684,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var defaultPageSize = 20;
-var sampleDataRoot = '/assets/data';
+var sampleDataRoot = 'assets/data';
 var GridGraphqlComponent = /** @class */ (function () {
     function GridGraphqlComponent(http, graphqlService) {
         this.http = http;
@@ -975,7 +975,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var defaultPageSize = 20;
-var sampleDataRoot = '/assets/data';
+var sampleDataRoot = 'assets/data';
 var GridOdataComponent = /** @class */ (function () {
     function GridOdataComponent(http, odataService) {
         this.http = http;
