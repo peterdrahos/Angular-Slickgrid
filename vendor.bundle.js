@@ -1497,6 +1497,7 @@ var graphqlQueryBuilder = Query;
 var GraphqlService = /** @class */ (function () {
     function GraphqlService() {
         this.serviceOptions = {};
+        this.defaultOrderBy = { sort: 'id', direction: 'ASC' };
     }
     /**
      * Build the GraphQL query, since the service include/exclude cursor, the output query will be different.
@@ -1507,20 +1508,47 @@ var GraphqlService = /** @class */ (function () {
         if (!this.serviceOptions.datasetName || !this.serviceOptions.dataFilters) {
             throw new Error('GraphQL Service requires "datasetName" & "dataFilters" properties for it to work');
         }
-        var /** @type {?} */ pageFilterQb = new graphqlQueryBuilder(this.serviceOptions.datasetName);
+        var /** @type {?} */ queryQb = new graphqlQueryBuilder('query');
+        var /** @type {?} */ datasetQb = new graphqlQueryBuilder(this.serviceOptions.datasetName);
         var /** @type {?} */ pageInfoQb = new graphqlQueryBuilder('pageInfo');
         var /** @type {?} */ dataQb = (this.serviceOptions.isWithCursor) ? new graphqlQueryBuilder('edges') : new graphqlQueryBuilder('nodes');
         if (this.serviceOptions.isWithCursor) {
+            // ...pageInfo { hasNextPage, endCursor }, edges { cursor, node { _filters_ } }
             pageInfoQb.find('hasNextPage', 'endCursor');
             dataQb.find(['cursor', { 'node': this.serviceOptions.dataFilters }]);
         }
         else {
+            // ...pageInfo { hasNextPage }, nodes { _filters_ }
             pageInfoQb.find('hasNextPage');
             dataQb.find(this.serviceOptions.dataFilters);
         }
-        pageFilterQb.find(['totalCount', pageInfoQb, dataQb]);
-        pageFilterQb.filter(this.serviceOptions.paginationOptions);
-        return pageFilterQb.toString();
+        datasetQb.find(['totalCount', pageInfoQb, dataQb]);
+        // add dataset filters, could be Pagination and SortingFilters and/or FieldFilters
+        var /** @type {?} */ datasetFilters = this.serviceOptions.paginationOptions;
+        if (this.serviceOptions.sortingOptions) {
+            // orderBy: [{ sort:x, direction: 'ASC' }]
+            datasetFilters.orderBy = this.serviceOptions.sortingOptions;
+        }
+        if (this.serviceOptions.filteringOptions) {
+            // filterBy: [{ fieldName: date, fieldOperator: '>', fieldValue: '2000-10-10' }]
+            datasetFilters.filterBy = this.serviceOptions.filteringOptions;
+        }
+        // query { users(first: 20, orderBy: [], filterBy: [])}
+        datasetQb.filter(datasetFilters);
+        queryQb.find(datasetQb);
+        return queryQb.toString();
+    };
+    /**
+     * @param {?=} serviceOptions
+     * @return {?}
+     */
+    GraphqlService.prototype.buildPaginationQuery = function (serviceOptions) {
+    };
+    /**
+     * @param {?=} serviceOptions
+     * @return {?}
+     */
+    GraphqlService.prototype.buildSortingQuery = function (serviceOptions) {
     };
     /**
      * @param {?=} serviceOptions
@@ -1597,7 +1625,7 @@ var GraphqlService = /** @class */ (function () {
             };
         }
         this.updateOptions({ paginationOptions: paginationOptions });
-        // build the OData query which we will use in the WebAPI callback
+        // build the GraphQL query which we will use in the WebAPI callback
         return this.buildQuery();
     };
     /**
@@ -1606,8 +1634,29 @@ var GraphqlService = /** @class */ (function () {
      * @return {?}
      */
     GraphqlService.prototype.onSortChanged = function (event, args) {
-        // will use sorting as per a FB suggestion
-        // https://github.com/graphql/graphql-relay-js/issues/20#issuecomment-220494222
+        var /** @type {?} */ sortByArray = [];
+        var /** @type {?} */ sortColumns = (args.multiColumnSort) ? args.sortCols : new Array({ sortCol: args.sortCol, sortAsc: args.sortAsc });
+        // build the orderBy array, it could be multisort, example
+        // orderBy:[{sort: lastName, direction: ASC}, {sort: firstName, direction: DESC}]
+        if (sortColumns && sortColumns.length === 0) {
+            sortByArray = new Array(this.defaultOrderBy); // when empty, use the default sort
+        }
+        else {
+            if (sortColumns) {
+                for (var _g = 0, sortColumns_1 = sortColumns; _g < sortColumns_1.length; _g++) {
+                    var column = sortColumns_1[_g];
+                    var /** @type {?} */ fieldName = column.sortCol.field || column.sortCol.id;
+                    var /** @type {?} */ direction = column.sortAsc ? 'ASC' : 'DESC';
+                    sortByArray.push({
+                        sort: fieldName,
+                        direction: direction
+                    });
+                }
+            }
+        }
+        this.updateOptions({ sortingOptions: sortByArray });
+        // build the GraphQL query which we will use in the WebAPI callback
+        return this.buildQuery();
     };
     return GraphqlService;
 }());
@@ -2044,8 +2093,8 @@ var GridOdataService = /** @class */ (function () {
         }
         else {
             if (sortColumns) {
-                for (var _g = 0, sortColumns_1 = sortColumns; _g < sortColumns_1.length; _g++) {
-                    var column = sortColumns_1[_g];
+                for (var _g = 0, sortColumns_2 = sortColumns; _g < sortColumns_2.length; _g++) {
+                    var column = sortColumns_2[_g];
                     var /** @type {?} */ fieldName = column.sortCol.field || column.sortCol.id;
                     if (this.odataService.options.caseType === CaseType.pascalCase) {
                         fieldName = String.titleCase(fieldName);
