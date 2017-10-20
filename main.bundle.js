@@ -72,7 +72,7 @@ var AppRoutingRoutingModule = /** @class */ (function () {
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-default navbar-fixed-top\" role=\"navigation\">\r\n  <div class=\"navbar-header\">\r\n    <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\"#skeleton-navigation-navbar-collapse\">\r\n      <span class=\"sr-only\">Toggle Navigation</span>\r\n      <span class=\"icon-bar\"></span>\r\n      <span class=\"icon-bar\"></span>\r\n      <span class=\"icon-bar\"></span>\r\n    </button>\r\n    <a class=\"navbar-brand\" href=\"https://github.com/ghiscoding/Angular-Slickgrid\">\r\n      <i class=\"fa fa-github\"></i>\r\n      <span>{{title}}</span>\r\n    </a>\r\n  </div>\r\n</nav>\r\n\r\n<section class=\"au-animate body-content\">\r\n  <div class=\"col-sm-3 col-md-2\">\r\n    <ul class=\"nav nav-pills nav-stacked\">\r\n      <li routerLinkActive=\"active\">\r\n        <a [routerLink]=\"['/basic']\">Basic Grid</a>\r\n      </li>\r\n      <li routerLinkActive=\"active\">\r\n        <a [routerLink]=\"['/formatter']\">Formatter</a>\r\n      </li>\r\n      <li routerLinkActive=\"active\">\r\n        <a [routerLink]=\"['/clientside']\">Client Side Sort/Filter</a>\r\n      </li>\r\n      <li routerLinkActive=\"active\">\r\n        <a [routerLink]=\"['/backend']\">Backend Server</a>\r\n      </li>\r\n      <li routerLinkActive=\"active\">\r\n        <a [routerLink]=\"['/odata']\">Backend Server with OData</a>\r\n      </li>\r\n      <li routerLinkActive=\"active\">\r\n        <a [routerLink]=\"['/graphql']\">Backend Server with GraphQL</a>\r\n      </li>\r\n    </ul>\r\n  </div>\r\n</section>\r\n<div id=\"demo-container\" class=\"col-sm-9\">\r\n  <router-outlet></router-outlet>\r\n</div>\r\n"
+module.exports = "<nav class=\"navbar navbar-default navbar-fixed-top\" role=\"navigation\">\r\n  <div class=\"navbar-header\">\r\n    <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\"#skeleton-navigation-navbar-collapse\">\r\n      <span class=\"sr-only\">Toggle Navigation</span>\r\n      <span class=\"icon-bar\"></span>\r\n      <span class=\"icon-bar\"></span>\r\n      <span class=\"icon-bar\"></span>\r\n    </button>\r\n    <a class=\"navbar-brand\" href=\"https://github.com/ghiscoding/Angular-Slickgrid\">\r\n      <i class=\"fa fa-github\"></i>\r\n      <span>{{title}}</span>\r\n    </a>\r\n  </div>\r\n</nav>\r\n\r\n<section class=\"au-animate body-content\">\r\n  <div class=\"col-sm-3 col-md-2\">\r\n    <ul class=\"nav nav-pills nav-stacked\">\r\n      <li routerLinkActive=\"active\">\r\n        <a [routerLink]=\"['/basic']\">Basic Grid</a>\r\n      </li>\r\n      <li routerLinkActive=\"active\">\r\n        <a [routerLink]=\"['/formatter']\">Formatter</a>\r\n      </li>\r\n      <li routerLinkActive=\"active\">\r\n        <a [routerLink]=\"['/clientside']\">Client Side Sort/Filter</a>\r\n      </li>\r\n      <li routerLinkActive=\"active\">\r\n        <a [routerLink]=\"['/backend']\">Backend Server</a>\r\n      </li>\r\n      <li routerLinkActive=\"active\">\r\n        <a [routerLink]=\"['/odata']\">Backend Server with OData</a>\r\n      </li>\r\n      <!--\r\n        <li routerLinkActive=\"active\">\r\n        <a [routerLink]=\"['/graphql']\">Backend Server with GraphQL</a>\r\n      </li>\r\n      -->\r\n    </ul>\r\n  </div>\r\n</section>\r\n<div id=\"demo-container\" class=\"col-sm-9\">\r\n  <router-outlet></router-outlet>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -685,6 +685,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var defaultPageSize = 20;
 var sampleDataRoot = 'assets/data';
+var timer;
 var GridGraphqlComponent = /** @class */ (function () {
     function GridGraphqlComponent(http, graphqlService) {
         this.http = http;
@@ -725,9 +726,13 @@ var GridGraphqlComponent = /** @class */ (function () {
                 totalItems: 0
             },
             onFilterChanged: function (event, args) {
-                _this.displaySpinner(true);
-                var query = _this.graphqlService.onFilterChanged(event, args);
-                // this.getCustomerApiCall(query).then((data) => this.getCustomerCallback(data));
+                // wait for user to stop typing before processing to avoid multiple requests sent to backend
+                clearTimeout(timer);
+                timer = setTimeout(function () {
+                    _this.displaySpinner(true);
+                    var query = _this.graphqlService.onFilterChanged(event, args);
+                    // this.getCustomerApiCall(query).then((data) => this.getCustomerCallback(data));
+                }, 700);
             },
             onPaginationChanged: function (event, args) {
                 _this.displaySpinner(true);
@@ -1020,11 +1025,11 @@ var GridOdataComponent = /** @class */ (function () {
                 totalItems: 0
             },
             onFilterChanged: function (event, args) {
-                _this.displaySpinner(true);
-                var query = _this.odataService.onFilterChanged(event, args);
                 // wait for user to stop typing before processing to avoid multiple requests sent to backend
                 clearTimeout(timer);
                 timer = setTimeout(function () {
+                    _this.displaySpinner(true);
+                    var query = _this.odataService.onFilterChanged(event, args);
                     _this.getCustomerApiCall(query).then(function (data) { return _this.getCustomerCallback(data); });
                 }, 700);
             },
