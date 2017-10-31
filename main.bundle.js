@@ -215,7 +215,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var GridBasicComponent = /** @class */ (function () {
     function GridBasicComponent() {
         this.title = 'Basic Grid';
-        this.subTitle = 'basic grid with fixed sizes (800 x 400) set by `gridHeight` &amp; `gridWidth`';
+        this.subTitle = "\n  Basic Grid with fixed sizes (800 x 400) set by \"gridHeight\" &amp; \"gridWidth\"\n  <ul>\n    <li>link to <a href=\"https://github.com/ghiscoding/Angular-Slickgrid/wiki/OData\">Wiki HOWTO documentation</a></li>\n  </ul>\n  ";
     }
     GridBasicComponent.prototype.ngOnInit = function () {
         this.columnDefinitions = [
