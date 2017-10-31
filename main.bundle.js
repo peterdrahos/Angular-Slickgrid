@@ -23,11 +23,11 @@ webpackEmptyAsyncContext.id = "../../../../../src/$$_gendir lazy recursive";
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppRoutingRoutingModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__examples_grid_basic_component__ = __webpack_require__("../../../../../src/app/examples/grid-basic.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__examples_grid_backend_component__ = __webpack_require__("../../../../../src/app/examples/grid-backend.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__examples_grid_clientside_component__ = __webpack_require__("../../../../../src/app/examples/grid-clientside.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__examples_grid_clientside_component__ = __webpack_require__("../../../../../src/app/examples/grid-clientside.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__examples_grid_editor_component__ = __webpack_require__("../../../../../src/app/examples/grid-editor.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__examples_grid_formatter_component__ = __webpack_require__("../../../../../src/app/examples/grid-formatter.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__examples_grid_graphql_component__ = __webpack_require__("../../../../../src/app/examples/grid-graphql.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__examples_grid_odata_component__ = __webpack_require__("../../../../../src/app/examples/grid-odata.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__examples_grid_odata_component__ = __webpack_require__("../../../../../src/app/examples/grid-odata.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__examples_grid_graphql_component__ = __webpack_require__("../../../../../src/app/examples/grid-graphql.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -46,12 +46,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 var routes = [
     { path: 'basic', component: __WEBPACK_IMPORTED_MODULE_0__examples_grid_basic_component__["a" /* GridBasicComponent */] },
+    { path: 'editor', component: __WEBPACK_IMPORTED_MODULE_2__examples_grid_editor_component__["a" /* GridEditorComponent */] },
     { path: 'formatter', component: __WEBPACK_IMPORTED_MODULE_3__examples_grid_formatter_component__["a" /* GridFormatterComponent */] },
-    { path: 'clientside', component: __WEBPACK_IMPORTED_MODULE_2__examples_grid_clientside_component__["a" /* GridClientSideComponent */] },
-    { path: 'backend', component: __WEBPACK_IMPORTED_MODULE_1__examples_grid_backend_component__["a" /* GridBackendComponent */] },
-    { path: 'odata', component: __WEBPACK_IMPORTED_MODULE_5__examples_grid_odata_component__["a" /* GridOdataComponent */] },
-    { path: 'graphql', component: __WEBPACK_IMPORTED_MODULE_4__examples_grid_graphql_component__["a" /* GridGraphqlComponent */] },
-    { path: '', redirectTo: '/formatter', pathMatch: 'full' }
+    { path: 'clientside', component: __WEBPACK_IMPORTED_MODULE_1__examples_grid_clientside_component__["a" /* GridClientSideComponent */] },
+    { path: 'odata', component: __WEBPACK_IMPORTED_MODULE_4__examples_grid_odata_component__["a" /* GridOdataComponent */] },
+    { path: 'gridgraphql', component: __WEBPACK_IMPORTED_MODULE_5__examples_grid_graphql_component__["a" /* GridGraphqlComponent */] },
+    { path: '', redirectTo: '/basic', pathMatch: 'full' }
 ];
 var AppRoutingRoutingModule = /** @class */ (function () {
     function AppRoutingRoutingModule() {
@@ -72,7 +72,7 @@ var AppRoutingRoutingModule = /** @class */ (function () {
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-default navbar-fixed-top\" role=\"navigation\">\r\n  <div class=\"navbar-header\">\r\n    <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\"#skeleton-navigation-navbar-collapse\">\r\n      <span class=\"sr-only\">Toggle Navigation</span>\r\n      <span class=\"icon-bar\"></span>\r\n      <span class=\"icon-bar\"></span>\r\n      <span class=\"icon-bar\"></span>\r\n    </button>\r\n    <a class=\"navbar-brand\" href=\"https://github.com/ghiscoding/Angular-Slickgrid\">\r\n      <i class=\"fa fa-github\"></i>\r\n      <span>{{title}}</span>\r\n    </a>\r\n  </div>\r\n</nav>\r\n\r\n<section class=\"au-animate body-content\">\r\n  <div class=\"col-sm-3 col-md-2\">\r\n    <ul class=\"nav nav-pills nav-stacked\">\r\n      <li routerLinkActive=\"active\">\r\n        <a [routerLink]=\"['/basic']\">Basic Grid</a>\r\n      </li>\r\n      <li routerLinkActive=\"active\">\r\n        <a [routerLink]=\"['/formatter']\">Formatter</a>\r\n      </li>\r\n      <li routerLinkActive=\"active\">\r\n        <a [routerLink]=\"['/clientside']\">Client Side Sort/Filter</a>\r\n      </li>\r\n      <li routerLinkActive=\"active\">\r\n        <a [routerLink]=\"['/backend']\">Backend Server</a>\r\n      </li>\r\n      <li routerLinkActive=\"active\">\r\n        <a [routerLink]=\"['/odata']\">Backend Server with OData</a>\r\n      </li>\r\n      <!--\r\n        <li routerLinkActive=\"active\">\r\n        <a [routerLink]=\"['/graphql']\">Backend Server with GraphQL</a>\r\n      </li>\r\n      -->\r\n    </ul>\r\n  </div>\r\n</section>\r\n<div id=\"demo-container\" class=\"col-sm-9\">\r\n  <router-outlet></router-outlet>\r\n</div>\r\n"
+module.exports = "<nav class=\"navbar navbar-default navbar-fixed-top\" role=\"navigation\">\n  <div class=\"navbar-header\">\n    <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\"#skeleton-navigation-navbar-collapse\">\n      <span class=\"sr-only\">Toggle Navigation</span>\n      <span class=\"icon-bar\"></span>\n      <span class=\"icon-bar\"></span>\n      <span class=\"icon-bar\"></span>\n    </button>\n    <a class=\"navbar-brand\" href=\"/\">\n      <i class=\"fa fa-home\"></i>\n      <span>{{title}}</span>\n    </a>\n  </div>\n</nav>\n\n<section class=\"au-animate body-content\">\n  <div class=\"col-sm-3 col-md-2\">\n    <ul class=\"nav nav-pills nav-stacked\">\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/basic']\">Basic Grid</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/editor']\">Editors</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/formatter']\">Formatters</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/clientside']\">Client Side Sort/Filter</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/odata']\">Backend Server with OData</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/gridgraphql']\">Backend Server with GraphQL</a>\n      </li>\n    </ul>\n  </div>\n</section>\n<div id=\"demo-container\" class=\"col-sm-9\">\n  <router-outlet></router-outlet>\n</div>\n"
 
 /***/ }),
 
@@ -84,7 +84,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".body-content {\n  margin-top: 60px; }\n", ""]);
+exports.push([module.i, ".body-content {\n  margin-top: 60px; }\n\n.red {\n  color: red; }\n", ""]);
 
 // exports
 
@@ -133,9 +133,9 @@ var AppComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_angular_slickgrid__ = __webpack_require__("../../../../angular-slickgrid/angular-slickgrid/angular-slickgrid.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__("../../../common/@angular/common/http.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__examples_grid_basic_component__ = __webpack_require__("../../../../../src/app/examples/grid-basic.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__examples_grid_formatter_component__ = __webpack_require__("../../../../../src/app/examples/grid-formatter.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__examples_grid_clientside_component__ = __webpack_require__("../../../../../src/app/examples/grid-clientside.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__examples_grid_backend_component__ = __webpack_require__("../../../../../src/app/examples/grid-backend.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__examples_grid_editor_component__ = __webpack_require__("../../../../../src/app/examples/grid-editor.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__examples_grid_formatter_component__ = __webpack_require__("../../../../../src/app/examples/grid-formatter.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__examples_grid_clientside_component__ = __webpack_require__("../../../../../src/app/examples/grid-clientside.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__examples_grid_graphql_component__ = __webpack_require__("../../../../../src/app/examples/grid-graphql.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__examples_grid_odata_component__ = __webpack_require__("../../../../../src/app/examples/grid-odata.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__app_routing_module__ = __webpack_require__("../../../../../src/app/app-routing.module.ts");
@@ -169,9 +169,9 @@ var AppModule = /** @class */ (function () {
             declarations: [
                 __WEBPACK_IMPORTED_MODULE_11__app_component__["a" /* AppComponent */],
                 __WEBPACK_IMPORTED_MODULE_2__examples_grid_basic_component__["a" /* GridBasicComponent */],
-                __WEBPACK_IMPORTED_MODULE_4__examples_grid_clientside_component__["a" /* GridClientSideComponent */],
-                __WEBPACK_IMPORTED_MODULE_3__examples_grid_formatter_component__["a" /* GridFormatterComponent */],
-                __WEBPACK_IMPORTED_MODULE_5__examples_grid_backend_component__["a" /* GridBackendComponent */],
+                __WEBPACK_IMPORTED_MODULE_3__examples_grid_editor_component__["a" /* GridEditorComponent */],
+                __WEBPACK_IMPORTED_MODULE_5__examples_grid_clientside_component__["a" /* GridClientSideComponent */],
+                __WEBPACK_IMPORTED_MODULE_4__examples_grid_formatter_component__["a" /* GridFormatterComponent */],
                 __WEBPACK_IMPORTED_MODULE_6__examples_grid_graphql_component__["a" /* GridGraphqlComponent */],
                 __WEBPACK_IMPORTED_MODULE_7__examples_grid_odata_component__["a" /* GridOdataComponent */]
             ],
@@ -181,7 +181,7 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["b" /* HttpClientModule */],
                 __WEBPACK_IMPORTED_MODULE_0_angular_slickgrid__["a" /* AngularSlickgridModule */]
             ],
-            providers: [__WEBPACK_IMPORTED_MODULE_0_angular_slickgrid__["g" /* GridOdataService */]],
+            providers: [__WEBPACK_IMPORTED_MODULE_0_angular_slickgrid__["i" /* GridOdataService */]],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_11__app_component__["a" /* AppComponent */]]
         })
     ], AppModule);
@@ -192,176 +192,10 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/examples/grid-backend.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\r\n<div class=\"container\">\r\n  <h2>{{title}}</h2>\r\n  <div class=\"subtitle\" [innerHTML]=\"subTitle\"></div>\r\n\r\n  <div class=\"col-sm-4\">\r\n    <div [class]=\"status.class\" role=\"alert\">\r\n      <strong>Status: </strong> {{status.text}}\r\n      <span [hidden]=\"!processing\">\r\n        <i class=\"fa fa-refresh fa-spin fa-lg fa-fw\"></i>\r\n      </span>\r\n    </div>\r\n  </div>\r\n\r\n  <angular-slickgrid gridId=\"grid3\"\r\n            [columnDefinitions]=\"columnDefinitions\"\r\n            [gridOptions]=\"gridOptions\"\r\n            [dataset]=\"dataset\">\r\n  </angular-slickgrid>\r\n</div>\r\n\r\n"
-
-/***/ }),
-
-/***/ "../../../../../src/app/examples/grid-backend.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/examples/grid-backend.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GridBackendComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__("../../../common/@angular/common/http.es5.js");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var defaultPageSize = 20;
-var sampleDataRoot = 'assets/data';
-var GridBackendComponent = /** @class */ (function () {
-    function GridBackendComponent(http) {
-        this.http = http;
-        this.title = 'Grid connected to Backend Server';
-        this.subTitle = 'Sorting/Paging connected to a Backend Service (the demo only has "Name" field sortable)';
-        this.processing = false;
-        this.status = { text: '', class: '' };
-        this.paginationOptions = {
-            pageNumber: 1,
-            pageSize: defaultPageSize,
-            sort: null
-        };
-    }
-    GridBackendComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this.columnDefinitions = [
-            { id: 'name', name: 'Name', field: 'name', sortable: true },
-            { id: 'gender', name: 'Gender', field: 'gender' },
-            { id: 'company', name: 'Company', field: 'company' }
-        ];
-        this.gridOptions = {
-            enableAutoResize: true,
-            autoResize: {
-                containerId: 'demo-container',
-                sidePadding: 15
-            },
-            enableCellNavigation: true,
-            enablePagination: true,
-            pagination: {
-                pageSizes: [10, 15, 20, 25, 30, 40, 50, 75, 100],
-                pageSize: defaultPageSize,
-                totalItems: 0
-            },
-            onPaginationChanged: function (event, args) {
-                console.log("onPagination changed, page: " + args.newPage + " with size of " + args.pageSize);
-                _this.paginationOptions.pageNumber = args.newPage;
-                _this.paginationOptions.pageSize = args.pageSize;
-                _this.getCustomerData();
-            },
-            onSortChanged: function (event, args) {
-                var sortColumns = (args.multiColumnSort) ? args.sortCols : new Array({ sortCol: args.sortCol, sortAsc: args.sortAsc });
-                if (sortColumns.length === 0) {
-                    _this.paginationOptions.sort = null;
-                }
-                else {
-                    _this.paginationOptions.sort = sortColumns[0].sortAsc ? 'ASC' : 'DESC';
-                }
-                _this.getCustomerData();
-            }
-        };
-        // get the data from backend
-        this.getCustomerData();
-    };
-    GridBackendComponent.prototype.getCustomerData = function () {
-        var _this = this;
-        var url;
-        switch (this.paginationOptions.sort) {
-            case 'ASC':
-                url = sampleDataRoot + "/customers_100_ASC.json";
-                break;
-            case 'DESC':
-                url = sampleDataRoot + "/customers_100_DESC.json";
-                break;
-            default:
-                url = sampleDataRoot + "/customers_100.json";
-                break;
-        }
-        this.processing = true;
-        this.status = {
-            text: 'loading...',
-            class: 'alert alert-danger'
-        };
-        this.http.get(url).subscribe(function (data) {
-            var dataArray = data;
-            // Read the result field from the JSON response.
-            var firstRow = (_this.paginationOptions.pageNumber - 1) * _this.paginationOptions.pageSize;
-            var updatedData = dataArray.slice(firstRow, firstRow + _this.paginationOptions.pageSize);
-            setTimeout(function () {
-                _this.dataset = updatedData;
-                _this.gridOptions.pagination.totalItems = 100; // this is required for pagination to work
-                _this.processing = false;
-                _this.status = {
-                    text: 'done',
-                    class: 'alert alert-success'
-                };
-            }, 500);
-        });
-    };
-    GridBackendComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-            template: __webpack_require__("../../../../../src/app/examples/grid-backend.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/examples/grid-backend.component.scss")]
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]) === "function" && _a || Object])
-    ], GridBackendComponent);
-    return GridBackendComponent;
-    var _a;
-}());
-
-//# sourceMappingURL=grid-backend.component.js.map
-
-/***/ }),
-
 /***/ "../../../../../src/app/examples/grid-basic.component.html":
 /***/ (function(module, exports) {
 
 module.exports = "<!--The content below is only a placeholder and can be replaced.-->\r\n<div class=\"container\">\r\n    <h2>{{title}}</h2>\r\n    <div class=\"subtitle\" [innerHTML]=\"subTitle\"></div>\r\n\r\n  <angular-slickgrid gridId=\"grid1\"\r\n            [columnDefinitions]=\"columnDefinitions\"\r\n            [gridOptions]=\"gridOptions\"\r\n            [dataset]=\"dataset\"\r\n            gridHeight=\"400\"\r\n            gridWidth=\"800\">\r\n  </angular-slickgrid>\r\n</div>\r\n\r\n"
-
-/***/ }),
-
-/***/ "../../../../../src/app/examples/grid-basic.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
 
 /***/ }),
 
@@ -400,7 +234,7 @@ var GridBasicComponent = /** @class */ (function () {
         for (var i = 0; i < 1000; i++) {
             var randomYear = 2000 + Math.floor(Math.random() * 10);
             var randomMonth = Math.floor(Math.random() * 11);
-            var randomDay = Math.floor((Math.random() * 28));
+            var randomDay = Math.floor((Math.random() * 29));
             var randomPercent = Math.round(Math.random() * 100);
             this.dataset[i] = {
                 id: i,
@@ -415,8 +249,7 @@ var GridBasicComponent = /** @class */ (function () {
     };
     GridBasicComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-            template: __webpack_require__("../../../../../src/app/examples/grid-basic.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/examples/grid-basic.component.scss")]
+            template: __webpack_require__("../../../../../src/app/examples/grid-basic.component.html")
         })
     ], GridBasicComponent);
     return GridBasicComponent;
@@ -430,24 +263,6 @@ var GridBasicComponent = /** @class */ (function () {
 /***/ (function(module, exports) {
 
 module.exports = "<!--The content below is only a placeholder and can be replaced.-->\r\n<div class=\"container-fluid\">\r\n    <h2>{{title}}</h2>\r\n    <div class=\"subtitle\" [innerHTML]=\"subTitle\"></div>\r\n\r\n    <angular-slickgrid gridId=\"grid2\"\r\n              [columnDefinitions]=\"columnDefinitions\"\r\n              [gridOptions]=\"gridOptions\"\r\n              [dataset]=\"dataset\">\r\n    </angular-slickgrid>\r\n  </div>\r\n"
-
-/***/ }),
-
-/***/ "../../../../../src/app/examples/grid-clientside.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
 
 /***/ }),
 
@@ -476,20 +291,20 @@ var GridClientSideComponent = /** @class */ (function () {
     }
     GridClientSideComponent.prototype.ngOnInit = function () {
         this.columnDefinitions = [
-            { id: 'title', name: 'Title', field: 'title', filterable: true, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["c" /* FieldType */].string },
-            { id: 'duration', name: 'Duration (days)', field: 'duration', filterable: true, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["c" /* FieldType */].number },
-            { id: 'complete', name: '% Complete', field: 'percentComplete', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* Formatters */].percentCompleteBar, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["c" /* FieldType */].number, filterable: true, sortable: true },
-            { id: 'start', name: 'Start', field: 'start', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* Formatters */].dateIso, filterable: true, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["c" /* FieldType */].date },
-            { id: 'usDateShort', name: 'US Date Short', field: 'usDateShort', filterable: true, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["c" /* FieldType */].dateUsShort },
-            { id: 'utcDate', name: 'UTC Date', field: 'utcDate', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* Formatters */].dateTimeIsoAmPm, filterable: true, sortable: true, minWidth: 115, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["c" /* FieldType */].dateUtc, filterSearchType: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["c" /* FieldType */].dateTimeIso },
-            { id: 'utcDate2', name: 'UTC Date (filterSearchType: dateUS)', field: 'utcDate', filterable: true, sortable: true, minWidth: 118, formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* Formatters */].dateUs, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["c" /* FieldType */].dateUtc, filterSearchType: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["c" /* FieldType */].dateUs },
-            { id: 'effort-driven', name: 'Effort Driven', field: 'effortDriven', maxWidth: 80, formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* Formatters */].checkmark,
-                type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["c" /* FieldType */].boolean,
+            { id: 'title', name: 'Title', field: 'title', filterable: true, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].string },
+            { id: 'duration', name: 'Duration (days)', field: 'duration', filterable: true, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].number },
+            { id: 'complete', name: '% Complete', field: 'percentComplete', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["f" /* Formatters */].percentCompleteBar, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].number, filterable: true, sortable: true },
+            { id: 'start', name: 'Start', field: 'start', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["f" /* Formatters */].dateIso, filterable: true, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].date },
+            { id: 'usDateShort', name: 'US Date Short', field: 'usDateShort', filterable: true, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].dateUsShort },
+            { id: 'utcDate', name: 'UTC Date', field: 'utcDate', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["f" /* Formatters */].dateTimeIsoAmPm, filterable: true, sortable: true, minWidth: 115, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].dateUtc, filterSearchType: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].dateTimeIso },
+            { id: 'utcDate2', name: 'UTC Date (filterSearchType: dateUS)', field: 'utcDate', filterable: true, sortable: true, minWidth: 115, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].dateUtc, filterSearchType: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].dateUs },
+            { id: 'effort-driven', name: 'Effort Driven', field: 'effortDriven', maxWidth: 80, formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["f" /* Formatters */].checkmark,
+                type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].boolean,
                 sortable: true,
                 filterable: true,
                 filter: {
                     searchTerm: '',
-                    type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FormElementType */].select,
+                    type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FormElementType */].select,
                     selectOptions: [{ value: '', label: '' }, { value: true, label: 'true' }, { value: false, label: 'false' }]
                 }
             }
@@ -528,8 +343,7 @@ var GridClientSideComponent = /** @class */ (function () {
     };
     GridClientSideComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-            template: __webpack_require__("../../../../../src/app/examples/grid-clientside.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/examples/grid-clientside.component.scss")]
+            template: __webpack_require__("../../../../../src/app/examples/grid-clientside.component.html")
         })
     ], GridClientSideComponent);
     return GridClientSideComponent;
@@ -539,28 +353,145 @@ var GridClientSideComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "../../../../../src/app/examples/grid-editor.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<div class=\"container\">\n    <h2>{{title}}</h2>\n    <div class=\"subtitle\" [innerHTML]=\"subTitle\"></div>\n\n    <div class=\"col-sm-4\">\n        <label>autoEdit setting</label>\n        <br/>\n        <span id=\"radioAutoEdit\">\n            <label class=\"radio-inline control-label\" for=\"radioTrue\">\n                <input type=\"radio\" name=\"inlineRadioOptions\" id=\"radioTrue\" checked [value]=\"isAutoEdit\" (change)=\"setAutoEdit(true)\"> ON (single-click)\n            </label>\n            <label class=\"radio-inline control-label\" for=\"radioFalse\">\n                <input type=\"radio\" name=\"inlineRadioOptions\" id=\"radioFalse\" [value]=\"isAutoEdit\" (change)=\"setAutoEdit(false)\"> OFF (double-click)\n            </label>\n        </span>\n    </div>\n\n    <div class=\"col-sm-8\">\n        <div class=\"alert alert-info\" *ngIf=\"updatedObject\">\n            <strong>Update Object:</strong> {{updatedObject | json}}\n        </div>\n    </div>\n\n    <div class=\"col-sm-12\">\n        <angular-slickgrid gridId=\"grid2\" (dataviewChanged)=\"dataviewReady($event)\" (gridChanged)=\"gridReady($event)\"\n            [columnDefinitions]=\"columnDefinitions\" [gridOptions]=\"gridOptions\" [dataset]=\"dataset\">\n        </angular-slickgrid>\n    </div>\n</div>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/examples/grid-editor.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GridEditorComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__ = __webpack_require__("../../../../angular-slickgrid/angular-slickgrid/angular-slickgrid.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var GridEditorComponent = /** @class */ (function () {
+    function GridEditorComponent(resizer) {
+        this.resizer = resizer;
+        this.title = 'Example 4: Editors';
+        this.subTitle = "inline editors (not yet implement) and onCellClick editor (execute an action, e.g: open a modal window)";
+        this.isAutoEdit = true;
+    }
+    GridEditorComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.columnDefinitions = [
+            {
+                id: 'edit', field: 'id',
+                formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["f" /* Formatters */].editIcon,
+                maxWidth: 30,
+                onCellClick: function (args) {
+                    console.log(args);
+                    console.log(_this);
+                }
+            },
+            {
+                id: 'delete', field: 'id',
+                formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["f" /* Formatters */].deleteIcon,
+                maxWidth: 30,
+                onCellClick: function (args) {
+                    console.log(args);
+                    console.log(_this);
+                }
+            },
+            { id: 'title', name: 'Title', field: 'title', sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].string, editor: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["c" /* Editors */].longText },
+            { id: 'duration', name: 'Duration (days)', field: 'duration', sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].number, editor: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["c" /* Editors */].text },
+            { id: 'complete', name: '% Complete', field: 'percentComplete', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["f" /* Formatters */].percentCompleteBar, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].number, editor: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["c" /* Editors */].integer },
+            { id: 'start', name: 'Start', field: 'start', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["f" /* Formatters */].dateIso, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].date },
+            { id: 'finish', name: 'Finish', field: 'finish', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["f" /* Formatters */].dateIso, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].date },
+            { id: 'effort-driven', name: 'Effort Driven', field: 'effortDriven', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["f" /* Formatters */].checkmark, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].number, editor: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["c" /* Editors */].checkbox }
+        ];
+        this.gridOptions = {
+            autoResize: {
+                containerId: 'demo-container',
+                sidePadding: 15
+            },
+            editable: true,
+            enableColumnPicker: true,
+            enableCellNavigation: true,
+            asyncEditorLoading: false,
+            autoEdit: this.isAutoEdit
+        };
+        // mock a dataset
+        var mockedDataset = [];
+        for (var i = 0; i < 1000; i++) {
+            var randomYear = 2000 + Math.floor(Math.random() * 10);
+            var randomMonth = Math.floor(Math.random() * 11);
+            var randomDay = Math.floor((Math.random() * 29));
+            var randomPercent = Math.round(Math.random() * 100);
+            mockedDataset[i] = {
+                id: i,
+                title: 'Task ' + i,
+                duration: Math.round(Math.random() * 100) + '',
+                percentComplete: randomPercent,
+                percentCompleteNumber: randomPercent,
+                start: new Date(randomYear, randomMonth, randomDay),
+                finish: new Date(randomYear, (randomMonth + 1), randomDay),
+                effortDriven: (i % 5 === 0)
+            };
+        }
+        this.dataset = mockedDataset;
+    };
+    GridEditorComponent.prototype.gridReady = function (grid) {
+        var _this = this;
+        this.gridObj = grid;
+        grid.onCellChange.subscribe(function (e, args) {
+            console.log('onCellChange', args);
+            _this.updatedObject = args.item;
+            _this.resizer.resizeGrid(_this.gridObj, _this.gridOptions, 10);
+        });
+        grid.onClick.subscribe(function (e, args) {
+            var column = __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["h" /* GridExtraUtils */].getColumnDefinitionAndData(args);
+            console.log('onClick', args, column);
+            if (column.columnDef.id === 'edit') {
+                alert('open a modal window to edit: ' + column.dataContext.title);
+            }
+            else if (column.columnDef.id === 'delete') {
+                if (confirm('Are you sure?')) {
+                    _this.dataviewObj.deleteItem(column.dataContext.id);
+                    _this.dataviewObj.refresh();
+                }
+            }
+        });
+    };
+    GridEditorComponent.prototype.dataviewReady = function (dataview) {
+        this.dataviewObj = dataview;
+    };
+    GridEditorComponent.prototype.setAutoEdit = function (isAutoEdit) {
+        this.isAutoEdit = isAutoEdit;
+        this.gridObj.setOptions({ autoEdit: isAutoEdit }); // change the grid option dynamically
+        return true;
+    };
+    GridEditorComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+            template: __webpack_require__("../../../../../src/app/examples/grid-editor.component.html")
+        }),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["j" /* ResizerService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["j" /* ResizerService */]) === "function" && _a || Object])
+    ], GridEditorComponent);
+    return GridEditorComponent;
+    var _a;
+}());
+
+//# sourceMappingURL=grid-editor.component.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/examples/grid-formatter.component.html":
 /***/ (function(module, exports) {
 
 module.exports = "<!--The content below is only a placeholder and can be replaced.-->\r\n<div class=\"container\">\r\n    <h2>{{title}}</h2>\r\n    <div class=\"subtitle\" [innerHTML]=\"subTitle\"></div>\r\n\r\n    <angular-slickgrid gridId=\"grid2\"\r\n              [columnDefinitions]=\"columnDefinitions\"\r\n              [gridOptions]=\"gridOptions\"\r\n              [dataset]=\"dataset\">\r\n    </angular-slickgrid>\r\n  </div>\r\n"
-
-/***/ }),
-
-/***/ "../../../../../src/app/examples/grid-formatter.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
 
 /***/ }),
 
@@ -590,24 +521,24 @@ var GridFormatterComponent = /** @class */ (function () {
     }
     GridFormatterComponent.prototype.ngOnInit = function () {
         this.columnDefinitions = [
-            { id: 'title', name: 'Title', field: 'title', sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["c" /* FieldType */].string },
-            { id: 'duration', name: 'Duration (days)', field: 'duration', sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["c" /* FieldType */].number },
-            { id: 'complete', name: '% Complete', field: 'percentComplete', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* Formatters */].percentCompleteBar, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["c" /* FieldType */].number, sortable: true },
-            { id: 'percent2', name: '% Complete', field: 'percentComplete2', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* Formatters */].progressBar, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["c" /* FieldType */].number, sortable: true },
-            { id: 'start', name: 'Start', field: 'start', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* Formatters */].dateIso, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["c" /* FieldType */].dateIso },
-            { id: 'finish', name: 'Finish', field: 'finish', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* Formatters */].dateIso, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["c" /* FieldType */].date },
-            { id: 'effort-driven', name: 'Effort Driven', field: 'effortDriven', formatter: myCustomCheckboxFormatter, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["c" /* FieldType */].number, sortable: true }
+            { id: 'title', name: 'Title', field: 'title', sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].string },
+            { id: 'duration', name: 'Duration (days)', field: 'duration', sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].number },
+            { id: 'complete', name: '% Complete', field: 'percentComplete', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["f" /* Formatters */].percentCompleteBar, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].number, sortable: true },
+            { id: 'percent2', name: '% Complete', field: 'percentComplete2', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["f" /* Formatters */].progressBar, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].number, sortable: true },
+            { id: 'start', name: 'Start', field: 'start', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["f" /* Formatters */].dateIso, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].dateIso },
+            { id: 'finish', name: 'Finish', field: 'finish', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["f" /* Formatters */].dateIso, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].date },
+            { id: 'effort-driven', name: 'Effort Driven', field: 'effortDriven', formatter: myCustomCheckboxFormatter, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].number, sortable: true }
         ];
         this.gridOptions = {
             autoResize: {
                 containerId: 'demo-container',
                 sidePadding: 15
             },
-            enableCellNavigation: true
+            enableCellNavigation: false
         };
         // mock a dataset
         this.dataset = [];
-        for (var i = 0; i < 1000; i++) {
+        for (var i = 0; i < 5; i++) {
             var randomYear = 2000 + Math.floor(Math.random() * 10);
             var randomMonth = Math.floor(Math.random() * 11);
             var randomDay = Math.floor((Math.random() * 29));
@@ -627,8 +558,7 @@ var GridFormatterComponent = /** @class */ (function () {
     };
     GridFormatterComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-            template: __webpack_require__("../../../../../src/app/examples/grid-formatter.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/examples/grid-formatter.component.scss")]
+            template: __webpack_require__("../../../../../src/app/examples/grid-formatter.component.html")
         })
     ], GridFormatterComponent);
     return GridFormatterComponent;
@@ -642,24 +572,6 @@ var GridFormatterComponent = /** @class */ (function () {
 /***/ (function(module, exports) {
 
 module.exports = "<!--The content below is only a placeholder and can be replaced.-->\r\n<div class=\"container-fluid\">\r\n  <h2>{{title}}</h2>\r\n  <div class=\"subtitle row\" [innerHTML]=\"subTitle\"></div>\r\n\r\n  <div class=\"row\">\r\n    <div class=\"col-sm-4\">\r\n      <div [class]=\"status.class\" role=\"alert\">\r\n        <strong>Status: </strong> {{status.text}}\r\n        <span [hidden]=\"!processing\">\r\n          <i class=\"fa fa-refresh fa-spin fa-lg fa-fw\"></i>\r\n        </span>\r\n      </div>\r\n      <div class=\"form-inline\">\r\n        <label class=\"control-label\" for=\"radioWithCursor\">With Cursor</label> :\r\n        <span id=\"radioWithCursor\">\r\n          <label class=\"radio-inline control-label\" for=\"radioTrue\">\r\n            <input type=\"radio\" name=\"inlineRadioOptions\" id=\"radioTrue\" value=\"true\" (change)=\"onWithCursorChange(true)\">\r\n            True\r\n          </label>\r\n          <label class=\"radio-inline control-label\" for=\"radioFalse\">\r\n            <input type=\"radio\" name=\"inlineRadioOptions\" id=\"radioFalse\" checked value=\"false\" (change)=\"onWithCursorChange(false)\">\r\n            False\r\n          </label>\r\n        </span>\r\n      </div>\r\n    </div>\r\n    <div class=\"col-sm-8\">\r\n      <div class=\"alert alert-info\">\r\n        <strong>GraphQL Query:</strong>\r\n        <div [innerHTML]=\"graphqlQuery\"></div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <angular-slickgrid gridId=\"grid4\"\r\n            [columnDefinitions]=\"columnDefinitions\"\r\n            [gridOptions]=\"gridOptions\"\r\n            [dataset]=\"dataset\">\r\n  </angular-slickgrid>\r\n</div>\r\n\r\n"
-
-/***/ }),
-
-/***/ "../../../../../src/app/examples/grid-graphql.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
 
 /***/ }),
 
@@ -684,14 +596,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var defaultPageSize = 20;
-var sampleDataRoot = 'assets/data';
-var timer;
+var sampleDataRoot = '/assets/data';
 var GridGraphqlComponent = /** @class */ (function () {
     function GridGraphqlComponent(http, graphqlService) {
         this.http = http;
         this.graphqlService = graphqlService;
         this.title = 'Grid connected to Backend Server with GraphQL';
-        this.subTitle = "\n    Sorting/Paging connected to a Backend GraphQL Service.\n    <br/>\n    <ul class=\"small\">\n      <li>Only \"Name\" field is sortable for the demo (because we use JSON files), however \"multiColumnSort: true\" is also supported</li>\n      <li>String column also support operator (>, >=, <, <=, <>, !=, =, ==, *)\n      <ul>\n        <li>The (*) can be used as startsWith (ex.: \"abc*\" => startsWith \"abc\") / endsWith (ex.: \"*xyz\" => endsWith \"xyz\")</li>\n        <li>The other operators can be used on column type number for example: \">=100\" (bigger or equal than 100)</li>\n      </ul>\n    </ul>\n  ";
+        this.subTitle = "\n  Sorting/Paging connected to a Backend GraphQL Service.\n  <br/>\n  <ul class=\"small\">\n    <li><span class=\"red\">(*) NO DATA SHOWING</span> - change filter &amp; page and look at the \"GraphQL Query\" changing</li>\n    <li>Only \"Name\" field is sortable for the demo (because we use JSON files), however \"multiColumnSort: true\" is also supported</li>\n    <li>String column also support operator (>, >=, <, <=, <>, !=, =, ==, *)\n    <ul>\n      <li>The (*) can be used as startsWith (ex.: \"abc*\" => startsWith \"abc\") / endsWith (ex.: \"*xyz\" => endsWith \"xyz\")</li>\n      <li>The other operators can be used on column type number for example: \">=100\" (bigger or equal than 100)</li>\n    </ul>\n  </ul>\n";
         this.dataset = [];
         this.graphqlQuery = '';
         this.processing = false;
@@ -701,11 +612,11 @@ var GridGraphqlComponent = /** @class */ (function () {
     GridGraphqlComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.columnDefinitions = [
-            { id: 'name', name: 'Name', field: 'name', filterable: true, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["c" /* FieldType */].string },
-            { id: 'gender', name: 'Gender', field: 'gender', filterable: true, sortable: false,
+            { id: 'name', name: 'Name', field: 'name', filterable: true, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].string },
+            { id: 'gender', name: 'Gender', field: 'gender', filterable: true, sortable: true,
                 filter: {
                     searchTerm: '',
-                    type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FormElementType */].select,
+                    type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FormElementType */].select,
                     selectOptions: [{ value: '', label: '' }, { value: 'male', label: 'male' }, { value: 'female', label: 'female' }]
                 }
             },
@@ -725,37 +636,33 @@ var GridGraphqlComponent = /** @class */ (function () {
                 pageSize: defaultPageSize,
                 totalItems: 0
             },
-            onFilterChanged: function (event, args) {
-                // wait for user to stop typing before processing to avoid multiple requests sent to backend
-                clearTimeout(timer);
-                timer = setTimeout(function () {
-                    _this.displaySpinner(true);
-                    var query = _this.graphqlService.onFilterChanged(event, args);
-                    // this.getCustomerApiCall(query).then((data) => this.getCustomerCallback(data));
-                }, 700);
-            },
-            onPaginationChanged: function (event, args) {
-                _this.displaySpinner(true);
-                var query = _this.graphqlService.onPaginationChanged(event, args);
-                _this.getCustomerApiCall(query).then(function (data) { return _this.getCustomerCallback(data); });
-            },
-            onSortChanged: function (event, args) {
-                _this.displaySpinner(true);
-                var query = _this.graphqlService.onSortChanged(event, args);
-                _this.getCustomerApiCall(query).then(function (data) { return _this.getCustomerCallback(data); });
+            onBackendEventApi: {
+                onInit: function (query) { return _this.getCustomerApiCall(query); },
+                preProcess: function () { return _this.displaySpinner(true); },
+                process: function (query) { return _this.getCustomerApiCall(query); },
+                postProcess: function (response) {
+                    _this.displaySpinner(false);
+                    _this.getCustomerCallback(response);
+                },
+                filterTypingDebounce: 700,
+                service: this.graphqlService
             }
         };
         var paginationOption = this.getPaginationOption(this.isWithCursor);
         this.graphqlService.initOptions(paginationOption);
-        // get the data from backend on page load
-        this.displaySpinner(true);
-        this.getCustomerApiCall(this.graphqlService.buildQuery()).then(function (data) { return _this.getCustomerCallback(data); });
     };
     GridGraphqlComponent.prototype.displaySpinner = function (isProcessing) {
         this.processing = isProcessing;
         this.status = (isProcessing)
             ? { text: 'processing...', class: 'alert alert-danger' }
             : { text: 'done', class: 'alert alert-success' };
+    };
+    GridGraphqlComponent.prototype.filterChange = function () {
+        console.log('filter change');
+    };
+    GridGraphqlComponent.prototype.filterChangeAfter = function () {
+        console.log('after filter change');
+        this.displaySpinner(false);
     };
     GridGraphqlComponent.prototype.onWithCursorChange = function (isWithCursor) {
         this.isWithCursor = isWithCursor;
@@ -806,7 +713,9 @@ var GridGraphqlComponent = /** @class */ (function () {
         // for the demo purpose, we will call a mock WebAPI function
         return new Promise(function (resolve, reject) {
             _this.graphqlQuery = _this.graphqlService.buildQuery();
-            resolve({ items: [], totalRecordCount: 100, query: query });
+            setTimeout(function () {
+                resolve({ items: [], totalRecordCount: 100, query: query });
+            }, 500);
         });
         // return this.getCustomerDataApiMock(query);
     };
@@ -921,10 +830,9 @@ var GridGraphqlComponent = /** @class */ (function () {
     };
     GridGraphqlComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-            template: __webpack_require__("../../../../../src/app/examples/grid-graphql.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/examples/grid-graphql.component.scss")]
+            template: __webpack_require__("../../../../../src/app/examples/grid-graphql.component.html")
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClient */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["f" /* GraphqlService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["f" /* GraphqlService */]) === "function" && _b || Object])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClient */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["g" /* GraphqlService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["g" /* GraphqlService */]) === "function" && _b || Object])
     ], GridGraphqlComponent);
     return GridGraphqlComponent;
     var _a, _b;
@@ -938,24 +846,6 @@ var GridGraphqlComponent = /** @class */ (function () {
 /***/ (function(module, exports) {
 
 module.exports = "<!--The content below is only a placeholder and can be replaced.-->\r\n<div class=\"container-fluid\">\r\n  <h2>{{title}}</h2>\r\n  <div class=\"subtitle row\" [innerHTML]=\"subTitle\"></div>\r\n\r\n  <div class=\"row\">\r\n    <div class=\"col-sm-4\">\r\n      <div [class]=\"status.class\" role=\"alert\">\r\n        <strong>Status: </strong> {{status.text}}\r\n        <span [hidden]=\"!processing\">\r\n          <i class=\"fa fa-refresh fa-spin fa-lg fa-fw\"></i>\r\n        </span>\r\n      </div>\r\n    </div>\r\n    <div class=\"col-sm-8\">\r\n      <div class=\"alert alert-info\">\r\n        <strong>OData Query:</strong> {{odataQuery}}\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <angular-slickgrid gridId=\"grid4\"\r\n            [columnDefinitions]=\"columnDefinitions\"\r\n            [gridOptions]=\"gridOptions\"\r\n            [dataset]=\"dataset\">\r\n  </angular-slickgrid>\r\n</div>\r\n\r\n"
-
-/***/ }),
-
-/***/ "../../../../../src/app/examples/grid-odata.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, ".slick-viewport {\n  opacity: 0.9; }\n\n.slick-headerrow {\n  overflow: unset !important; }\n\n.slick-headerrow-column, .slick-headerrow-columns {\n  overflow: unset; }\n", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
 
 /***/ }),
 
@@ -979,9 +869,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var defaultPageSize = 5;
-var sampleDataRoot = 'assets/data';
-var timer;
+var defaultPageSize = 20;
+var sampleDataRoot = '/assets/data';
 var GridOdataComponent = /** @class */ (function () {
     function GridOdataComponent(http, odataService) {
         this.http = http;
@@ -1000,11 +889,11 @@ var GridOdataComponent = /** @class */ (function () {
     GridOdataComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.columnDefinitions = [
-            { id: 'name', name: 'Name', field: 'name', filterable: true, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["c" /* FieldType */].string },
-            { id: 'gender', name: 'Gender', field: 'gender', filterable: true, sortable: false,
+            { id: 'name', name: 'Name', field: 'name', filterable: true, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].string },
+            { id: 'gender', name: 'Gender', field: 'gender', filterable: true, sortable: true,
                 filter: {
                     searchTerm: '',
-                    type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FormElementType */].select,
+                    type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FormElementType */].select,
                     selectOptions: [{ value: '', label: '' }, { value: 'male', label: 'male' }, { value: 'female', label: 'female' }]
                 }
             },
@@ -1024,29 +913,19 @@ var GridOdataComponent = /** @class */ (function () {
                 pageSize: defaultPageSize,
                 totalItems: 0
             },
-            onFilterChanged: function (event, args) {
-                // wait for user to stop typing before processing to avoid multiple requests sent to backend
-                clearTimeout(timer);
-                timer = setTimeout(function () {
-                    _this.displaySpinner(true);
-                    var query = _this.odataService.onFilterChanged(event, args);
-                    _this.getCustomerApiCall(query).then(function (data) { return _this.getCustomerCallback(data); });
-                }, 700);
-            },
-            onPaginationChanged: function (event, args) {
-                _this.displaySpinner(true);
-                var query = _this.odataService.onPaginationChanged(event, args);
-                _this.getCustomerApiCall(query).then(function (data) { return _this.getCustomerCallback(data); });
-            },
-            onSortChanged: function (event, args) {
-                _this.displaySpinner(true);
-                var query = _this.odataService.onSortChanged(event, args);
-                _this.getCustomerApiCall(query).then(function (data) { return _this.getCustomerCallback(data); });
+            onBackendEventApi: {
+                onInit: function (query) { return _this.getCustomerApiCall(query); },
+                preProcess: function () { return _this.displaySpinner(true); },
+                process: function (query) { return _this.getCustomerApiCall(query); },
+                postProcess: function (response) {
+                    console.log(response);
+                    _this.displaySpinner(false);
+                    _this.getCustomerCallback(response);
+                },
+                filterTypingDebounce: 700,
+                service: this.odataService
             }
         };
-        // get the data from backend on page load
-        this.displaySpinner(true);
-        this.getCustomerApiCall(this.odataService.buildQuery()).then(function (data) { return _this.getCustomerCallback(data); });
     };
     GridOdataComponent.prototype.displaySpinner = function (isProcessing) {
         this.processing = isProcessing;
@@ -1177,10 +1056,9 @@ var GridOdataComponent = /** @class */ (function () {
     };
     GridOdataComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-            template: __webpack_require__("../../../../../src/app/examples/grid-odata.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/examples/grid-odata.component.scss")]
+            template: __webpack_require__("../../../../../src/app/examples/grid-odata.component.html")
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClient */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["g" /* GridOdataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["g" /* GridOdataService */]) === "function" && _b || Object])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClient */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["i" /* GridOdataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["i" /* GridOdataService */]) === "function" && _b || Object])
     ], GridOdataComponent);
     return GridOdataComponent;
     var _a, _b;
