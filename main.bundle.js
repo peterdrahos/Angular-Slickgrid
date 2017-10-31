@@ -287,7 +287,7 @@ function randomBetween(min, max) {
 var GridClientSideComponent = /** @class */ (function () {
     function GridClientSideComponent() {
         this.title = 'Client Side Sort/Filter';
-        this.subTitle = "\n  Sort/Filter on client side only using SlickGrid DataView\n  <br/>\n  <ul class=\"small\">\n    <li>Support multi-sort (by default), hold \"Shift\" key and click on the next column to sort.\n    <li>All column types support the following operators: (>, >=, <, <=, <>, !=, =, ==, *)\n    <ul>\n      <li>Example: >100 ... >=2001-01-01 ... >02/28/17</li>\n      <li><b>Note:</b> For filters to work properly (default is string), make sure to provide a FieldType (type is against the dataset, not the Formatter)</li>\n    </ul>\n    <li>Date Filters</li>\n    <ul>\n      <li>FieldType of dateUtc/date (from dataset) can use an extra option of \"filterSearchType\" to let user filter more easily. For example, in the \"UTC Date\" field below, you can type \"&gt;02/28/2017\", also when dealing with UTC you have to take the time difference in consideration.</li>\n    </ul>\n    <li>On String filters, (*) can be used as startsWith (Hello* => matches \"Hello Word\") ... endsWith (*Doe => matches: \"John Doe\")</li>\n  </ul>\n";
+        this.subTitle = "\n  Sort/Filter on client side only using SlickGrid DataView (link to <a href=\"https://github.com/ghiscoding/Angular-Slickgrid/wiki/Sorting\">Wiki documentation</a>)\n  <br/>\n  <ul class=\"small\">\n    <li>Support multi-sort (by default), hold \"Shift\" key and click on the next column to sort.\n    <li>All column types support the following operators: (>, >=, <, <=, <>, !=, =, ==, *)\n    <ul>\n      <li>Example: >100 ... >=2001-01-01 ... >02/28/17</li>\n      <li><b>Note:</b> For filters to work properly (default is string), make sure to provide a FieldType (type is against the dataset, not the Formatter)</li>\n    </ul>\n    <li>Date Filters</li>\n    <ul>\n      <li>FieldType of dateUtc/date (from dataset) can use an extra option of \"filterSearchType\" to let user filter more easily. For example, in the \"UTC Date\" field below, you can type \"&gt;02/28/2017\", also when dealing with UTC you have to take the time difference in consideration.</li>\n    </ul>\n    <li>On String filters, (*) can be used as startsWith (Hello* => matches \"Hello Word\") ... endsWith (*Doe => matches: \"John Doe\")</li>\n  </ul>\n";
     }
     GridClientSideComponent.prototype.ngOnInit = function () {
         this.columnDefinitions = [
@@ -382,7 +382,7 @@ var GridEditorComponent = /** @class */ (function () {
     function GridEditorComponent(resizer) {
         this.resizer = resizer;
         this.title = 'Example 4: Editors';
-        this.subTitle = "inline editors (not yet implement) and onCellClick editor (execute an action, e.g: open a modal window)";
+        this.subTitle = "\n  Grid with Inline Editors and onCellClick actions (link to <a href=\"https://github.com/ghiscoding/Angular-Slickgrid/wiki/Editors\">Wiki documentation</a>).\n  ";
         this.isAutoEdit = true;
     }
     GridEditorComponent.prototype.ngOnInit = function () {
@@ -517,7 +517,7 @@ var myCustomCheckboxFormatter = function (row, cell, value, columnDef, dataConte
 var GridFormatterComponent = /** @class */ (function () {
     function GridFormatterComponent() {
         this.title = 'Grid with Formatters';
-        this.subTitle = 'grid auto-resize, multi-column sort and custom/SlickGrid Formatters';
+        this.subTitle = "\n  Grid with Custom and/or included Slickgrid Formatters (link to <a href=\"https://github.com/ghiscoding/Angular-Slickgrid/wiki/Formatters\">Wiki documentation</a>).\n  ";
     }
     GridFormatterComponent.prototype.ngOnInit = function () {
         this.columnDefinitions = [
@@ -571,7 +571,7 @@ var GridFormatterComponent = /** @class */ (function () {
 /***/ "../../../../../src/app/examples/grid-graphql.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\r\n<div class=\"container-fluid\">\r\n  <h2>{{title}}</h2>\r\n  <div class=\"subtitle row\" [innerHTML]=\"subTitle\"></div>\r\n\r\n  <div class=\"row\">\r\n    <div class=\"col-sm-4\">\r\n      <div [class]=\"status.class\" role=\"alert\">\r\n        <strong>Status: </strong> {{status.text}}\r\n        <span [hidden]=\"!processing\">\r\n          <i class=\"fa fa-refresh fa-spin fa-lg fa-fw\"></i>\r\n        </span>\r\n      </div>\r\n      <div class=\"form-inline\">\r\n        <label class=\"control-label\" for=\"radioWithCursor\">With Cursor</label> :\r\n        <span id=\"radioWithCursor\">\r\n          <label class=\"radio-inline control-label\" for=\"radioTrue\">\r\n            <input type=\"radio\" name=\"inlineRadioOptions\" id=\"radioTrue\" value=\"true\" (change)=\"onWithCursorChange(true)\">\r\n            True\r\n          </label>\r\n          <label class=\"radio-inline control-label\" for=\"radioFalse\">\r\n            <input type=\"radio\" name=\"inlineRadioOptions\" id=\"radioFalse\" checked value=\"false\" (change)=\"onWithCursorChange(false)\">\r\n            False\r\n          </label>\r\n        </span>\r\n      </div>\r\n    </div>\r\n    <div class=\"col-sm-8\">\r\n      <div class=\"alert alert-info\">\r\n        <strong>GraphQL Query:</strong>\r\n        <div [innerHTML]=\"graphqlQuery\"></div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <angular-slickgrid gridId=\"grid4\"\r\n            [columnDefinitions]=\"columnDefinitions\"\r\n            [gridOptions]=\"gridOptions\"\r\n            [dataset]=\"dataset\">\r\n  </angular-slickgrid>\r\n</div>\r\n\r\n"
+module.exports = "<!--The content below is only a placeholder and can be replaced.-->\r\n<div class=\"container-fluid\">\r\n  <h2>{{title}}</h2>\r\n  <div class=\"subtitle row\" [innerHTML]=\"subTitle\"></div>\r\n\r\n  <div class=\"row\">\r\n    <div class=\"col-sm-4\">\r\n      <div [class]=\"status.class\" role=\"alert\">\r\n        <strong>Status: </strong> {{status.text}}\r\n        <span [hidden]=\"!processing\">\r\n          <i class=\"fa fa-refresh fa-spin fa-lg fa-fw\"></i>\r\n        </span>\r\n      </div>\r\n      <div class=\"form-inline\">\r\n        <label class=\"control-label\" for=\"radioWithCursor\">With Cursor</label> :\r\n        <span id=\"radioWithCursor\">\r\n          <label class=\"radio-inline control-label\" for=\"radioTrue\">\r\n            <input type=\"radio\" name=\"inlineRadioOptions\" id=\"radioTrue\" value=\"true\" (change)=\"onWithCursorChange(true)\">\r\n            True\r\n          </label>\r\n          <label class=\"radio-inline control-label\" for=\"radioFalse\">\r\n            <input type=\"radio\" name=\"inlineRadioOptions\" id=\"radioFalse\" checked value=\"false\" (change)=\"onWithCursorChange(false)\">\r\n            False\r\n          </label>\r\n        </span>\r\n      </div>\r\n    </div>\r\n    <div class=\"col-sm-8\">\r\n      <div class=\"alert alert-info\">\r\n        <strong>GraphQL Query:</strong>\r\n        <div [innerHTML]=\"graphqlQuery\"></div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <angular-slickgrid gridId=\"grid4\"\r\n            [columnDefinitions]=\"columnDefinitions\"\r\n            [gridOptions]=\"gridOptions\"\r\n            [dataset]=\"dataset\"\r\n            gridHeight=\"250\"\r\n            gridWidth=\"800\">\r\n  </angular-slickgrid>\r\n</div>\r\n\r\n"
 
 /***/ }),
 
@@ -602,7 +602,7 @@ var GridGraphqlComponent = /** @class */ (function () {
         this.http = http;
         this.graphqlService = graphqlService;
         this.title = 'Grid connected to Backend Server with GraphQL';
-        this.subTitle = "\n  Sorting/Paging connected to a Backend GraphQL Service.\n  <br/>\n  <ul class=\"small\">\n    <li><span class=\"red\">(*) NO DATA SHOWING</span> - change filter &amp; page and look at the \"GraphQL Query\" changing</li>\n    <li>Only \"Name\" field is sortable for the demo (because we use JSON files), however \"multiColumnSort: true\" is also supported</li>\n    <li>String column also support operator (>, >=, <, <=, <>, !=, =, ==, *)\n    <ul>\n      <li>The (*) can be used as startsWith (ex.: \"abc*\" => startsWith \"abc\") / endsWith (ex.: \"*xyz\" => endsWith \"xyz\")</li>\n      <li>The other operators can be used on column type number for example: \">=100\" (bigger or equal than 100)</li>\n    </ul>\n  </ul>\n";
+        this.subTitle = "\n  Sorting/Paging connected to a Backend GraphQL Service (link to <a href=\"https://github.com/ghiscoding/Angular-Slickgrid/wiki/GraphQL\">Wiki documentation</a>).\n  <br/>\n  <ul class=\"small\">\n    <li><span class=\"red\">(*) NO DATA SHOWING</span> - just change Filters &amp; Pages and look at the \"GraphQL Query\" changing :)</li>\n    <li>Only \"Name\" field is sortable for the demo (because we use JSON files), however \"multiColumnSort: true\" is also supported</li>\n    <li>String column also support operator (>, >=, <, <=, <>, !=, =, ==, *)\n    <ul>\n      <li>The (*) can be used as startsWith (ex.: \"abc*\" => startsWith \"abc\") / endsWith (ex.: \"*xyz\" => endsWith \"xyz\")</li>\n      <li>The other operators can be used on column type number for example: \">=100\" (bigger or equal than 100)</li>\n    </ul>\n  </ul>\n";
         this.dataset = [];
         this.graphqlQuery = '';
         this.processing = false;
@@ -623,11 +623,7 @@ var GridGraphqlComponent = /** @class */ (function () {
             { id: 'company', name: 'Company', field: 'company' }
         ];
         this.gridOptions = {
-            enableAutoResize: true,
-            autoResize: {
-                containerId: 'demo-container',
-                sidePadding: 15
-            },
+            enableAutoResize: false,
             enableFiltering: true,
             enableCellNavigation: true,
             enablePagination: true,
@@ -876,7 +872,7 @@ var GridOdataComponent = /** @class */ (function () {
         this.http = http;
         this.odataService = odataService;
         this.title = 'Grid connected to Backend Server with OData';
-        this.subTitle = "\n    Sorting/Paging connected to a Backend OData Service.\n    <br/>\n    <ul class=\"small\">\n      <li>Only \"Name\" field is sortable for the demo (because we use JSON files), however \"multiColumnSort: true\" is also supported</li>\n      <li>String column also support operator (>, >=, <, <=, <>, !=, =, ==, *)\n      <ul>\n        <li>The (*) can be used as startsWith (ex.: \"abc*\" => startsWith \"abc\") / endsWith (ex.: \"*xyz\" => endsWith \"xyz\")</li>\n        <li>The other operators can be used on column type number for example: \">=100\" (bigger or equal than 100)</li>\n      </ul>\n      <li>OData Service could be replaced by other Service type in the future (GraphQL or whichever you provide)</li>\n    </ul>\n  ";
+        this.subTitle = "\n    Sorting/Paging connected to a Backend OData Service (link to <a href=\"https://github.com/ghiscoding/Angular-Slickgrid/wiki/OData\">Wiki documentation</a>).\n    <br/>\n    <ul class=\"small\">\n      <li>Only \"Name\" field is sortable for the demo (because we use JSON files), however \"multiColumnSort: true\" is also supported</li>\n      <li>String column also support operator (>, >=, <, <=, <>, !=, =, ==, *)\n      <ul>\n        <li>The (*) can be used as startsWith (ex.: \"abc*\" => startsWith \"abc\") / endsWith (ex.: \"*xyz\" => endsWith \"xyz\")</li>\n        <li>The other operators can be used on column type number for example: \">=100\" (bigger or equal than 100)</li>\n      </ul>\n      <li>OData Service could be replaced by other Service type in the future (GraphQL or whichever you provide)</li>\n    </ul>\n  ";
         this.dataset = [];
         this.odataQuery = '';
         this.processing = false;
