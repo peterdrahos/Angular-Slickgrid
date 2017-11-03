@@ -291,14 +291,14 @@ var GridClientSideComponent = /** @class */ (function () {
     }
     GridClientSideComponent.prototype.ngOnInit = function () {
         this.columnDefinitions = [
-            { id: 'title', name: 'Title', field: 'title', filterable: true, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].string },
-            { id: 'duration', name: 'Duration (days)', field: 'duration', filterable: true, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].number },
-            { id: 'complete', name: '% Complete', field: 'percentComplete', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["f" /* Formatters */].percentCompleteBar, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].number, filterable: true, sortable: true },
-            { id: 'start', name: 'Start', field: 'start', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["f" /* Formatters */].dateIso, filterable: true, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].date },
-            { id: 'usDateShort', name: 'US Date Short', field: 'usDateShort', filterable: true, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].dateUsShort },
-            { id: 'utcDate', name: 'UTC Date', field: 'utcDate', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["f" /* Formatters */].dateTimeIsoAmPm, filterable: true, sortable: true, minWidth: 115, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].dateUtc, filterSearchType: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].dateTimeIso },
-            { id: 'utcDate2', name: 'UTC Date (filterSearchType: dateUS)', field: 'utcDate', filterable: true, sortable: true, minWidth: 115, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].dateUtc, filterSearchType: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].dateUs },
-            { id: 'effort-driven', name: 'Effort Driven', field: 'effortDriven', maxWidth: 80, formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["f" /* Formatters */].checkmark,
+            { id: 'title', name: 'Title', field: 'title', filterable: true, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].string, minWidth: 100 },
+            { id: 'duration', name: 'Duration (days)', field: 'duration', filterable: true, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].number, minWidth: 100 },
+            { id: 'complete', name: '% Complete', field: 'percentComplete', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["f" /* Formatters */].percentCompleteBar, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].number, filterable: true, sortable: true, minWidth: 100 },
+            { id: 'start', name: 'Start', field: 'start', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["f" /* Formatters */].dateIso, filterable: true, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].date, minWidth: 100 },
+            { id: 'usDateShort', name: 'US Date Short', field: 'usDateShort', filterable: true, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].dateUsShort, minWidth: 100 },
+            { id: 'utcDate', name: 'UTC Date', field: 'utcDate', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["f" /* Formatters */].dateTimeIsoAmPm, filterable: true, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].dateUtc, filterSearchType: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].dateTimeIso, minWidth: 115 },
+            { id: 'utcDate2', name: 'UTC Date (filterSearchType: dateUS)', field: 'utcDate', filterable: true, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].dateUtc, filterSearchType: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].dateUs, minWidth: 115 },
+            { id: 'effort-driven', name: 'Effort Driven', field: 'effortDriven', maxWidth: 80, formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["f" /* Formatters */].checkmark, minWidth: 100,
                 type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].boolean,
                 sortable: true,
                 filterable: true,
@@ -391,6 +391,7 @@ var GridEditorComponent = /** @class */ (function () {
             {
                 id: 'edit', field: 'id',
                 formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["f" /* Formatters */].editIcon,
+                minWidth: 30,
                 maxWidth: 30,
                 onCellClick: function (args) {
                     console.log(args);
@@ -400,18 +401,19 @@ var GridEditorComponent = /** @class */ (function () {
             {
                 id: 'delete', field: 'id',
                 formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["f" /* Formatters */].deleteIcon,
+                minWidth: 30,
                 maxWidth: 30,
                 onCellClick: function (args) {
                     console.log(args);
                     console.log(_this);
                 }
             },
-            { id: 'title', name: 'Title', field: 'title', sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].string, editor: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["c" /* Editors */].longText },
-            { id: 'duration', name: 'Duration (days)', field: 'duration', sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].number, editor: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["c" /* Editors */].text },
-            { id: 'complete', name: '% Complete', field: 'percentComplete', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["f" /* Formatters */].percentCompleteBar, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].number, editor: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["c" /* Editors */].integer },
-            { id: 'start', name: 'Start', field: 'start', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["f" /* Formatters */].dateIso, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].date },
-            { id: 'finish', name: 'Finish', field: 'finish', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["f" /* Formatters */].dateIso, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].date },
-            { id: 'effort-driven', name: 'Effort Driven', field: 'effortDriven', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["f" /* Formatters */].checkmark, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].number, editor: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["c" /* Editors */].checkbox }
+            { id: 'title', name: 'Title', field: 'title', sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].string, editor: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["c" /* Editors */].longText, minWidth: 100 },
+            { id: 'duration', name: 'Duration (days)', field: 'duration', sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].number, editor: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["c" /* Editors */].text, minWidth: 100 },
+            { id: 'complete', name: '% Complete', field: 'percentComplete', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["f" /* Formatters */].percentCompleteBar, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].number, editor: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["c" /* Editors */].integer, minWidth: 100 },
+            { id: 'start', name: 'Start', field: 'start', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["f" /* Formatters */].dateIso, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].date, minWidth: 100 },
+            { id: 'finish', name: 'Finish', field: 'finish', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["f" /* Formatters */].dateIso, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].date, minWidth: 100 },
+            { id: 'effort-driven', name: 'Effort Driven', field: 'effortDriven', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["f" /* Formatters */].checkmark, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].number, editor: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["c" /* Editors */].checkbox, minWidth: 100 }
         ];
         this.gridOptions = {
             autoResize: {
@@ -521,13 +523,13 @@ var GridFormatterComponent = /** @class */ (function () {
     }
     GridFormatterComponent.prototype.ngOnInit = function () {
         this.columnDefinitions = [
-            { id: 'title', name: 'Title', field: 'title', sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].string },
-            { id: 'duration', name: 'Duration (days)', field: 'duration', sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].number },
-            { id: 'complete', name: '% Complete', field: 'percentComplete', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["f" /* Formatters */].percentCompleteBar, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].number, sortable: true },
-            { id: 'percent2', name: '% Complete', field: 'percentComplete2', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["f" /* Formatters */].progressBar, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].number, sortable: true },
-            { id: 'start', name: 'Start', field: 'start', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["f" /* Formatters */].dateIso, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].dateIso },
-            { id: 'finish', name: 'Finish', field: 'finish', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["f" /* Formatters */].dateIso, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].date },
-            { id: 'effort-driven', name: 'Effort Driven', field: 'effortDriven', formatter: myCustomCheckboxFormatter, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].number, sortable: true }
+            { id: 'title', name: 'Title', field: 'title', sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].string, minWidth: 100 },
+            { id: 'duration', name: 'Duration (days)', field: 'duration', sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].number, minWidth: 100 },
+            { id: 'complete', name: '% Complete', field: 'percentComplete', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["f" /* Formatters */].percentCompleteBar, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].number, sortable: true, minWidth: 100 },
+            { id: 'percent2', name: '% Complete', field: 'percentComplete2', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["f" /* Formatters */].progressBar, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].number, sortable: true, minWidth: 100 },
+            { id: 'start', name: 'Start', field: 'start', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["f" /* Formatters */].dateIso, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].dateIso, minWidth: 100 },
+            { id: 'finish', name: 'Finish', field: 'finish', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["f" /* Formatters */].dateIso, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].date, minWidth: 100 },
+            { id: 'effort-driven', name: 'Effort Driven', field: 'effortDriven', formatter: myCustomCheckboxFormatter, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].number, sortable: true, minWidth: 100 }
         ];
         this.gridOptions = {
             autoResize: {
@@ -538,7 +540,7 @@ var GridFormatterComponent = /** @class */ (function () {
         };
         // mock a dataset
         this.dataset = [];
-        for (var i = 0; i < 5; i++) {
+        for (var i = 0; i < 1000; i++) {
             var randomYear = 2000 + Math.floor(Math.random() * 10);
             var randomMonth = Math.floor(Math.random() * 11);
             var randomDay = Math.floor((Math.random() * 29));
@@ -612,15 +614,15 @@ var GridGraphqlComponent = /** @class */ (function () {
     GridGraphqlComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.columnDefinitions = [
-            { id: 'name', name: 'Name', field: 'name', filterable: true, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].string },
-            { id: 'gender', name: 'Gender', field: 'gender', filterable: true, sortable: true,
+            { id: 'name', name: 'Name', field: 'name', filterable: true, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].string, minWidth: 100 },
+            { id: 'gender', name: 'Gender', field: 'gender', filterable: true, sortable: true, minWidth: 100,
                 filter: {
                     searchTerm: '',
                     type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FormElementType */].select,
                     selectOptions: [{ value: '', label: '' }, { value: 'male', label: 'male' }, { value: 'female', label: 'female' }]
                 }
             },
-            { id: 'company', name: 'Company', field: 'company' }
+            { id: 'company', name: 'Company', field: 'company', minWidth: 100 }
         ];
         this.gridOptions = {
             enableAutoResize: false,
@@ -885,15 +887,15 @@ var GridOdataComponent = /** @class */ (function () {
     GridOdataComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.columnDefinitions = [
-            { id: 'name', name: 'Name', field: 'name', filterable: true, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].string },
-            { id: 'gender', name: 'Gender', field: 'gender', filterable: true, sortable: true,
+            { id: 'name', name: 'Name', field: 'name', filterable: true, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].string, minWidth: 100 },
+            { id: 'gender', name: 'Gender', field: 'gender', filterable: true, sortable: true, minWidth: 100,
                 filter: {
                     searchTerm: '',
                     type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FormElementType */].select,
                     selectOptions: [{ value: '', label: '' }, { value: 'male', label: 'male' }, { value: 'female', label: 'female' }]
                 }
             },
-            { id: 'company', name: 'Company', field: 'company' }
+            { id: 'company', name: 'Company', field: 'company', minWidth: 100 }
         ];
         this.gridOptions = {
             enableAutoResize: true,
