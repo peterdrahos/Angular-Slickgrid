@@ -26,10 +26,13 @@ webpackEmptyAsyncContext.id = "../../../../../src/$$_gendir lazy recursive";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__examples_grid_clientside_component__ = __webpack_require__("../../../../../src/app/examples/grid-clientside.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__examples_grid_editor_component__ = __webpack_require__("../../../../../src/app/examples/grid-editor.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__examples_grid_formatter_component__ = __webpack_require__("../../../../../src/app/examples/grid-formatter.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__examples_grid_odata_component__ = __webpack_require__("../../../../../src/app/examples/grid-odata.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__examples_grid_graphql_component__ = __webpack_require__("../../../../../src/app/examples/grid-graphql.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__examples_grid_headerbutton_component__ = __webpack_require__("../../../../../src/app/examples/grid-headerbutton.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__examples_grid_headermenu_component__ = __webpack_require__("../../../../../src/app/examples/grid-headermenu.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__examples_grid_menu_component__ = __webpack_require__("../../../../../src/app/examples/grid-menu.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__examples_grid_odata_component__ = __webpack_require__("../../../../../src/app/examples/grid-odata.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__examples_grid_graphql_component__ = __webpack_require__("../../../../../src/app/examples/grid-graphql.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -44,22 +47,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
+
+
 var routes = [
     { path: 'basic', component: __WEBPACK_IMPORTED_MODULE_0__examples_grid_basic_component__["a" /* GridBasicComponent */] },
     { path: 'editor', component: __WEBPACK_IMPORTED_MODULE_2__examples_grid_editor_component__["a" /* GridEditorComponent */] },
     { path: 'formatter', component: __WEBPACK_IMPORTED_MODULE_3__examples_grid_formatter_component__["a" /* GridFormatterComponent */] },
+    { path: 'headerbutton', component: __WEBPACK_IMPORTED_MODULE_4__examples_grid_headerbutton_component__["a" /* GridHeaderButtonComponent */] },
+    { path: 'headermenu', component: __WEBPACK_IMPORTED_MODULE_5__examples_grid_headermenu_component__["a" /* GridHeaderMenuComponent */] },
+    { path: 'gridmenu', component: __WEBPACK_IMPORTED_MODULE_6__examples_grid_menu_component__["a" /* GridMenuComponent */] },
     { path: 'clientside', component: __WEBPACK_IMPORTED_MODULE_1__examples_grid_clientside_component__["a" /* GridClientSideComponent */] },
-    { path: 'odata', component: __WEBPACK_IMPORTED_MODULE_4__examples_grid_odata_component__["a" /* GridOdataComponent */] },
-    { path: 'gridgraphql', component: __WEBPACK_IMPORTED_MODULE_5__examples_grid_graphql_component__["a" /* GridGraphqlComponent */] },
+    { path: 'odata', component: __WEBPACK_IMPORTED_MODULE_7__examples_grid_odata_component__["a" /* GridOdataComponent */] },
+    { path: 'gridgraphql', component: __WEBPACK_IMPORTED_MODULE_8__examples_grid_graphql_component__["a" /* GridGraphqlComponent */] },
     { path: '', redirectTo: '/basic', pathMatch: 'full' }
 ];
 var AppRoutingRoutingModule = /** @class */ (function () {
     function AppRoutingRoutingModule() {
     }
     AppRoutingRoutingModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_6__angular_core__["M" /* NgModule */])({
-            imports: [__WEBPACK_IMPORTED_MODULE_7__angular_router__["b" /* RouterModule */].forRoot(routes, { useHash: true })],
-            exports: [__WEBPACK_IMPORTED_MODULE_7__angular_router__["b" /* RouterModule */]],
+        Object(__WEBPACK_IMPORTED_MODULE_9__angular_core__["M" /* NgModule */])({
+            imports: [__WEBPACK_IMPORTED_MODULE_10__angular_router__["b" /* RouterModule */].forRoot(routes, { useHash: true })],
+            exports: [__WEBPACK_IMPORTED_MODULE_10__angular_router__["b" /* RouterModule */]],
         })
     ], AppRoutingRoutingModule);
     return AppRoutingRoutingModule;
@@ -72,7 +81,7 @@ var AppRoutingRoutingModule = /** @class */ (function () {
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-default navbar-fixed-top\" role=\"navigation\">\n  <div class=\"navbar-header\">\n    <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\"#skeleton-navigation-navbar-collapse\">\n      <span class=\"sr-only\">Toggle Navigation</span>\n      <span class=\"icon-bar\"></span>\n      <span class=\"icon-bar\"></span>\n      <span class=\"icon-bar\"></span>\n    </button>\n    <a class=\"navbar-brand\" href=\"https://github.com/ghiscoding/Angular-Slickgrid\">\n      <i class=\"fa fa-home\"></i>\n      <span>{{title}}</span>\n    </a>\n  </div>\n</nav>\n\n<section class=\"au-animate body-content\">\n  <div class=\"col-sm-3 col-md-2\">\n    <ul class=\"nav nav-pills nav-stacked\">\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/basic']\">Basic Grid</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/editor']\">Editors</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/formatter']\">Formatters</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/clientside']\">Client Side Sort/Filter</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/odata']\">Backend Server with OData</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/gridgraphql']\">Backend Server with GraphQL</a>\n      </li>\n    </ul>\n  </div>\n</section>\n<div id=\"demo-container\" class=\"col-sm-9\">\n  <router-outlet></router-outlet>\n</div>\n"
+module.exports = "<nav class=\"navbar navbar-default navbar-fixed-top\" role=\"navigation\">\n  <div class=\"navbar-header\">\n    <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\"#skeleton-navigation-navbar-collapse\">\n      <span class=\"sr-only\">Toggle Navigation</span>\n      <span class=\"icon-bar\"></span>\n      <span class=\"icon-bar\"></span>\n      <span class=\"icon-bar\"></span>\n    </button>\n    <a class=\"navbar-brand\" href=\"https://github.com/ghiscoding/Angular-Slickgrid\">\n      <i class=\"fa fa-home\"></i>\n      <span>{{title}}</span>\n    </a>\n  </div>\n</nav>\n\n<section class=\"au-animate body-content\">\n  <div class=\"col-sm-3 col-md-2\">\n    <ul class=\"nav nav-pills nav-stacked\">\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/basic']\">1- Basic Grid</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/formatter']\">2- Formatters</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/editor']\">3- Editors</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/clientside']\">4- Client Side Sort/Filter</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/odata']\">5- Backend Server with OData</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/gridgraphql']\">6- Backend Server with GraphQL</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/headerbutton']\">7- Header Button Plugin</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/headermenu']\">8- Header Menu Plugin</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/gridmenu']\">9- Grid Menu (hamburger menu)</a>\n      </li>\n    </ul>\n  </div>\n</section>\n<div id=\"demo-container\" class=\"col-sm-9\">\n  <router-outlet></router-outlet>\n</div>\n"
 
 /***/ }),
 
@@ -84,7 +93,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".body-content {\n  margin-top: 60px; }\n\n.red {\n  color: red; }\n", ""]);
+exports.push([module.i, ".body-content {\n  margin-top: 60px; }\n\n.red {\n  color: red; }\n\n.faded {\n  opacity: 0.2; }\n\n.faded:hover {\n  opacity: 0.5; }\n", ""]);
 
 // exports
 
@@ -130,18 +139,21 @@ var AppComponent = /** @class */ (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_angular_slickgrid__ = __webpack_require__("../../../../angular-slickgrid/angular-slickgrid/angular-slickgrid.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__("../../../common/@angular/common/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__app_routing_module__ = __webpack_require__("../../../../../src/app/app-routing.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__("../../../platform-browser/@angular/platform-browser.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__examples_grid_basic_component__ = __webpack_require__("../../../../../src/app/examples/grid-basic.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__examples_grid_editor_component__ = __webpack_require__("../../../../../src/app/examples/grid-editor.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__examples_grid_formatter_component__ = __webpack_require__("../../../../../src/app/examples/grid-formatter.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__examples_grid_clientside_component__ = __webpack_require__("../../../../../src/app/examples/grid-clientside.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__examples_grid_clientside_component__ = __webpack_require__("../../../../../src/app/examples/grid-clientside.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__examples_grid_editor_component__ = __webpack_require__("../../../../../src/app/examples/grid-editor.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__examples_grid_formatter_component__ = __webpack_require__("../../../../../src/app/examples/grid-formatter.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__examples_grid_graphql_component__ = __webpack_require__("../../../../../src/app/examples/grid-graphql.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__examples_grid_odata_component__ = __webpack_require__("../../../../../src/app/examples/grid-odata.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__app_routing_module__ = __webpack_require__("../../../../../src/app/app-routing.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__angular_platform_browser__ = __webpack_require__("../../../platform-browser/@angular/platform-browser.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__examples_grid_headermenu_component__ = __webpack_require__("../../../../../src/app/examples/grid-headermenu.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__examples_grid_headerbutton_component__ = __webpack_require__("../../../../../src/app/examples/grid-headerbutton.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__examples_grid_menu_component__ = __webpack_require__("../../../../../src/app/examples/grid-menu.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_angular_slickgrid__ = __webpack_require__("../../../../angular-slickgrid/angular-slickgrid/angular-slickgrid.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__examples_grid_odata_component__ = __webpack_require__("../../../../../src/app/examples/grid-odata.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__angular_common_http__ = __webpack_require__("../../../common/@angular/common/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -161,28 +173,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
+
+
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_10__angular_core__["M" /* NgModule */])({
+        Object(__WEBPACK_IMPORTED_MODULE_13__angular_core__["M" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_11__app_component__["a" /* AppComponent */],
+                __WEBPACK_IMPORTED_MODULE_14__app_component__["a" /* AppComponent */],
                 __WEBPACK_IMPORTED_MODULE_2__examples_grid_basic_component__["a" /* GridBasicComponent */],
-                __WEBPACK_IMPORTED_MODULE_3__examples_grid_editor_component__["a" /* GridEditorComponent */],
-                __WEBPACK_IMPORTED_MODULE_5__examples_grid_clientside_component__["a" /* GridClientSideComponent */],
-                __WEBPACK_IMPORTED_MODULE_4__examples_grid_formatter_component__["a" /* GridFormatterComponent */],
+                __WEBPACK_IMPORTED_MODULE_4__examples_grid_editor_component__["a" /* GridEditorComponent */],
+                __WEBPACK_IMPORTED_MODULE_3__examples_grid_clientside_component__["a" /* GridClientSideComponent */],
+                __WEBPACK_IMPORTED_MODULE_5__examples_grid_formatter_component__["a" /* GridFormatterComponent */],
                 __WEBPACK_IMPORTED_MODULE_6__examples_grid_graphql_component__["a" /* GridGraphqlComponent */],
-                __WEBPACK_IMPORTED_MODULE_7__examples_grid_odata_component__["a" /* GridOdataComponent */]
+                __WEBPACK_IMPORTED_MODULE_8__examples_grid_headerbutton_component__["a" /* GridHeaderButtonComponent */],
+                __WEBPACK_IMPORTED_MODULE_7__examples_grid_headermenu_component__["a" /* GridHeaderMenuComponent */],
+                __WEBPACK_IMPORTED_MODULE_9__examples_grid_menu_component__["a" /* GridMenuComponent */],
+                __WEBPACK_IMPORTED_MODULE_11__examples_grid_odata_component__["a" /* GridOdataComponent */]
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_8__app_routing_module__["a" /* AppRoutingRoutingModule */],
-                __WEBPACK_IMPORTED_MODULE_9__angular_platform_browser__["a" /* BrowserModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["b" /* HttpClientModule */],
-                __WEBPACK_IMPORTED_MODULE_0_angular_slickgrid__["a" /* AngularSlickgridModule */]
+                __WEBPACK_IMPORTED_MODULE_0__app_routing_module__["a" /* AppRoutingRoutingModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["a" /* BrowserModule */],
+                __WEBPACK_IMPORTED_MODULE_12__angular_common_http__["b" /* HttpClientModule */],
+                __WEBPACK_IMPORTED_MODULE_10_angular_slickgrid__["a" /* AngularSlickgridModule */]
             ],
-            providers: [__WEBPACK_IMPORTED_MODULE_0_angular_slickgrid__["i" /* GridOdataService */]],
-            bootstrap: [__WEBPACK_IMPORTED_MODULE_11__app_component__["a" /* AppComponent */]]
+            providers: [__WEBPACK_IMPORTED_MODULE_10_angular_slickgrid__["i" /* GridOdataService */]],
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_14__app_component__["a" /* AppComponent */]]
         })
     ], AppModule);
     return AppModule;
@@ -214,8 +232,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 var GridBasicComponent = /** @class */ (function () {
     function GridBasicComponent() {
-        this.title = 'Basic Grid';
-        this.subTitle = "\n  Basic Grid with fixed sizes (800 x 400) set by \"gridHeight\" &amp; \"gridWidth\"\n  <ul>\n    <li>link to <a href=\"https://github.com/ghiscoding/Angular-Slickgrid/wiki/OData\">Wiki HOWTO documentation</a></li>\n  </ul>\n  ";
+        this.title = 'Example 1: Basic Grid';
+        this.subTitle = "\n    Basic Grid with fixed sizes (800 x 400) set by \"gridHeight\" &amp; \"gridWidth\"\n    <ul>\n      <li><a href=\"https://github.com/ghiscoding/angular-slickgrid/wiki/HOWTO---Step-by-Step\">Wiki HOWTO link</a></li>\n    </ul>\n  ";
     }
     GridBasicComponent.prototype.ngOnInit = function () {
         this.columnDefinitions = [
@@ -286,8 +304,8 @@ function randomBetween(min, max) {
 }
 var GridClientSideComponent = /** @class */ (function () {
     function GridClientSideComponent() {
-        this.title = 'Client Side Sort/Filter';
-        this.subTitle = "\n  Sort/Filter on client side only using SlickGrid DataView (link to <a href=\"https://github.com/ghiscoding/Angular-Slickgrid/wiki/Sorting\">Wiki documentation</a>)\n  <br/>\n  <ul class=\"small\">\n    <li>Support multi-sort (by default), hold \"Shift\" key and click on the next column to sort.\n    <li>All column types support the following operators: (>, >=, <, <=, <>, !=, =, ==, *)\n    <ul>\n      <li>Example: >100 ... >=2001-01-01 ... >02/28/17</li>\n      <li><b>Note:</b> For filters to work properly (default is string), make sure to provide a FieldType (type is against the dataset, not the Formatter)</li>\n    </ul>\n    <li>Date Filters</li>\n    <ul>\n      <li>FieldType of dateUtc/date (from dataset) can use an extra option of \"filterSearchType\" to let user filter more easily. For example, in the \"UTC Date\" field below, you can type \"&gt;02/28/2017\", also when dealing with UTC you have to take the time difference in consideration.</li>\n    </ul>\n    <li>On String filters, (*) can be used as startsWith (Hello* => matches \"Hello Word\") ... endsWith (*Doe => matches: \"John Doe\")</li>\n  </ul>\n";
+        this.title = 'Example 4: Client Side Sort/Filter';
+        this.subTitle = "\n    Sort/Filter on client side only using SlickGrid DataView (<a href=\"https://github.com/ghiscoding/Angular-Slickgrid/wiki/Sorting\">Wiki link</a>)\n    <br/>\n    <ul class=\"small\">\n      <li>Support multi-sort (by default), hold \"Shift\" key and click on the next column to sort.\n      <li>All column types support the following operators: (>, >=, <, <=, <>, !=, =, ==, *)\n      <ul>\n        <li>Example: >100 ... >=2001-01-01 ... >02/28/17</li>\n        <li><b>Note:</b> For filters to work properly (default is string), make sure to provide a FieldType (type is against the dataset, not the Formatter)</li>\n      </ul>\n      <li>Date Filters</li>\n      <ul>\n        <li>FieldType of dateUtc/date (from dataset) can use an extra option of \"filterSearchType\" to let user filter more easily. For example, in the \"UTC Date\" field below, you can type \"&gt;02/28/2017\", also when dealing with UTC you have to take the time difference in consideration.</li>\n      </ul>\n      <li>On String filters, (*) can be used as startsWith (Hello* => matches \"Hello Word\") ... endsWith (*Doe => matches: \"John Doe\")</li>\n    </ul>\n  ";
     }
     GridClientSideComponent.prototype.ngOnInit = function () {
         this.columnDefinitions = [
@@ -381,8 +399,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var GridEditorComponent = /** @class */ (function () {
     function GridEditorComponent(resizer) {
         this.resizer = resizer;
-        this.title = 'Example 4: Editors';
-        this.subTitle = "\n  Grid with Inline Editors and onCellClick actions (link to <a href=\"https://github.com/ghiscoding/Angular-Slickgrid/wiki/Editors\">Wiki documentation</a>).\n  ";
+        this.title = 'Example 3: Editors';
+        this.subTitle = "\n  Grid with Inline Editors and onCellClick actions (<a href=\"https://github.com/ghiscoding/Angular-Slickgrid/wiki/Editors\">Wiki link</a>).\n  ";
         this.isAutoEdit = true;
     }
     GridEditorComponent.prototype.ngOnInit = function () {
@@ -518,8 +536,8 @@ var myCustomCheckboxFormatter = function (row, cell, value, columnDef, dataConte
 };
 var GridFormatterComponent = /** @class */ (function () {
     function GridFormatterComponent() {
-        this.title = 'Grid with Formatters';
-        this.subTitle = "\n  Grid with Custom and/or included Slickgrid Formatters (link to <a href=\"https://github.com/ghiscoding/Angular-Slickgrid/wiki/Formatters\">Wiki documentation</a>).\n  ";
+        this.title = 'Example 2: Grid with Formatters';
+        this.subTitle = "\n  Grid with Custom and/or included Slickgrid Formatters (<a href=\"https://github.com/ghiscoding/Angular-Slickgrid/wiki/Formatters\">Wiki link</a>).\n  ";
     }
     GridFormatterComponent.prototype.ngOnInit = function () {
         this.columnDefinitions = [
@@ -603,8 +621,8 @@ var GridGraphqlComponent = /** @class */ (function () {
     function GridGraphqlComponent(http, graphqlService) {
         this.http = http;
         this.graphqlService = graphqlService;
-        this.title = 'Grid connected to Backend Server with GraphQL';
-        this.subTitle = "\n  Sorting/Paging connected to a Backend GraphQL Service (link to <a href=\"https://github.com/ghiscoding/Angular-Slickgrid/wiki/GraphQL\">Wiki documentation</a>).\n  <br/>\n  <ul class=\"small\">\n    <li><span class=\"red\">(*) NO DATA SHOWING</span> - just change Filters &amp; Pages and look at the \"GraphQL Query\" changing :)</li>\n    <li>Only \"Name\" field is sortable for the demo (because we use JSON files), however \"multiColumnSort: true\" is also supported</li>\n    <li>String column also support operator (>, >=, <, <=, <>, !=, =, ==, *)\n    <ul>\n      <li>The (*) can be used as startsWith (ex.: \"abc*\" => startsWith \"abc\") / endsWith (ex.: \"*xyz\" => endsWith \"xyz\")</li>\n      <li>The other operators can be used on column type number for example: \">=100\" (bigger or equal than 100)</li>\n    </ul>\n  </ul>\n";
+        this.title = 'Example 6: Grid connected to Backend Server with GraphQL';
+        this.subTitle = "\n    Sorting/Paging connected to a Backend GraphQL Service (<a href=\"https://github.com/ghiscoding/Angular-Slickgrid/wiki/GraphQL\">Wiki link</a>).\n    <br/>\n    <ul class=\"small\">\n      <li><span class=\"red\">(*) NO DATA SHOWING</span> - just change Filters &amp; Pages and look at the \"GraphQL Query\" changing :)</li>\n      <li>Only \"Name\" field is sortable for the demo (because we use JSON files), however \"multiColumnSort: true\" is also supported</li>\n      <li>String column also support operator (>, >=, <, <=, <>, !=, =, ==, *)\n      <ul>\n        <li>The (*) can be used as startsWith (ex.: \"abc*\" => startsWith \"abc\") / endsWith (ex.: \"*xyz\" => endsWith \"xyz\")</li>\n        <li>The other operators can be used on column type number for example: \">=100\" (bigger or equal than 100)</li>\n      </ul>\n    </ul>\n  ";
         this.dataset = [];
         this.graphqlQuery = '';
         this.processing = false;
@@ -840,6 +858,507 @@ var GridGraphqlComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "../../../../../src/app/examples/grid-headerbutton.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<!--The content below is only a placeholder and can be replaced.-->\r\n<div class=\"container\">\r\n    <h2>{{title}}</h2>\r\n    <div class=\"subtitle\" [innerHTML]=\"subTitle\"></div>\r\n\r\n    <div class=\"col-sm-12\">\r\n        <angular-slickgrid gridId=\"grid2\" (dataviewChanged)=\"dataviewReady($event)\" (gridChanged)=\"gridReady($event)\"\r\n            [columnDefinitions]=\"columnDefinitions\" [gridOptions]=\"gridOptions\" [dataset]=\"dataset\">\r\n        </angular-slickgrid>\r\n    </div>\r\n</div>\r\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/examples/grid-headerbutton.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GridHeaderButtonComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+// create a custom Formatter to highlight negative values in red
+var columnsWithHighlightingById = {};
+var highlightingFormatter = function (row, cell, value, columnDef, dataContext) {
+    if (columnsWithHighlightingById[columnDef.id] && value < 0) {
+        return "<div style=\"color:red; font-weight:bold;\">" + value + "</div>";
+    }
+    else {
+        return value;
+    }
+};
+var GridHeaderButtonComponent = /** @class */ (function () {
+    function GridHeaderButtonComponent() {
+        this.title = 'Example 7: Header Button Plugin';
+        this.subTitle = "\n    This example demonstrates using the <b>Slick.Plugins.HeaderButtons</b> plugin to easily add buttons to colum headers.\n    These buttons can be specified directly in the column definition, and are very easy to configure and use.\n    (<a href=\"https://github.com/ghiscoding/Angular-Slickgrid/wiki/SlickGrid-Controls-&-Plugins\">Wiki link</a>)\n    <ul>\n      <li>Resize the 1st column to see all icon/command</li>\n      <li>Mouse hover the 2nd column to see it's icon/command</li>\n      <li>For all the other columns, click on top-right red circle icon to enable highlight of negative numbers.</li>\n    </ul>\n  ";
+    }
+    GridHeaderButtonComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.columnDefinitions = [];
+        this.gridOptions = {
+            enableAutoResize: true,
+            enableHeaderButton: true,
+            autoResize: {
+                containerId: 'demo-container',
+                sidePadding: 15
+            },
+            enableFiltering: false,
+            enableCellNavigation: true,
+            onHeaderButtonCommand: function (e, args) {
+                var column = args.column;
+                var button = args.button;
+                var command = args.command;
+                if (command === 'toggle-highlight') {
+                    if (button.cssClass === 'fa fa-circle red') {
+                        delete columnsWithHighlightingById[column.id];
+                        button.cssClass = 'fa fa-circle-o red faded';
+                        button.tooltip = 'Highlight negative numbers.';
+                    }
+                    else {
+                        columnsWithHighlightingById[column.id] = true;
+                        button.cssClass = 'fa fa-circle red';
+                        button.tooltip = 'Remove highlight.';
+                    }
+                    _this.gridObj.invalidate();
+                }
+            }
+        };
+        this.getData();
+    };
+    GridHeaderButtonComponent.prototype.getData = function () {
+        // Set up some test columns.
+        for (var i = 0; i < 9; i++) {
+            this.columnDefinitions.push({
+                id: i,
+                name: 'Column' + (i + 1),
+                field: i + '',
+                width: 100,
+                sortable: true,
+                formatter: highlightingFormatter,
+                header: {
+                    buttons: [
+                        {
+                            cssClass: 'fa fa-circle-o red faded',
+                            command: 'toggle-highlight',
+                            tooltip: 'Highlight negative numbers.'
+                        }
+                    ]
+                }
+            });
+        }
+        // Set multiple buttons on the first column to demonstrate overflow.
+        this.columnDefinitions[0].name = 'Resize me!';
+        this.columnDefinitions[0].header = {
+            buttons: [
+                {
+                    cssClass: 'fa fa-tag',
+                    handler: function (e) {
+                        alert('Tag');
+                    }
+                },
+                {
+                    cssClass: 'fa fa-comment',
+                    handler: function (e) {
+                        alert('Comment');
+                    }
+                },
+                {
+                    cssClass: 'fa fa-info-circle',
+                    handler: function (e) {
+                        alert('Info');
+                    }
+                },
+                {
+                    cssClass: 'fa fa-question-circle',
+                    handler: function (e) {
+                        alert('Help');
+                    }
+                }
+            ]
+        };
+        // Set a button on the second column to demonstrate hover.
+        this.columnDefinitions[1].name = 'Hover me!';
+        this.columnDefinitions[1].header = {
+            buttons: [
+                {
+                    cssClass: 'fa fa-question-circle',
+                    showOnHover: true,
+                    tooltip: 'This button only appears on hover.',
+                    handler: function (e) {
+                        alert('Help');
+                    }
+                }
+            ]
+        };
+        // mock a dataset
+        var mockDataset = [];
+        for (var i = 0; i < 100; i++) {
+            var d = (mockDataset[i] = {});
+            d['id'] = i;
+            for (var j = 0; j < this.columnDefinitions.length; j++) {
+                d[j] = Math.round(Math.random() * 10) - 5;
+            }
+        }
+        this.dataset = mockDataset;
+    };
+    GridHeaderButtonComponent.prototype.gridReady = function (grid) {
+        this.gridObj = grid;
+    };
+    GridHeaderButtonComponent.prototype.dataviewReady = function (dataview) {
+        this.dataviewObj = dataview;
+    };
+    GridHeaderButtonComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+            template: __webpack_require__("../../../../../src/app/examples/grid-headerbutton.component.html")
+        })
+    ], GridHeaderButtonComponent);
+    return GridHeaderButtonComponent;
+}());
+
+//# sourceMappingURL=grid-headerbutton.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/examples/grid-headermenu.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<!--The content below is only a placeholder and can be replaced.-->\r\n<div class=\"container\">\r\n    <h2>{{title}}</h2>\r\n    <div class=\"subtitle\" [innerHTML]=\"subTitle\"></div>\r\n\r\n    <div class=\"col-sm-12\">\r\n        <angular-slickgrid gridId=\"grid2\" (dataviewChanged)=\"dataviewReady($event)\" (gridChanged)=\"gridReady($event)\"\r\n            [columnDefinitions]=\"columnDefinitions\" [gridOptions]=\"gridOptions\" [dataset]=\"dataset\">\r\n        </angular-slickgrid>\r\n    </div>\r\n</div>\r\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/examples/grid-headermenu.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GridHeaderMenuComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_jquery__ = __webpack_require__("../../../../jquery/dist/jquery.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_jquery__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+// create a custom Formatter to highlight negative values in red
+var columnsWithHighlightingById = {};
+var highlightingFormatter = function (row, cell, value, columnDef, dataContext) {
+    if (columnsWithHighlightingById[columnDef.id] && value < 0) {
+        return "<div style=\"color:red; font-weight:bold;\">" + value + "</div>";
+    }
+    else {
+        return value;
+    }
+};
+var GridHeaderMenuComponent = /** @class */ (function () {
+    function GridHeaderMenuComponent() {
+        this.title = 'Example 8: Header Menu Plugin';
+        this.subTitle = "\n    This example demonstrates using the <b>Slick.Plugins.HeaderMenu</b> plugin to easily add menus to colum headers.<br/>\n    These menus can be specified directly in the column definition, and are very easy to configure and use.\n    (<a href=\"https://github.com/ghiscoding/Angular-Slickgrid/wiki/SlickGrid-Controls-&-Plugins\">Wiki link</a>)\n    <ul>\n      <li>Hover over any column header to see an arrow showing up on the right</li>\n      <li>Try Sorting (multi-sort) the 2 columns \"Duration\" and \"% Complete\" (the other ones are disabled)</li>\n      <li>Try hiding any columns (you use the \"Column Picker\" plugin by doing a right+click on the header to show the column back)</li>\n    </ul>\n  ";
+    }
+    GridHeaderMenuComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.columnDefinitions = [
+            { id: 'title', name: 'Title', field: 'title' },
+            { id: 'duration', name: 'Duration', field: 'duration', sortable: true },
+            { id: '%', name: '% Complete', field: 'percentComplete', sortable: true },
+            { id: 'start', name: 'Start', field: 'start' },
+            { id: 'finish', name: 'Finish', field: 'finish' },
+            { id: 'effort-driven', name: 'Effort Driven', field: 'effortDriven' }
+        ];
+        for (var i = 0; i < this.columnDefinitions.length; i++) {
+            this.columnDefinitions[i].header = {
+                menu: {
+                    items: [
+                        {
+                            iconCssClass: 'fa fa-sort-asc',
+                            title: 'Sort Ascending',
+                            disabled: !this.columnDefinitions[i].sortable,
+                            command: 'sort-asc'
+                        },
+                        {
+                            iconCssClass: 'fa fa-sort-desc',
+                            title: 'Sort Descending',
+                            disabled: !this.columnDefinitions[i].sortable,
+                            command: 'sort-desc'
+                        },
+                        {
+                            title: 'Hide Column',
+                            command: 'hide'
+                        },
+                        {
+                            iconCssClass: 'fa fa-question-circle',
+                            title: 'Help',
+                            command: 'help'
+                        }
+                    ]
+                }
+            };
+        }
+        this.visibleColumns = this.columnDefinitions;
+        this.gridOptions = {
+            enableAutoResize: true,
+            enableHeaderMenu: true,
+            autoResize: {
+                containerId: 'demo-container',
+                sidePadding: 15
+            },
+            enableFiltering: false,
+            enableCellNavigation: true,
+            onHeaderMenuCommand: function (e, args) {
+                if (args.command === 'hide') {
+                    var columnIndex = _this.gridObj.getColumnIndex(args.column.id);
+                    _this.visibleColumns = _this.removeColumnByIndex(_this.visibleColumns, columnIndex);
+                    _this.gridObj.setColumns(_this.visibleColumns);
+                }
+                else if (args.command === 'sort-asc' || args.command === 'sort-desc') {
+                    // get previously sorted columns
+                    // getSortColumns() only returns sortAsc & columnId, we want the entire column definition
+                    var oldSortColumns = _this.gridObj.getSortColumns();
+                    var cols = __WEBPACK_IMPORTED_MODULE_1_jquery__["map"](oldSortColumns, function (col) {
+                        // get the column definition but only keep column which are not equal to our current column
+                        if (col.columnId !== args.column.id) {
+                            return { sortCol: _this.columnDefinitions[_this.gridObj.getColumnIndex(col.columnId)], sortAsc: col.sortAsc };
+                        }
+                    });
+                    // add to the column array, the column sorted by the header menu
+                    var isSortedAsc = (args.command === 'sort-asc');
+                    cols.push({ sortAsc: isSortedAsc, sortCol: args.column });
+                    // update the this.gridObj sortColumns array which will at the same add the visual sort icon(s) on the UI
+                    var newSortColumns = __WEBPACK_IMPORTED_MODULE_1_jquery__["map"](cols, function (col) {
+                        return { columnId: col.sortCol.id, sortAsc: col.sortAsc };
+                    });
+                    _this.gridObj.setSortColumns(newSortColumns);
+                    _this.executeSort(cols);
+                }
+                else {
+                    alert('Command: ' + args.command);
+                }
+            }
+        };
+        this.getData();
+    };
+    GridHeaderMenuComponent.prototype.getData = function () {
+        // Set up some test columns.
+        var mockDataset = [];
+        for (var i = 0; i < 500; i++) {
+            mockDataset[i] = {
+                id: i,
+                title: 'Task ' + i,
+                duration: Math.round(Math.random() * 25) + ' days',
+                percentComplete: Math.round(Math.random() * 100),
+                start: '01/01/2009',
+                finish: '01/05/2009',
+                effortDriven: (i % 5 === 0)
+            };
+        }
+        this.dataset = mockDataset;
+    };
+    GridHeaderMenuComponent.prototype.gridReady = function (grid) {
+        this.gridObj = grid;
+    };
+    GridHeaderMenuComponent.prototype.dataviewReady = function (dataview) {
+        this.dataviewObj = dataview;
+    };
+    GridHeaderMenuComponent.prototype.executeSort = function (cols) {
+        this.dataviewObj.sort(function (dataRow1, dataRow2) {
+            for (var i = 0, l = cols.length; i < l; i++) {
+                var field = cols[i].sortCol.field;
+                var sign = cols[i].sortAsc ? 1 : -1;
+                var value1 = dataRow1[field];
+                var value2 = dataRow2[field];
+                var result = (value1 === value2 ? 0 : (value1 > value2 ? 1 : -1)) * sign;
+                if (result !== 0) {
+                    return result;
+                }
+            }
+            return 0;
+        });
+        this.gridObj.invalidate();
+        this.gridObj.render();
+    };
+    GridHeaderMenuComponent.prototype.removeColumnByIndex = function (array, index) {
+        return array.filter(function (el, i) {
+            return index !== i;
+        });
+    };
+    GridHeaderMenuComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+            template: __webpack_require__("../../../../../src/app/examples/grid-headermenu.component.html")
+        })
+    ], GridHeaderMenuComponent);
+    return GridHeaderMenuComponent;
+}());
+
+//# sourceMappingURL=grid-headermenu.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/examples/grid-menu.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<!--The content below is only a placeholder and can be replaced.-->\r\n<div class=\"container\">\r\n    <h2>{{title}}</h2>\r\n    <div class=\"subtitle\" [innerHTML]=\"subTitle\"></div>\r\n\r\n    <div class=\"col-sm-12\">\r\n        <angular-slickgrid gridId=\"grid2\" (dataviewChanged)=\"dataviewReady($event)\" (gridChanged)=\"gridReady($event)\"\r\n            [columnDefinitions]=\"columnDefinitions\" [gridOptions]=\"gridOptions\" [dataset]=\"dataset\">\r\n        </angular-slickgrid>\r\n    </div>\r\n</div>\r\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/examples/grid-menu.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GridMenuComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__ = __webpack_require__("../../../../angular-slickgrid/angular-slickgrid/angular-slickgrid.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery__ = __webpack_require__("../../../../jquery/dist/jquery.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_jquery__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+// create a custom Formatter to highlight negative values in red
+var columnsWithHighlightingById = {};
+var highlightingFormatter = function (row, cell, value, columnDef, dataContext) {
+    if (columnsWithHighlightingById[columnDef.id] && value < 0) {
+        return "<div style=\"color:red; font-weight:bold;\">" + value + "</div>";
+    }
+    else {
+        return value;
+    }
+};
+var GridMenuComponent = /** @class */ (function () {
+    function GridMenuComponent() {
+        this.title = 'Example 9: Grid Menu Control';
+        this.subTitle = "\n    This example demonstrates using the <b>Slick.Controls.GridMenu</b> plugin to easily add a Grid Menu (aka hamburger menu) on the top right corner of the grid.\n    (<a href=\"https://github.com/ghiscoding/Angular-Slickgrid/wiki/Grid-Menu\">Wiki link</a>)\n    <br/>\n    <ul>\n      <li>The Grid Menu uses the following icon by default \"fa-bars\"&nbsp;&nbsp;<span class=\"fa fa-bars\"></span>&nbsp;&nbsp;(which looks like a hamburger, hence the name)</li>\n      <ul><li>Another icon which you could use is \"fa-ellipsis-v\"&nbsp;&nbsp;<span class=\"fa fa-ellipsis-v\"></span>&nbsp;&nbsp;(which is shown in this example)</li></ul>\n      <li>By default the Grid Menu shows all columns which you can show/hide</li>\n      <li>You can configure multiple \"commands\" to show up in the Grid Menu and use the \"onGridMenuCommand()\" callback</li>\n      <li>Doing a \"right+click\" over any column header will also provide a way to show/hide a column (via the Column Picker Plugin)</li>\n    </ul>\n  ";
+    }
+    GridMenuComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.columnDefinitions = [
+            { id: 'title', name: 'Title', field: 'title', filterable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].string },
+            { id: 'duration', name: 'Duration', field: 'duration', sortable: true, filterable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].string },
+            { id: '%', name: '% Complete', field: 'percentComplete', sortable: true, filterable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].number },
+            { id: 'start', name: 'Start', field: 'start', filterable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].string },
+            { id: 'finish', name: 'Finish', field: 'finish', filterable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].string },
+            {
+                id: 'effort-driven', name: 'Effort Driven', field: 'effortDriven', maxWidth: 80, formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["f" /* Formatters */].checkmark,
+                type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].boolean,
+                minWidth: 100,
+                sortable: true,
+                filterable: true,
+                filter: {
+                    searchTerm: '',
+                    type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FormElementType */].select,
+                    selectOptions: [{ value: '', label: '' }, { value: true, label: 'true' }, { value: false, label: 'false' }]
+                }
+            }
+        ];
+        this.visibleColumns = this.columnDefinitions;
+        this.gridOptions = {
+            enableAutoResize: true,
+            enableGridMenu: true,
+            autoResize: {
+                containerId: 'demo-container',
+                sidePadding: 15
+            },
+            enableFiltering: true,
+            enableCellNavigation: true,
+            gridMenu: {
+                customTitle: 'Custom Commands',
+                columnTitle: 'Columns',
+                iconCssClass: 'fa fa-ellipsis-v',
+                menuWidth: 17,
+                resizeOnShowHeaderRow: true,
+                customItems: [
+                    {
+                        iconCssClass: 'fa fa-filter text-danger',
+                        title: 'Clear All Filters',
+                        disabled: false,
+                        command: 'clear-filter'
+                    },
+                    {
+                        iconCssClass: 'fa fa-random',
+                        title: 'Toggle Filter Row',
+                        disabled: false,
+                        command: 'toggle-filter'
+                    },
+                    {
+                        iconCssClass: 'fa fa-random',
+                        title: 'Toggle Top Panel',
+                        disabled: false,
+                        command: 'toggle-toppanel'
+                    },
+                    {
+                        iconCssClass: 'fa fa-question-circle',
+                        title: 'Help',
+                        disabled: false,
+                        command: 'help'
+                    },
+                    {
+                        title: 'Disabled command',
+                        disabled: true,
+                        command: 'disabled-command'
+                    }
+                ]
+            },
+            onGridMenuCommand: function (e, args) {
+                if (args.command === 'toggle-filter') {
+                    _this.gridObj.setHeaderRowVisibility(!_this.gridObj.getOptions().showHeaderRow);
+                }
+                else if (args.command === 'toggle-toppanel') {
+                    _this.gridObj.setTopPanelVisibility(!_this.gridObj.getOptions().showTopPanel);
+                }
+                else if (args.command === 'clear-filter') {
+                    __WEBPACK_IMPORTED_MODULE_2_jquery__('.slick-headerrow-column').children().val('');
+                    // TODO aurelia-slickgrid should have a clearAllFilters function
+                    alert('Command: ' + args.command);
+                    _this.dataviewObj.refresh();
+                }
+                else {
+                    alert('Command: ' + args.command);
+                }
+            }
+        };
+        this.getData();
+    };
+    GridMenuComponent.prototype.getData = function () {
+        // Set up some test columns.
+        var mockDataset = [];
+        for (var i = 0; i < 500; i++) {
+            mockDataset[i] = {
+                id: i,
+                title: 'Task ' + i,
+                duration: Math.round(Math.random() * 25) + ' days',
+                percentComplete: Math.round(Math.random() * 100),
+                start: '01/01/2009',
+                finish: '01/05/2009',
+                effortDriven: (i % 5 === 0)
+            };
+        }
+        this.dataset = mockDataset;
+    };
+    GridMenuComponent.prototype.gridReady = function (grid) {
+        this.gridObj = grid;
+    };
+    GridMenuComponent.prototype.dataviewReady = function (dataview) {
+        this.dataviewObj = dataview;
+    };
+    GridMenuComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+            template: __webpack_require__("../../../../../src/app/examples/grid-menu.component.html")
+        })
+    ], GridMenuComponent);
+    return GridMenuComponent;
+}());
+
+//# sourceMappingURL=grid-menu.component.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/examples/grid-odata.component.html":
 /***/ (function(module, exports) {
 
@@ -873,8 +1392,8 @@ var GridOdataComponent = /** @class */ (function () {
     function GridOdataComponent(http, odataService) {
         this.http = http;
         this.odataService = odataService;
-        this.title = 'Grid connected to Backend Server with OData';
-        this.subTitle = "\n    Sorting/Paging connected to a Backend OData Service (link to <a href=\"https://github.com/ghiscoding/Angular-Slickgrid/wiki/OData\">Wiki documentation</a>).\n    <br/>\n    <ul class=\"small\">\n      <li>Only \"Name\" field is sortable for the demo (because we use JSON files), however \"multiColumnSort: true\" is also supported</li>\n      <li>String column also support operator (>, >=, <, <=, <>, !=, =, ==, *)\n      <ul>\n        <li>The (*) can be used as startsWith (ex.: \"abc*\" => startsWith \"abc\") / endsWith (ex.: \"*xyz\" => endsWith \"xyz\")</li>\n        <li>The other operators can be used on column type number for example: \">=100\" (bigger or equal than 100)</li>\n      </ul>\n      <li>OData Service could be replaced by other Service type in the future (GraphQL or whichever you provide)</li>\n    </ul>\n  ";
+        this.title = 'Example 5: Grid connected to Backend Server with OData';
+        this.subTitle = "\n    Sorting/Paging connected to a Backend OData Service (<a href=\"https://github.com/ghiscoding/Angular-Slickgrid/wiki/OData\">Wiki link</a>).\n    <br/>\n    <ul class=\"small\">\n      <li>Only \"Name\" field is sortable for the demo (because we use JSON files), however \"multiColumnSort: true\" is also supported</li>\n      <li>String column also support operator (>, >=, <, <=, <>, !=, =, ==, *)\n      <ul>\n        <li>The (*) can be used as startsWith (ex.: \"abc*\" => startsWith \"abc\") / endsWith (ex.: \"*xyz\" => endsWith \"xyz\")</li>\n        <li>The other operators can be used on column type number for example: \">=100\" (bigger or equal than 100)</li>\n      </ul>\n      <li>OData Service could be replaced by other Service type in the future (GraphQL or whichever you provide)</li>\n    </ul>\n  ";
         this.dataset = [];
         this.odataQuery = '';
         this.processing = false;
