@@ -5,23 +5,23 @@ webpackJsonp(["vendor"],{
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(global) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return CaseType; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return FieldType; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return FormElementType; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return FieldType; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return FormElementType; });
 /* unused harmony export KeyCode */
 /* unused harmony export OperatorType */
 /* unused harmony export SortDirection */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return Editors; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return Editors; });
 /* unused harmony export FilterConditions */
 /* unused harmony export FilterTemplates */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return Formatters; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return Formatters; });
 /* unused harmony export Sorters */
-/* unused harmony export ControlPluginService */
-/* unused harmony export FilterService */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return ControlAndPluginService; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return FilterService; });
 /* unused harmony export GridEventService */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return GraphqlService; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return GridExtraUtils; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return GridOdataService; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return ResizerService; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return GraphqlService; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return GridExtraUtils; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return GridOdataService; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "l", function() { return ResizerService; });
 /* unused harmony export SortService */
 /* unused harmony export SlickPaginationComponent */
 /* unused harmony export AngularSlickgridComponent */
@@ -9492,7 +9492,7 @@ var selectFilterTemplate = function (searchTerm, columnDef) {
     columnDef.filter.selectOptions.forEach(function (option) {
         options += "<option value=\"" + option.value + "\">" + option.label + "</option>";
     });
-    return "<select id=\"search-" + columnDef.id + "\" class=\"form-control\">" + options + "</select>";
+    return "<select class=\"form-control search-filter\">" + options + "</select>";
 };
 var FilterTemplates = {
     input: inputFilterTemplate,
@@ -9662,8 +9662,8 @@ var Sorters = {
     numeric: numericSorter,
     string: stringSorter
 };
-var ControlPluginService = /** @class */ (function () {
-    function ControlPluginService() {
+var ControlAndPluginService = /** @class */ (function () {
+    function ControlAndPluginService() {
     }
     /**
      * @param {?} grid
@@ -9672,7 +9672,9 @@ var ControlPluginService = /** @class */ (function () {
      * @param {?} dataView
      * @return {?}
      */
-    ControlPluginService.prototype.attachDifferentControlOrPlugins = function (grid, columnDefinitions, options, dataView) {
+    ControlAndPluginService.prototype.attachDifferentControlOrPlugins = function (grid, columnDefinitions, options, dataView) {
+        this._visibleColumns = columnDefinitions;
+        this._grid = grid;
         if (options.enableColumnPicker) {
             var /** @type {?} */ columnPickerControl = new Slick.Controls.ColumnPicker(columnDefinitions, grid, options);
         }
@@ -9724,7 +9726,32 @@ var ControlPluginService = /** @class */ (function () {
             }
         }
     };
-    return ControlPluginService;
+    /**
+     * @param {?} column
+     * @return {?}
+     */
+    ControlAndPluginService.prototype.hideColumn = function (column) {
+        var /** @type {?} */ columnIndex = this._grid.getColumnIndex(column.id);
+        this._visibleColumns = this.removeColumnByIndex(this._visibleColumns, columnIndex);
+        this._grid.setColumns(this._visibleColumns);
+    };
+    /**
+     * @param {?} array
+     * @param {?} index
+     * @return {?}
+     */
+    ControlAndPluginService.prototype.removeColumnByIndex = function (array, index) {
+        return array.filter(function (el, i) {
+            return index !== i;
+        });
+    };
+    /**
+     * @return {?}
+     */
+    ControlAndPluginService.prototype.autoResizeColumns = function () {
+        this._grid.autosizeColumns();
+    };
+    return ControlAndPluginService;
 }());
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -9770,7 +9797,7 @@ var FilterService = /** @class */ (function () {
         this.subscriber = new Slick.Event();
         this.subscriber.subscribe(this.attachBackendOnFilterSubscribe);
         grid.onHeaderRowCellRendered.subscribe(function (e, args) {
-            _this.addFilterTemplateToHeaderRow();
+            _this.addFilterTemplateToHeaderRow(args);
         });
     };
     /**
@@ -9812,6 +9839,27 @@ var FilterService = /** @class */ (function () {
         });
     };
     /**
+     * Clear the search filters (below the column titles)
+     * @return {?}
+     */
+    FilterService.prototype.clearFilters = function () {
+        // remove the text inside each search input fields
+        jquery('.slick-headerrow-column .search-filter').val('');
+        // we need to loop through all columnFilters and delete them 1 by 1
+        // only trying to make columnFilter an empty (without looping) would not trigger a dataset change
+        for (var /** @type {?} */ columnId in this._columnFilters) {
+            if (columnId && this._columnFilters[columnId]) {
+                delete this._columnFilters[columnId];
+            }
+        }
+        // we also need to refresh the dataView and optionally the grid (it's optional since we use DataView)
+        if (this._dataView) {
+            this._dataView.refresh();
+            this._grid.invalidate();
+            this._grid.render();
+        }
+    };
+    /**
      * @param {?} operator
      * @param {?} value1
      * @param {?} value2
@@ -9850,7 +9898,7 @@ var FilterService = /** @class */ (function () {
             }
         });
         grid.onHeaderRowCellRendered.subscribe(function (e, args) {
-            _this.addFilterTemplateToHeaderRow();
+            _this.addFilterTemplateToHeaderRow(args);
         });
     };
     /**
@@ -9935,9 +9983,10 @@ var FilterService = /** @class */ (function () {
         }, e);
     };
     /**
+     * @param {?} args
      * @return {?}
      */
-    FilterService.prototype.addFilterTemplateToHeaderRow = function () {
+    FilterService.prototype.addFilterTemplateToHeaderRow = function (args) {
         var _this = this;
         var _loop_1 = function (i) {
             if (this_1._columnDefinitions[i].id !== 'selector' && this_1._columnDefinitions[i].filterable) {
@@ -9959,12 +10008,17 @@ var FilterService = /** @class */ (function () {
                         filterTemplate = FilterTemplates.select(searchTerm, columnDef_1);
                     }
                 }
+                // when hiding/showing (Column Picker or Grid Menu), it will come re-create yet again the filters
+                // because of that we need to first get searchTerm from the columnFilters (that is what the user input last)
+                // if nothing is found, we can then use the optional searchTerm passed to the Grid Option (that is couple lines before)
+                var /** @type {?} */ inputSearchTerm = (this_1._columnFilters[columnDef_1.id]) ? this_1._columnFilters[columnDef_1.id].searchTerm : searchTerm || null;
                 // create the DOM Element
                 header = this_1._grid.getHeaderRowColumn(columnDef_1.id);
                 jquery(header).empty();
                 elm = jquery(filterTemplate);
-                elm.val(searchTerm);
+                elm.attr('id', "filter-" + columnDef_1.id);
                 elm.data('columnId', columnDef_1.id);
+                elm.val(inputSearchTerm);
                 if (elm && typeof elm.appendTo === 'function') {
                     elm.appendTo(header);
                 }
@@ -32655,6 +32709,11 @@ var GlobalGridOptions = {
     enableTextSelectionOnCells: true,
     explicitInitialization: true,
     forceFitColumns: false,
+    gridMenu: {
+        columnTitle: 'Columns',
+        iconCssClass: 'fa fa-bars',
+        menuWidth: 16
+    },
     headerRowHeight: 35,
     multiColumnSort: true,
     pagination: {
@@ -32687,14 +32746,14 @@ var __awaiter$3 = (this && this.__awaiter) || function (thisArg, _arguments, P, 
 };
 var AngularSlickgridComponent = /** @class */ (function () {
     /**
-     * @param {?} controlPluginService
+     * @param {?} controlAndPluginService
      * @param {?} gridEventService
      * @param {?} filterService
      * @param {?} resizer
      * @param {?} sortService
      */
-    function AngularSlickgridComponent(controlPluginService, gridEventService, filterService, resizer, sortService) {
-        this.controlPluginService = controlPluginService;
+    function AngularSlickgridComponent(controlAndPluginService, gridEventService, filterService, resizer, sortService) {
+        this.controlAndPluginService = controlAndPluginService;
         this.gridEventService = gridEventService;
         this.filterService = filterService;
         this.resizer = resizer;
@@ -32740,7 +32799,7 @@ var AngularSlickgridComponent = /** @class */ (function () {
         this._dataView = new Slick.Data.DataView();
         this.grid = new Slick.Grid("#" + this.gridId, this._dataView, this.columnDefinitions, this._gridOptions);
         this.grid.setSelectionModel(new Slick.RowSelectionModel());
-        this.controlPluginService.attachDifferentControlOrPlugins(this.grid, this.columnDefinitions, this._gridOptions, this._dataView);
+        this.controlAndPluginService.attachDifferentControlOrPlugins(this.grid, this.columnDefinitions, this._gridOptions, this._dataView);
         this.attachDifferentHooks(this.grid, this._gridOptions, this._dataView);
         // emit the Grid & DataView object to make them available in parent component
         this.gridChanged.emit(this.grid);
@@ -32892,7 +32951,7 @@ AngularSlickgridComponent.decorators = [
  * @nocollapse
  */
 AngularSlickgridComponent.ctorParameters = function () { return [
-    { type: ControlPluginService, },
+    { type: ControlAndPluginService, },
     { type: GridEventService, },
     { type: FilterService, },
     { type: ResizerService, },
@@ -32927,7 +32986,7 @@ AngularSlickgridModule.decorators = [
                     SlickPaginationComponent
                 ],
                 providers: [
-                    ControlPluginService,
+                    ControlAndPluginService,
                     GraphqlService,
                     GridEventService,
                     OdataService,

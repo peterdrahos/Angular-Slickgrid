@@ -199,7 +199,7 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_12__angular_common_http__["b" /* HttpClientModule */],
                 __WEBPACK_IMPORTED_MODULE_10_angular_slickgrid__["a" /* AngularSlickgridModule */]
             ],
-            providers: [__WEBPACK_IMPORTED_MODULE_10_angular_slickgrid__["i" /* GridOdataService */]],
+            providers: [__WEBPACK_IMPORTED_MODULE_10_angular_slickgrid__["k" /* GridOdataService */]],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_14__app_component__["a" /* AppComponent */]]
         })
     ], AppModule);
@@ -309,20 +309,20 @@ var GridClientSideComponent = /** @class */ (function () {
     }
     GridClientSideComponent.prototype.ngOnInit = function () {
         this.columnDefinitions = [
-            { id: 'title', name: 'Title', field: 'title', filterable: true, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].string, minWidth: 100 },
-            { id: 'duration', name: 'Duration (days)', field: 'duration', filterable: true, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].number, minWidth: 100 },
-            { id: 'complete', name: '% Complete', field: 'percentComplete', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["f" /* Formatters */].percentCompleteBar, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].number, filterable: true, sortable: true, minWidth: 100 },
-            { id: 'start', name: 'Start', field: 'start', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["f" /* Formatters */].dateIso, filterable: true, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].date, minWidth: 100 },
-            { id: 'usDateShort', name: 'US Date Short', field: 'usDateShort', filterable: true, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].dateUsShort, minWidth: 100 },
-            { id: 'utcDate', name: 'UTC Date', field: 'utcDate', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["f" /* Formatters */].dateTimeIsoAmPm, filterable: true, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].dateUtc, filterSearchType: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].dateTimeIso, minWidth: 115 },
-            { id: 'utcDate2', name: 'UTC Date (filterSearchType: dateUS)', field: 'utcDate', filterable: true, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].dateUtc, filterSearchType: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].dateUs, minWidth: 115 },
-            { id: 'effort-driven', name: 'Effort Driven', field: 'effortDriven', maxWidth: 80, formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["f" /* Formatters */].checkmark, minWidth: 100,
-                type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].boolean,
+            { id: 'title', name: 'Title', field: 'title', filterable: true, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FieldType */].string, minWidth: 100 },
+            { id: 'duration', name: 'Duration (days)', field: 'duration', filterable: true, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FieldType */].number, minWidth: 100 },
+            { id: 'complete', name: '% Complete', field: 'percentComplete', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["h" /* Formatters */].percentCompleteBar, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FieldType */].number, filterable: true, sortable: true, minWidth: 100 },
+            { id: 'start', name: 'Start', field: 'start', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["h" /* Formatters */].dateIso, filterable: true, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FieldType */].date, minWidth: 100 },
+            { id: 'usDateShort', name: 'US Date Short', field: 'usDateShort', filterable: true, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FieldType */].dateUsShort, minWidth: 100 },
+            { id: 'utcDate', name: 'UTC Date', field: 'utcDate', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["h" /* Formatters */].dateTimeIsoAmPm, filterable: true, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FieldType */].dateUtc, filterSearchType: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FieldType */].dateTimeIso, minWidth: 115 },
+            { id: 'utcDate2', name: 'UTC Date (filterSearchType: dateUS)', field: 'utcDate', filterable: true, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FieldType */].dateUtc, filterSearchType: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FieldType */].dateUs, minWidth: 115 },
+            { id: 'effort-driven', name: 'Effort Driven', field: 'effortDriven', maxWidth: 80, formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["h" /* Formatters */].checkmark, minWidth: 100,
+                type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FieldType */].boolean,
                 sortable: true,
                 filterable: true,
                 filter: {
                     searchTerm: '',
-                    type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FormElementType */].select,
+                    type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["g" /* FormElementType */].select,
                     selectOptions: [{ value: '', label: '' }, { value: true, label: 'true' }, { value: false, label: 'false' }]
                 }
             }
@@ -408,7 +408,7 @@ var GridEditorComponent = /** @class */ (function () {
         this.columnDefinitions = [
             {
                 id: 'edit', field: 'id',
-                formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["f" /* Formatters */].editIcon,
+                formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["h" /* Formatters */].editIcon,
                 minWidth: 30,
                 maxWidth: 30,
                 onCellClick: function (args) {
@@ -418,7 +418,7 @@ var GridEditorComponent = /** @class */ (function () {
             },
             {
                 id: 'delete', field: 'id',
-                formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["f" /* Formatters */].deleteIcon,
+                formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["h" /* Formatters */].deleteIcon,
                 minWidth: 30,
                 maxWidth: 30,
                 onCellClick: function (args) {
@@ -426,12 +426,12 @@ var GridEditorComponent = /** @class */ (function () {
                     console.log(_this);
                 }
             },
-            { id: 'title', name: 'Title', field: 'title', sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].string, editor: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["c" /* Editors */].longText, minWidth: 100 },
-            { id: 'duration', name: 'Duration (days)', field: 'duration', sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].number, editor: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["c" /* Editors */].text, minWidth: 100 },
-            { id: 'complete', name: '% Complete', field: 'percentComplete', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["f" /* Formatters */].percentCompleteBar, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].number, editor: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["c" /* Editors */].integer, minWidth: 100 },
-            { id: 'start', name: 'Start', field: 'start', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["f" /* Formatters */].dateIso, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].date, minWidth: 100 },
-            { id: 'finish', name: 'Finish', field: 'finish', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["f" /* Formatters */].dateIso, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].date, minWidth: 100 },
-            { id: 'effort-driven', name: 'Effort Driven', field: 'effortDriven', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["f" /* Formatters */].checkmark, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].number, editor: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["c" /* Editors */].checkbox, minWidth: 100 }
+            { id: 'title', name: 'Title', field: 'title', sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FieldType */].string, editor: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* Editors */].longText, minWidth: 100 },
+            { id: 'duration', name: 'Duration (days)', field: 'duration', sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FieldType */].number, editor: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* Editors */].text, minWidth: 100 },
+            { id: 'complete', name: '% Complete', field: 'percentComplete', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["h" /* Formatters */].percentCompleteBar, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FieldType */].number, editor: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* Editors */].integer, minWidth: 100 },
+            { id: 'start', name: 'Start', field: 'start', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["h" /* Formatters */].dateIso, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FieldType */].date, minWidth: 100 },
+            { id: 'finish', name: 'Finish', field: 'finish', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["h" /* Formatters */].dateIso, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FieldType */].date, minWidth: 100 },
+            { id: 'effort-driven', name: 'Effort Driven', field: 'effortDriven', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["h" /* Formatters */].checkmark, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FieldType */].number, editor: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* Editors */].checkbox, minWidth: 100 }
         ];
         this.gridOptions = {
             autoResize: {
@@ -473,7 +473,7 @@ var GridEditorComponent = /** @class */ (function () {
             _this.resizer.resizeGrid(_this.gridObj, _this.gridOptions, 10);
         });
         grid.onClick.subscribe(function (e, args) {
-            var column = __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["h" /* GridExtraUtils */].getColumnDefinitionAndData(args);
+            var column = __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["j" /* GridExtraUtils */].getColumnDefinitionAndData(args);
             console.log('onClick', args, column);
             if (column.columnDef.id === 'edit') {
                 alert('open a modal window to edit: ' + column.dataContext.title);
@@ -498,7 +498,7 @@ var GridEditorComponent = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
             template: __webpack_require__("../../../../../src/app/examples/grid-editor.component.html")
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["j" /* ResizerService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["j" /* ResizerService */]) === "function" && _a || Object])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["l" /* ResizerService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["l" /* ResizerService */]) === "function" && _a || Object])
     ], GridEditorComponent);
     return GridEditorComponent;
     var _a;
@@ -541,13 +541,13 @@ var GridFormatterComponent = /** @class */ (function () {
     }
     GridFormatterComponent.prototype.ngOnInit = function () {
         this.columnDefinitions = [
-            { id: 'title', name: 'Title', field: 'title', sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].string, minWidth: 100 },
-            { id: 'duration', name: 'Duration (days)', field: 'duration', sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].number, minWidth: 100 },
-            { id: 'complete', name: '% Complete', field: 'percentComplete', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["f" /* Formatters */].percentCompleteBar, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].number, sortable: true, minWidth: 100 },
-            { id: 'percent2', name: '% Complete', field: 'percentComplete2', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["f" /* Formatters */].progressBar, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].number, sortable: true, minWidth: 100 },
-            { id: 'start', name: 'Start', field: 'start', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["f" /* Formatters */].dateIso, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].dateIso, minWidth: 100 },
-            { id: 'finish', name: 'Finish', field: 'finish', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["f" /* Formatters */].dateIso, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].date, minWidth: 100 },
-            { id: 'effort-driven', name: 'Effort Driven', field: 'effortDriven', formatter: myCustomCheckboxFormatter, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].number, sortable: true, minWidth: 100 }
+            { id: 'title', name: 'Title', field: 'title', sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FieldType */].string, minWidth: 100 },
+            { id: 'duration', name: 'Duration (days)', field: 'duration', sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FieldType */].number, minWidth: 100 },
+            { id: 'complete', name: '% Complete', field: 'percentComplete', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["h" /* Formatters */].percentCompleteBar, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FieldType */].number, sortable: true, minWidth: 100 },
+            { id: 'percent2', name: '% Complete', field: 'percentComplete2', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["h" /* Formatters */].progressBar, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FieldType */].number, sortable: true, minWidth: 100 },
+            { id: 'start', name: 'Start', field: 'start', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["h" /* Formatters */].dateIso, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FieldType */].dateIso, minWidth: 100 },
+            { id: 'finish', name: 'Finish', field: 'finish', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["h" /* Formatters */].dateIso, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FieldType */].date, minWidth: 100 },
+            { id: 'effort-driven', name: 'Effort Driven', field: 'effortDriven', formatter: myCustomCheckboxFormatter, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FieldType */].number, sortable: true, minWidth: 100 }
         ];
         this.gridOptions = {
             autoResize: {
@@ -632,11 +632,11 @@ var GridGraphqlComponent = /** @class */ (function () {
     GridGraphqlComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.columnDefinitions = [
-            { id: 'name', name: 'Name', field: 'name', filterable: true, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].string, minWidth: 100 },
+            { id: 'name', name: 'Name', field: 'name', filterable: true, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FieldType */].string, minWidth: 100 },
             { id: 'gender', name: 'Gender', field: 'gender', filterable: true, sortable: true, minWidth: 100,
                 filter: {
                     searchTerm: '',
-                    type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FormElementType */].select,
+                    type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["g" /* FormElementType */].select,
                     selectOptions: [{ value: '', label: '' }, { value: 'male', label: 'male' }, { value: 'female', label: 'female' }]
                 }
             },
@@ -848,7 +848,8 @@ var GridGraphqlComponent = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
             template: __webpack_require__("../../../../../src/app/examples/grid-graphql.component.html")
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClient */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["g" /* GraphqlService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["g" /* GraphqlService */]) === "function" && _b || Object])
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])(),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClient */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["i" /* GraphqlService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["i" /* GraphqlService */]) === "function" && _b || Object])
     ], GridGraphqlComponent);
     return GridGraphqlComponent;
     var _a, _b;
@@ -1033,14 +1034,19 @@ module.exports = "<!--The content below is only a placeholder and can be replace
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GridHeaderMenuComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_jquery__ = __webpack_require__("../../../../jquery/dist/jquery.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_jquery__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__ = __webpack_require__("../../../../angular-slickgrid/angular-slickgrid/angular-slickgrid.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery__ = __webpack_require__("../../../../jquery/dist/jquery.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_jquery__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
 
 
 // create a custom Formatter to highlight negative values in red
@@ -1054,7 +1060,8 @@ var highlightingFormatter = function (row, cell, value, columnDef, dataContext) 
     }
 };
 var GridHeaderMenuComponent = /** @class */ (function () {
-    function GridHeaderMenuComponent() {
+    function GridHeaderMenuComponent(controlService) {
+        this.controlService = controlService;
         this.title = 'Example 8: Header Menu Plugin';
         this.subTitle = "\n    This example demonstrates using the <b>Slick.Plugins.HeaderMenu</b> plugin to easily add menus to colum headers.<br/>\n    These menus can be specified directly in the column definition, and are very easy to configure and use.\n    (<a href=\"https://github.com/ghiscoding/Angular-Slickgrid/wiki/SlickGrid-Controls-&-Plugins\">Wiki link</a>)\n    <ul>\n      <li>Hover over any column header to see an arrow showing up on the right</li>\n      <li>Try Sorting (multi-sort) the 2 columns \"Duration\" and \"% Complete\" (the other ones are disabled)</li>\n      <li>Try hiding any columns (you use the \"Column Picker\" plugin by doing a right+click on the header to show the column back)</li>\n    </ul>\n  ";
     }
@@ -1109,15 +1116,14 @@ var GridHeaderMenuComponent = /** @class */ (function () {
             enableCellNavigation: true,
             onHeaderMenuCommand: function (e, args) {
                 if (args.command === 'hide') {
-                    var columnIndex = _this.gridObj.getColumnIndex(args.column.id);
-                    _this.visibleColumns = _this.removeColumnByIndex(_this.visibleColumns, columnIndex);
-                    _this.gridObj.setColumns(_this.visibleColumns);
+                    _this.controlService.hideColumn(args.column);
+                    _this.controlService.autoResizeColumns();
                 }
                 else if (args.command === 'sort-asc' || args.command === 'sort-desc') {
                     // get previously sorted columns
                     // getSortColumns() only returns sortAsc & columnId, we want the entire column definition
                     var oldSortColumns = _this.gridObj.getSortColumns();
-                    var cols = __WEBPACK_IMPORTED_MODULE_1_jquery__["map"](oldSortColumns, function (col) {
+                    var cols = __WEBPACK_IMPORTED_MODULE_2_jquery__["map"](oldSortColumns, function (col) {
                         // get the column definition but only keep column which are not equal to our current column
                         if (col.columnId !== args.column.id) {
                             return { sortCol: _this.columnDefinitions[_this.gridObj.getColumnIndex(col.columnId)], sortAsc: col.sortAsc };
@@ -1127,7 +1133,7 @@ var GridHeaderMenuComponent = /** @class */ (function () {
                     var isSortedAsc = (args.command === 'sort-asc');
                     cols.push({ sortAsc: isSortedAsc, sortCol: args.column });
                     // update the this.gridObj sortColumns array which will at the same add the visual sort icon(s) on the UI
-                    var newSortColumns = __WEBPACK_IMPORTED_MODULE_1_jquery__["map"](cols, function (col) {
+                    var newSortColumns = __WEBPACK_IMPORTED_MODULE_2_jquery__["map"](cols, function (col) {
                         return { columnId: col.sortCol.id, sortAsc: col.sortAsc };
                     });
                     _this.gridObj.setSortColumns(newSortColumns);
@@ -1179,17 +1185,15 @@ var GridHeaderMenuComponent = /** @class */ (function () {
         this.gridObj.invalidate();
         this.gridObj.render();
     };
-    GridHeaderMenuComponent.prototype.removeColumnByIndex = function (array, index) {
-        return array.filter(function (el, i) {
-            return index !== i;
-        });
-    };
     GridHeaderMenuComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
             template: __webpack_require__("../../../../../src/app/examples/grid-headermenu.component.html")
-        })
+        }),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])(),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["c" /* ControlAndPluginService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["c" /* ControlAndPluginService */]) === "function" && _a || Object])
     ], GridHeaderMenuComponent);
     return GridHeaderMenuComponent;
+    var _a;
 }());
 
 //# sourceMappingURL=grid-headermenu.component.js.map
@@ -1210,15 +1214,15 @@ module.exports = "<!--The content below is only a placeholder and can be replace
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GridMenuComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__ = __webpack_require__("../../../../angular-slickgrid/angular-slickgrid/angular-slickgrid.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery__ = __webpack_require__("../../../../jquery/dist/jquery.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_jquery__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 
 
 // create a custom Formatter to highlight negative values in red
@@ -1232,27 +1236,28 @@ var highlightingFormatter = function (row, cell, value, columnDef, dataContext) 
     }
 };
 var GridMenuComponent = /** @class */ (function () {
-    function GridMenuComponent() {
+    function GridMenuComponent(filterService) {
+        this.filterService = filterService;
         this.title = 'Example 9: Grid Menu Control';
         this.subTitle = "\n    This example demonstrates using the <b>Slick.Controls.GridMenu</b> plugin to easily add a Grid Menu (aka hamburger menu) on the top right corner of the grid.\n    (<a href=\"https://github.com/ghiscoding/Angular-Slickgrid/wiki/Grid-Menu\">Wiki link</a>)\n    <br/>\n    <ul>\n      <li>The Grid Menu uses the following icon by default \"fa-bars\"&nbsp;&nbsp;<span class=\"fa fa-bars\"></span>&nbsp;&nbsp;(which looks like a hamburger, hence the name)</li>\n      <ul><li>Another icon which you could use is \"fa-ellipsis-v\"&nbsp;&nbsp;<span class=\"fa fa-ellipsis-v\"></span>&nbsp;&nbsp;(which is shown in this example)</li></ul>\n      <li>By default the Grid Menu shows all columns which you can show/hide</li>\n      <li>You can configure multiple \"commands\" to show up in the Grid Menu and use the \"onGridMenuCommand()\" callback</li>\n      <li>Doing a \"right+click\" over any column header will also provide a way to show/hide a column (via the Column Picker Plugin)</li>\n    </ul>\n  ";
     }
     GridMenuComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.columnDefinitions = [
-            { id: 'title', name: 'Title', field: 'title', filterable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].string },
-            { id: 'duration', name: 'Duration', field: 'duration', sortable: true, filterable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].string },
-            { id: '%', name: '% Complete', field: 'percentComplete', sortable: true, filterable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].number },
-            { id: 'start', name: 'Start', field: 'start', filterable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].string },
-            { id: 'finish', name: 'Finish', field: 'finish', filterable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].string },
+            { id: 'title', name: 'Title', field: 'title', filterable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FieldType */].string },
+            { id: 'duration', name: 'Duration', field: 'duration', sortable: true, filterable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FieldType */].string },
+            { id: '%', name: '% Complete', field: 'percentComplete', sortable: true, filterable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FieldType */].number },
+            { id: 'start', name: 'Start', field: 'start', filterable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FieldType */].string },
+            { id: 'finish', name: 'Finish', field: 'finish', filterable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FieldType */].string },
             {
-                id: 'effort-driven', name: 'Effort Driven', field: 'effortDriven', maxWidth: 80, formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["f" /* Formatters */].checkmark,
-                type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].boolean,
+                id: 'effort-driven', name: 'Effort Driven', field: 'effortDriven', maxWidth: 80, formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["h" /* Formatters */].checkmark,
+                type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FieldType */].boolean,
                 minWidth: 100,
                 sortable: true,
                 filterable: true,
                 filter: {
                     searchTerm: '',
-                    type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FormElementType */].select,
+                    type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["g" /* FormElementType */].select,
                     selectOptions: [{ value: '', label: '' }, { value: true, label: 'true' }, { value: false, label: 'false' }]
                 }
             }
@@ -1313,10 +1318,7 @@ var GridMenuComponent = /** @class */ (function () {
                     _this.gridObj.setTopPanelVisibility(!_this.gridObj.getOptions().showTopPanel);
                 }
                 else if (args.command === 'clear-filter') {
-                    __WEBPACK_IMPORTED_MODULE_2_jquery__('.slick-headerrow-column').children().val('');
-                    // TODO aurelia-slickgrid should have a clearAllFilters function
-                    alert('Command: ' + args.command);
-                    _this.dataviewObj.refresh();
+                    _this.filterService.clearFilters();
                 }
                 else {
                     alert('Command: ' + args.command);
@@ -1350,9 +1352,12 @@ var GridMenuComponent = /** @class */ (function () {
     GridMenuComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
             template: __webpack_require__("../../../../../src/app/examples/grid-menu.component.html")
-        })
+        }),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])(),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["f" /* FilterService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["f" /* FilterService */]) === "function" && _a || Object])
     ], GridMenuComponent);
     return GridMenuComponent;
+    var _a;
 }());
 
 //# sourceMappingURL=grid-menu.component.js.map
@@ -1406,11 +1411,11 @@ var GridOdataComponent = /** @class */ (function () {
     GridOdataComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.columnDefinitions = [
-            { id: 'name', name: 'Name', field: 'name', filterable: true, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* FieldType */].string, minWidth: 100 },
+            { id: 'name', name: 'Name', field: 'name', filterable: true, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FieldType */].string, minWidth: 100 },
             { id: 'gender', name: 'Gender', field: 'gender', filterable: true, sortable: true, minWidth: 100,
                 filter: {
                     searchTerm: '',
-                    type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FormElementType */].select,
+                    type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["g" /* FormElementType */].select,
                     selectOptions: [{ value: '', label: '' }, { value: 'male', label: 'male' }, { value: 'female', label: 'female' }]
                 }
             },
@@ -1575,7 +1580,7 @@ var GridOdataComponent = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
             template: __webpack_require__("../../../../../src/app/examples/grid-odata.component.html")
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClient */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["i" /* GridOdataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["i" /* GridOdataService */]) === "function" && _b || Object])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClient */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["k" /* GridOdataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["k" /* GridOdataService */]) === "function" && _b || Object])
     ], GridOdataComponent);
     return GridOdataComponent;
     var _a, _b;
