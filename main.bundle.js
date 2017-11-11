@@ -199,7 +199,7 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_12__angular_common_http__["b" /* HttpClientModule */],
                 __WEBPACK_IMPORTED_MODULE_10_angular_slickgrid__["a" /* AngularSlickgridModule */]
             ],
-            providers: [__WEBPACK_IMPORTED_MODULE_10_angular_slickgrid__["k" /* GridOdataService */]],
+            providers: [__WEBPACK_IMPORTED_MODULE_10_angular_slickgrid__["l" /* GridOdataService */]],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_14__app_component__["a" /* AppComponent */]]
         })
     ], AppModule);
@@ -397,10 +397,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var GridEditorComponent = /** @class */ (function () {
-    function GridEditorComponent(resizer) {
+    function GridEditorComponent(gridExtraService, resizer) {
+        this.gridExtraService = gridExtraService;
         this.resizer = resizer;
         this.title = 'Example 3: Editors';
-        this.subTitle = "\n  Grid with Inline Editors and onCellClick actions (<a href=\"https://github.com/ghiscoding/Angular-Slickgrid/wiki/Editors\">Wiki link</a>).\n  ";
+        this.subTitle = "\n  Grid with Inline Editors and onCellClick actions (<a href=\"https://github.com/ghiscoding/Angular-Slickgrid/wiki/Editors\">Wiki link</a>).\n  <ul>\n    <li>When using \"enableCellNavigation: true\", clicking on a cell will automatically make it active &amp; selected.\n    <ul><li>If you don't want this behavior, then you should disable \"enableCellNavigation\"</li></ul>\n    <li>Inline Editors requires \"enableCellNavigation: true\" (not sure why though)</li>\n  </ul>\n  ";
         this.isAutoEdit = true;
     }
     GridEditorComponent.prototype.ngOnInit = function () {
@@ -411,9 +412,12 @@ var GridEditorComponent = /** @class */ (function () {
                 formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["h" /* Formatters */].editIcon,
                 minWidth: 30,
                 maxWidth: 30,
+                // use onCellClick OR grid.onClick.subscribe which you can see down below
                 onCellClick: function (args) {
                     console.log(args);
-                    console.log(_this);
+                    alert("Editing: " + args.dataContext.title);
+                    _this.gridExtraService.highlightRow(args.row, 1500);
+                    _this.gridExtraService.setSelectedRow(args.row);
                 }
             },
             {
@@ -421,9 +425,13 @@ var GridEditorComponent = /** @class */ (function () {
                 formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["h" /* Formatters */].deleteIcon,
                 minWidth: 30,
                 maxWidth: 30,
+                // use onCellClick OR grid.onClick.subscribe which you can see down below
                 onCellClick: function (args) {
                     console.log(args);
-                    console.log(_this);
+                    if (confirm('Are you sure?')) {
+                        _this.dataviewObj.deleteItem(args.dataContext.id);
+                        _this.dataviewObj.refresh();
+                    }
                 }
             },
             { id: 'title', name: 'Title', field: 'title', sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FieldType */].string, editor: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* Editors */].longText, minWidth: 100 },
@@ -472,11 +480,17 @@ var GridEditorComponent = /** @class */ (function () {
             _this.updatedObject = args.item;
             _this.resizer.resizeGrid(_this.gridObj, _this.gridOptions, 10);
         });
+        // You could also subscribe to grid.onClick
+        // Note that if you had already setup "onCellClick" in the column definition, you cannot use grid.onClick
         grid.onClick.subscribe(function (e, args) {
-            var column = __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["j" /* GridExtraUtils */].getColumnDefinitionAndData(args);
+            var column = __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["k" /* GridExtraUtils */].getColumnDefinitionAndData(args);
             console.log('onClick', args, column);
             if (column.columnDef.id === 'edit') {
                 alert('open a modal window to edit: ' + column.dataContext.title);
+                // highlight the row, to customize the color, you can change the SASS variable $row-highlight-background-color
+                _this.gridExtraService.highlightRow(args.row, 1500);
+                // you could also select the row, when using "enableCellNavigation: true", it automatically selects the row
+                // this.gridExtraService.setSelectedRow(args.row);
             }
             else if (column.columnDef.id === 'delete') {
                 if (confirm('Are you sure?')) {
@@ -498,10 +512,10 @@ var GridEditorComponent = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
             template: __webpack_require__("../../../../../src/app/examples/grid-editor.component.html")
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["l" /* ResizerService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["l" /* ResizerService */]) === "function" && _a || Object])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["j" /* GridExtraService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["j" /* GridExtraService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["m" /* ResizerService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["m" /* ResizerService */]) === "function" && _b || Object])
     ], GridEditorComponent);
     return GridEditorComponent;
-    var _a;
+    var _a, _b;
 }());
 
 //# sourceMappingURL=grid-editor.component.js.map
@@ -906,22 +920,24 @@ var GridHeaderButtonComponent = /** @class */ (function () {
             },
             enableFiltering: false,
             enableCellNavigation: true,
-            onHeaderButtonCommand: function (e, args) {
-                var column = args.column;
-                var button = args.button;
-                var command = args.command;
-                if (command === 'toggle-highlight') {
-                    if (button.cssClass === 'fa fa-circle red') {
-                        delete columnsWithHighlightingById[column.id];
-                        button.cssClass = 'fa fa-circle-o red faded';
-                        button.tooltip = 'Highlight negative numbers.';
+            headerButtonOptions: {
+                onCommand: function (e, args) {
+                    var column = args.column;
+                    var button = args.button;
+                    var command = args.command;
+                    if (command === 'toggle-highlight') {
+                        if (button.cssClass === 'fa fa-circle red') {
+                            delete columnsWithHighlightingById[column.id];
+                            button.cssClass = 'fa fa-circle-o red faded';
+                            button.tooltip = 'Highlight negative numbers.';
+                        }
+                        else {
+                            columnsWithHighlightingById[column.id] = true;
+                            button.cssClass = 'fa fa-circle red';
+                            button.tooltip = 'Remove highlight.';
+                        }
+                        _this.gridObj.invalidate();
                     }
-                    else {
-                        columnsWithHighlightingById[column.id] = true;
-                        button.cssClass = 'fa fa-circle red';
-                        button.tooltip = 'Remove highlight.';
-                    }
-                    _this.gridObj.invalidate();
                 }
             }
         };
@@ -1114,33 +1130,35 @@ var GridHeaderMenuComponent = /** @class */ (function () {
             },
             enableFiltering: false,
             enableCellNavigation: true,
-            onHeaderMenuCommand: function (e, args) {
-                if (args.command === 'hide') {
-                    _this.controlService.hideColumn(args.column);
-                    _this.controlService.autoResizeColumns();
-                }
-                else if (args.command === 'sort-asc' || args.command === 'sort-desc') {
-                    // get previously sorted columns
-                    // getSortColumns() only returns sortAsc & columnId, we want the entire column definition
-                    var oldSortColumns = _this.gridObj.getSortColumns();
-                    var cols = __WEBPACK_IMPORTED_MODULE_2_jquery__["map"](oldSortColumns, function (col) {
-                        // get the column definition but only keep column which are not equal to our current column
-                        if (col.columnId !== args.column.id) {
-                            return { sortCol: _this.columnDefinitions[_this.gridObj.getColumnIndex(col.columnId)], sortAsc: col.sortAsc };
-                        }
-                    });
-                    // add to the column array, the column sorted by the header menu
-                    var isSortedAsc = (args.command === 'sort-asc');
-                    cols.push({ sortAsc: isSortedAsc, sortCol: args.column });
-                    // update the this.gridObj sortColumns array which will at the same add the visual sort icon(s) on the UI
-                    var newSortColumns = __WEBPACK_IMPORTED_MODULE_2_jquery__["map"](cols, function (col) {
-                        return { columnId: col.sortCol.id, sortAsc: col.sortAsc };
-                    });
-                    _this.gridObj.setSortColumns(newSortColumns);
-                    _this.executeSort(cols);
-                }
-                else {
-                    alert('Command: ' + args.command);
+            headerMenuOptions: {
+                onCommand: function (e, args) {
+                    if (args.command === 'hide') {
+                        _this.controlService.hideColumn(args.column);
+                        _this.controlService.autoResizeColumns();
+                    }
+                    else if (args.command === 'sort-asc' || args.command === 'sort-desc') {
+                        // get previously sorted columns
+                        // getSortColumns() only returns sortAsc & columnId, we want the entire column definition
+                        var oldSortColumns = _this.gridObj.getSortColumns();
+                        var cols = __WEBPACK_IMPORTED_MODULE_2_jquery__["map"](oldSortColumns, function (col) {
+                            // get the column definition but only keep column which are not equal to our current column
+                            if (col.columnId !== args.column.id) {
+                                return { sortCol: _this.columnDefinitions[_this.gridObj.getColumnIndex(col.columnId)], sortAsc: col.sortAsc };
+                            }
+                        });
+                        // add to the column array, the column sorted by the header menu
+                        var isSortedAsc = (args.command === 'sort-asc');
+                        cols.push({ sortAsc: isSortedAsc, sortCol: args.column });
+                        // update the this.gridObj sortColumns array which will at the same add the visual sort icon(s) on the UI
+                        var newSortColumns = __WEBPACK_IMPORTED_MODULE_2_jquery__["map"](cols, function (col) {
+                            return { columnId: col.sortCol.id, sortAsc: col.sortAsc };
+                        });
+                        _this.gridObj.setSortColumns(newSortColumns);
+                        _this.executeSort(cols);
+                    }
+                    else {
+                        alert('Command: ' + args.command);
+                    }
                 }
             }
         };
@@ -1308,22 +1326,22 @@ var GridMenuComponent = /** @class */ (function () {
                         disabled: true,
                         command: 'disabled-command'
                     }
-                ]
+                ],
+                onCommand: function (e, args) {
+                    if (args.command === 'toggle-filter') {
+                        _this.gridObj.setHeaderRowVisibility(!_this.gridObj.getOptions().showHeaderRow);
+                    }
+                    else if (args.command === 'toggle-toppanel') {
+                        _this.gridObj.setTopPanelVisibility(!_this.gridObj.getOptions().showTopPanel);
+                    }
+                    else if (args.command === 'clear-filter') {
+                        _this.filterService.clearFilters();
+                    }
+                    else {
+                        alert('Command: ' + args.command);
+                    }
+                }
             },
-            onGridMenuCommand: function (e, args) {
-                if (args.command === 'toggle-filter') {
-                    _this.gridObj.setHeaderRowVisibility(!_this.gridObj.getOptions().showHeaderRow);
-                }
-                else if (args.command === 'toggle-toppanel') {
-                    _this.gridObj.setTopPanelVisibility(!_this.gridObj.getOptions().showTopPanel);
-                }
-                else if (args.command === 'clear-filter') {
-                    _this.filterService.clearFilters();
-                }
-                else {
-                    alert('Command: ' + args.command);
-                }
-            }
         };
         this.getData();
     };
@@ -1580,7 +1598,7 @@ var GridOdataComponent = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
             template: __webpack_require__("../../../../../src/app/examples/grid-odata.component.html")
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClient */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["k" /* GridOdataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["k" /* GridOdataService */]) === "function" && _b || Object])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClient */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["l" /* GridOdataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["l" /* GridOdataService */]) === "function" && _b || Object])
     ], GridOdataComponent);
     return GridOdataComponent;
     var _a, _b;
