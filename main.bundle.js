@@ -26,13 +26,14 @@ webpackEmptyAsyncContext.id = "../../../../../src/$$_gendir lazy recursive";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__examples_grid_clientside_component__ = __webpack_require__("../../../../../src/app/examples/grid-clientside.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__examples_grid_editor_component__ = __webpack_require__("../../../../../src/app/examples/grid-editor.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__examples_grid_formatter_component__ = __webpack_require__("../../../../../src/app/examples/grid-formatter.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__examples_grid_headerbutton_component__ = __webpack_require__("../../../../../src/app/examples/grid-headerbutton.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__examples_grid_headermenu_component__ = __webpack_require__("../../../../../src/app/examples/grid-headermenu.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__examples_grid_menu_component__ = __webpack_require__("../../../../../src/app/examples/grid-menu.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__examples_grid_odata_component__ = __webpack_require__("../../../../../src/app/examples/grid-odata.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__examples_grid_graphql_component__ = __webpack_require__("../../../../../src/app/examples/grid-graphql.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__examples_grid_graphql_component__ = __webpack_require__("../../../../../src/app/examples/grid-graphql.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__examples_grid_headerbutton_component__ = __webpack_require__("../../../../../src/app/examples/grid-headerbutton.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__examples_grid_headermenu_component__ = __webpack_require__("../../../../../src/app/examples/grid-headermenu.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__examples_grid_menu_component__ = __webpack_require__("../../../../../src/app/examples/grid-menu.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__examples_grid_odata_component__ = __webpack_require__("../../../../../src/app/examples/grid-odata.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__examples_grid_rowselection_component__ = __webpack_require__("../../../../../src/app/examples/grid-rowselection.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -50,25 +51,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 var routes = [
     { path: 'basic', component: __WEBPACK_IMPORTED_MODULE_0__examples_grid_basic_component__["a" /* GridBasicComponent */] },
     { path: 'editor', component: __WEBPACK_IMPORTED_MODULE_2__examples_grid_editor_component__["a" /* GridEditorComponent */] },
     { path: 'formatter', component: __WEBPACK_IMPORTED_MODULE_3__examples_grid_formatter_component__["a" /* GridFormatterComponent */] },
-    { path: 'headerbutton', component: __WEBPACK_IMPORTED_MODULE_4__examples_grid_headerbutton_component__["a" /* GridHeaderButtonComponent */] },
-    { path: 'headermenu', component: __WEBPACK_IMPORTED_MODULE_5__examples_grid_headermenu_component__["a" /* GridHeaderMenuComponent */] },
-    { path: 'gridmenu', component: __WEBPACK_IMPORTED_MODULE_6__examples_grid_menu_component__["a" /* GridMenuComponent */] },
+    { path: 'headerbutton', component: __WEBPACK_IMPORTED_MODULE_5__examples_grid_headerbutton_component__["a" /* GridHeaderButtonComponent */] },
+    { path: 'headermenu', component: __WEBPACK_IMPORTED_MODULE_6__examples_grid_headermenu_component__["a" /* GridHeaderMenuComponent */] },
+    { path: 'gridgraphql', component: __WEBPACK_IMPORTED_MODULE_4__examples_grid_graphql_component__["a" /* GridGraphqlComponent */] },
+    { path: 'gridmenu', component: __WEBPACK_IMPORTED_MODULE_7__examples_grid_menu_component__["a" /* GridMenuComponent */] },
     { path: 'clientside', component: __WEBPACK_IMPORTED_MODULE_1__examples_grid_clientside_component__["a" /* GridClientSideComponent */] },
-    { path: 'odata', component: __WEBPACK_IMPORTED_MODULE_7__examples_grid_odata_component__["a" /* GridOdataComponent */] },
-    { path: 'gridgraphql', component: __WEBPACK_IMPORTED_MODULE_8__examples_grid_graphql_component__["a" /* GridGraphqlComponent */] },
+    { path: 'odata', component: __WEBPACK_IMPORTED_MODULE_8__examples_grid_odata_component__["a" /* GridOdataComponent */] },
+    { path: 'selection', component: __WEBPACK_IMPORTED_MODULE_9__examples_grid_rowselection_component__["a" /* GridRowSelectionComponent */] },
     { path: '', redirectTo: '/basic', pathMatch: 'full' }
 ];
 var AppRoutingRoutingModule = /** @class */ (function () {
     function AppRoutingRoutingModule() {
     }
     AppRoutingRoutingModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_9__angular_core__["M" /* NgModule */])({
-            imports: [__WEBPACK_IMPORTED_MODULE_10__angular_router__["b" /* RouterModule */].forRoot(routes, { useHash: true })],
-            exports: [__WEBPACK_IMPORTED_MODULE_10__angular_router__["b" /* RouterModule */]],
+        Object(__WEBPACK_IMPORTED_MODULE_10__angular_core__["M" /* NgModule */])({
+            imports: [__WEBPACK_IMPORTED_MODULE_11__angular_router__["b" /* RouterModule */].forRoot(routes, { useHash: true })],
+            exports: [__WEBPACK_IMPORTED_MODULE_11__angular_router__["b" /* RouterModule */]],
         })
     ], AppRoutingRoutingModule);
     return AppRoutingRoutingModule;
@@ -81,7 +84,7 @@ var AppRoutingRoutingModule = /** @class */ (function () {
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-default navbar-fixed-top\" role=\"navigation\">\n  <div class=\"navbar-header\">\n    <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\"#skeleton-navigation-navbar-collapse\">\n      <span class=\"sr-only\">Toggle Navigation</span>\n      <span class=\"icon-bar\"></span>\n      <span class=\"icon-bar\"></span>\n      <span class=\"icon-bar\"></span>\n    </button>\n    <a class=\"navbar-brand\" href=\"https://github.com/ghiscoding/Angular-Slickgrid\">\n      <i class=\"fa fa-home\"></i>\n      <span>{{title}}</span>\n    </a>\n  </div>\n</nav>\n\n<section class=\"au-animate body-content\">\n  <div class=\"col-sm-3 col-md-2\">\n    <ul class=\"nav nav-pills nav-stacked\">\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/basic']\">1- Basic Grid</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/formatter']\">2- Formatters</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/editor']\">3- Editors</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/clientside']\">4- Client Side Sort/Filter</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/odata']\">5- Backend Server with OData</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/gridgraphql']\">6- Backend Server with GraphQL</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/headerbutton']\">7- Header Button Plugin</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/headermenu']\">8- Header Menu Plugin</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/gridmenu']\">9- Grid Menu (hamburger menu)</a>\n      </li>\n    </ul>\n  </div>\n</section>\n<div id=\"demo-container\" class=\"col-sm-9\">\n  <router-outlet></router-outlet>\n</div>\n"
+module.exports = "<nav class=\"navbar navbar-default navbar-fixed-top\" role=\"navigation\">\n  <div class=\"navbar-header\">\n    <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\"#skeleton-navigation-navbar-collapse\">\n      <span class=\"sr-only\">Toggle Navigation</span>\n      <span class=\"icon-bar\"></span>\n      <span class=\"icon-bar\"></span>\n      <span class=\"icon-bar\"></span>\n    </button>\n    <a class=\"navbar-brand\" href=\"https://github.com/ghiscoding/Angular-Slickgrid\">\n      <i class=\"fa fa-home\"></i>\n      <span>{{title}}</span>\n    </a>\n  </div>\n</nav>\n\n<section class=\"au-animate body-content\">\n  <div class=\"col-sm-3 col-md-2\">\n    <ul class=\"nav nav-pills nav-stacked\">\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/basic']\">1- Basic Grid</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/formatter']\">2- Formatters</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/editor']\">3- Editors</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/clientside']\">4- Client Side Sort/Filter</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/odata']\">5- Backend Server with OData</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/gridgraphql']\">6- Backend Server with GraphQL</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/headerbutton']\">7- Header Button Plugin</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/headermenu']\">8- Header Menu Plugin</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/gridmenu']\">9- Grid Menu (hamburger menu)</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/selection']\">10- Row Selection</a>\n      </li>\n    </ul>\n  </div>\n</section>\n<div id=\"demo-container\" class=\"col-sm-9\">\n  <router-outlet></router-outlet>\n</div>\n"
 
 /***/ }),
 
@@ -139,21 +142,22 @@ var AppComponent = /** @class */ (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__app_routing_module__ = __webpack_require__("../../../../../src/app/app-routing.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__("../../../platform-browser/@angular/platform-browser.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__examples_grid_basic_component__ = __webpack_require__("../../../../../src/app/examples/grid-basic.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__examples_grid_clientside_component__ = __webpack_require__("../../../../../src/app/examples/grid-clientside.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__examples_grid_editor_component__ = __webpack_require__("../../../../../src/app/examples/grid-editor.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__examples_grid_formatter_component__ = __webpack_require__("../../../../../src/app/examples/grid-formatter.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__examples_grid_graphql_component__ = __webpack_require__("../../../../../src/app/examples/grid-graphql.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__examples_grid_headermenu_component__ = __webpack_require__("../../../../../src/app/examples/grid-headermenu.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__examples_grid_headerbutton_component__ = __webpack_require__("../../../../../src/app/examples/grid-headerbutton.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__examples_grid_menu_component__ = __webpack_require__("../../../../../src/app/examples/grid-menu.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_angular_slickgrid__ = __webpack_require__("../../../../angular-slickgrid/angular-slickgrid/angular-slickgrid.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__examples_grid_odata_component__ = __webpack_require__("../../../../../src/app/examples/grid-odata.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__angular_common_http__ = __webpack_require__("../../../common/@angular/common/http.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__examples_grid_rowselection_component__ = __webpack_require__("../../../../../src/app/examples/grid-rowselection.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_routing_module__ = __webpack_require__("../../../../../src/app/app-routing.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__ = __webpack_require__("../../../platform-browser/@angular/platform-browser.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__examples_grid_basic_component__ = __webpack_require__("../../../../../src/app/examples/grid-basic.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__examples_grid_clientside_component__ = __webpack_require__("../../../../../src/app/examples/grid-clientside.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__examples_grid_editor_component__ = __webpack_require__("../../../../../src/app/examples/grid-editor.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__examples_grid_formatter_component__ = __webpack_require__("../../../../../src/app/examples/grid-formatter.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__examples_grid_graphql_component__ = __webpack_require__("../../../../../src/app/examples/grid-graphql.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__examples_grid_headermenu_component__ = __webpack_require__("../../../../../src/app/examples/grid-headermenu.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__examples_grid_headerbutton_component__ = __webpack_require__("../../../../../src/app/examples/grid-headerbutton.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__examples_grid_menu_component__ = __webpack_require__("../../../../../src/app/examples/grid-menu.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_angular_slickgrid__ = __webpack_require__("../../../../angular-slickgrid/angular-slickgrid/angular-slickgrid.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__examples_grid_odata_component__ = __webpack_require__("../../../../../src/app/examples/grid-odata.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__angular_common_http__ = __webpack_require__("../../../common/@angular/common/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -176,31 +180,33 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_13__angular_core__["M" /* NgModule */])({
+        Object(__WEBPACK_IMPORTED_MODULE_14__angular_core__["M" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_14__app_component__["a" /* AppComponent */],
-                __WEBPACK_IMPORTED_MODULE_2__examples_grid_basic_component__["a" /* GridBasicComponent */],
-                __WEBPACK_IMPORTED_MODULE_4__examples_grid_editor_component__["a" /* GridEditorComponent */],
-                __WEBPACK_IMPORTED_MODULE_3__examples_grid_clientside_component__["a" /* GridClientSideComponent */],
-                __WEBPACK_IMPORTED_MODULE_5__examples_grid_formatter_component__["a" /* GridFormatterComponent */],
-                __WEBPACK_IMPORTED_MODULE_6__examples_grid_graphql_component__["a" /* GridGraphqlComponent */],
-                __WEBPACK_IMPORTED_MODULE_8__examples_grid_headerbutton_component__["a" /* GridHeaderButtonComponent */],
-                __WEBPACK_IMPORTED_MODULE_7__examples_grid_headermenu_component__["a" /* GridHeaderMenuComponent */],
-                __WEBPACK_IMPORTED_MODULE_9__examples_grid_menu_component__["a" /* GridMenuComponent */],
-                __WEBPACK_IMPORTED_MODULE_11__examples_grid_odata_component__["a" /* GridOdataComponent */]
+                __WEBPACK_IMPORTED_MODULE_15__app_component__["a" /* AppComponent */],
+                __WEBPACK_IMPORTED_MODULE_3__examples_grid_basic_component__["a" /* GridBasicComponent */],
+                __WEBPACK_IMPORTED_MODULE_5__examples_grid_editor_component__["a" /* GridEditorComponent */],
+                __WEBPACK_IMPORTED_MODULE_4__examples_grid_clientside_component__["a" /* GridClientSideComponent */],
+                __WEBPACK_IMPORTED_MODULE_6__examples_grid_formatter_component__["a" /* GridFormatterComponent */],
+                __WEBPACK_IMPORTED_MODULE_7__examples_grid_graphql_component__["a" /* GridGraphqlComponent */],
+                __WEBPACK_IMPORTED_MODULE_9__examples_grid_headerbutton_component__["a" /* GridHeaderButtonComponent */],
+                __WEBPACK_IMPORTED_MODULE_8__examples_grid_headermenu_component__["a" /* GridHeaderMenuComponent */],
+                __WEBPACK_IMPORTED_MODULE_10__examples_grid_menu_component__["a" /* GridMenuComponent */],
+                __WEBPACK_IMPORTED_MODULE_12__examples_grid_odata_component__["a" /* GridOdataComponent */],
+                __WEBPACK_IMPORTED_MODULE_0__examples_grid_rowselection_component__["a" /* GridRowSelectionComponent */]
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_0__app_routing_module__["a" /* AppRoutingRoutingModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["a" /* BrowserModule */],
-                __WEBPACK_IMPORTED_MODULE_12__angular_common_http__["b" /* HttpClientModule */],
-                __WEBPACK_IMPORTED_MODULE_10_angular_slickgrid__["a" /* AngularSlickgridModule */]
+                __WEBPACK_IMPORTED_MODULE_1__app_routing_module__["a" /* AppRoutingRoutingModule */],
+                __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__["a" /* BrowserModule */],
+                __WEBPACK_IMPORTED_MODULE_13__angular_common_http__["b" /* HttpClientModule */],
+                __WEBPACK_IMPORTED_MODULE_11_angular_slickgrid__["a" /* AngularSlickgridModule */]
             ],
-            providers: [__WEBPACK_IMPORTED_MODULE_10_angular_slickgrid__["l" /* GridOdataService */]],
-            bootstrap: [__WEBPACK_IMPORTED_MODULE_14__app_component__["a" /* AppComponent */]]
+            providers: [__WEBPACK_IMPORTED_MODULE_11_angular_slickgrid__["l" /* GridOdataService */]],
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_15__app_component__["a" /* AppComponent */]]
         })
     ], AppModule);
     return AppModule;
@@ -920,7 +926,7 @@ var GridHeaderButtonComponent = /** @class */ (function () {
             },
             enableFiltering: false,
             enableCellNavigation: true,
-            headerButtonOptions: {
+            headerButton: {
                 onCommand: function (e, args) {
                     var column = args.column;
                     var button = args.button;
@@ -1130,7 +1136,7 @@ var GridHeaderMenuComponent = /** @class */ (function () {
             },
             enableFiltering: false,
             enableCellNavigation: true,
-            headerMenuOptions: {
+            headerMenu: {
                 onCommand: function (e, args) {
                     if (args.command === 'hide') {
                         _this.controlService.hideColumn(args.column);
@@ -1605,6 +1611,120 @@ var GridOdataComponent = /** @class */ (function () {
 }());
 
 //# sourceMappingURL=grid-odata.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/examples/grid-rowselection.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<div class=\"container\">\n    <h2>{{title}}</h2>\n    <div class=\"subtitle\" [innerHTML]=\"subTitle\"></div>\n\n    <div class=\"row\">\n        <div class=\"col-sm-4\">\n          <div class=\"form-inline\">\n            <label class=\"control-label\" for=\"radioWithCursor\">Multi-Select / Single</label>\n            <span id=\"radioWithCursor\">\n              <label class=\"radio-inline control-label\" for=\"radioTrue\">\n                <input type=\"radio\" name=\"inlineRadioOptions\" id=\"radioTrue\" checked [value]=\"isMultiSelect\" (change)=\"onChooseMultiSelectType(true)\">\n                Multi-Select\n              </label>\n              <label class=\"radio-inline control-label\" for=\"radioFalse\">\n                <input type=\"radio\" name=\"inlineRadioOptions\" id=\"radioFalse\" [value]=\"isMultiSelect\" (change)=\"onChooseMultiSelectType(false)\">\n                Single\n              </label>\n            </span>\n          </div>\n        </div>\n        <div class=\"col-sm-8\">\n          <div class=\"alert alert-info\">\n            <strong>Selected Row(s):</strong>\n            <div [innerHTML]=\"selectedObjects\"></div>\n          </div>\n        </div>\n      </div>\n\n    <angular-slickgrid gridId=\"grid1\"\n                (dataviewChanged)=\"dataviewReady($event)\" (gridChanged)=\"gridReady($event)\"\n              [columnDefinitions]=\"columnDefinitions\"\n              [gridOptions]=\"gridOptions\"\n              [dataset]=\"dataset\">\n    </angular-slickgrid>\n    <br/>\n    <hr/>\n  </div>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/examples/grid-rowselection.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GridRowSelectionComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__ = __webpack_require__("../../../../angular-slickgrid/angular-slickgrid/angular-slickgrid.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var GridRowSelectionComponent = /** @class */ (function () {
+    function GridRowSelectionComponent(gridExtraService) {
+        this.gridExtraService = gridExtraService;
+        this.title = 'Example 10: Grid with Row Selection';
+        this.subTitle = "\n    Row selection, single or multi-select (<a href=\"https://github.com/ghiscoding/Angular-Slickgrid/wiki/Row-Selection\">Wiki link</a>).\n  ";
+        this.isMultiSelect = true;
+    }
+    GridRowSelectionComponent.prototype.ngOnInit = function () {
+        this.prepareGrid();
+    };
+    GridRowSelectionComponent.prototype.prepareGrid = function () {
+        this.columnDefinitions = [
+            { id: 'title', name: 'Title', field: 'title', sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FieldType */].string },
+            { id: 'duration', name: 'Duration (days)', field: 'duration', sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FieldType */].number },
+            { id: 'complete', name: '% Complete', field: 'percentComplete', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["h" /* Formatters */].percentCompleteBar, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FieldType */].number, sortable: true },
+            { id: 'start', name: 'Start', field: 'start', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["h" /* Formatters */].dateIso, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FieldType */].dateIso },
+            { id: 'finish', name: 'Finish', field: 'finish', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["h" /* Formatters */].dateIso, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FieldType */].date },
+            { id: 'effort-driven', name: 'Effort Driven', field: 'effortDriven', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["h" /* Formatters */].checkmark, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FieldType */].number, sortable: true }
+        ];
+        this.gridOptions = {
+            autoResize: {
+                containerId: 'demo-container',
+                sidePadding: 15
+            },
+            enableAutoResize: true,
+            enableCellNavigation: false,
+            enableCheckboxSelector: true
+        };
+        this.dataset = this.prepareData();
+    };
+    GridRowSelectionComponent.prototype.prepareData = function () {
+        // mock a dataset
+        var mockDataset = [];
+        for (var i = 0; i < 500; i++) {
+            var randomYear = 2000 + Math.floor(Math.random() * 10);
+            var randomMonth = Math.floor(Math.random() * 11);
+            var randomDay = Math.floor((Math.random() * 29));
+            var randomPercent = Math.round(Math.random() * 100);
+            mockDataset[i] = {
+                id: i,
+                title: 'Task ' + i,
+                duration: Math.round(Math.random() * 100) + '',
+                percentComplete: randomPercent,
+                percentCompleteNumber: randomPercent,
+                start: new Date(randomYear, randomMonth, randomDay),
+                finish: new Date(randomYear, (randomMonth + 1), randomDay),
+                effortDriven: (i % 5 === 0)
+            };
+        }
+        return mockDataset;
+    };
+    GridRowSelectionComponent.prototype.gridReady = function (grid) {
+        var _this = this;
+        this.gridObj = grid;
+        grid.onSelectedRowsChanged.subscribe(function (e, args) {
+            if (Array.isArray(args.rows)) {
+                _this.selectedObjects = args.rows.map(function (idx) {
+                    var item = grid.getDataItem(idx);
+                    return item.title || '';
+                });
+            }
+        });
+    };
+    GridRowSelectionComponent.prototype.dataviewReady = function (dataview) {
+        this.dataviewObj = dataview;
+    };
+    GridRowSelectionComponent.prototype.onChooseMultiSelectType = function (isMultiSelect) {
+        this.isMultiSelect = isMultiSelect;
+        this.gridObj.setOptions({
+            enableCellNavigation: !isMultiSelect,
+            enableCheckboxSelector: isMultiSelect
+        }); // change the grid option dynamically
+        this.gridExtraService.setSelectedRows([]);
+        return true;
+    };
+    GridRowSelectionComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+            template: __webpack_require__("../../../../../src/app/examples/grid-rowselection.component.html")
+        }),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["j" /* GridExtraService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["j" /* GridExtraService */]) === "function" && _a || Object])
+    ], GridRowSelectionComponent);
+    return GridRowSelectionComponent;
+    var _a;
+}());
+
+//# sourceMappingURL=grid-rowselection.component.js.map
 
 /***/ }),
 
