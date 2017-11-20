@@ -22,18 +22,19 @@ webpackEmptyAsyncContext.id = "../../../../../src/$$_gendir lazy recursive";
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppRoutingRoutingModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__examples_grid_basic_component__ = __webpack_require__("../../../../../src/app/examples/grid-basic.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__examples_grid_clientside_component__ = __webpack_require__("../../../../../src/app/examples/grid-clientside.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__examples_grid_editor_component__ = __webpack_require__("../../../../../src/app/examples/grid-editor.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__examples_grid_formatter_component__ = __webpack_require__("../../../../../src/app/examples/grid-formatter.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__examples_grid_graphql_component__ = __webpack_require__("../../../../../src/app/examples/grid-graphql.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__examples_grid_headerbutton_component__ = __webpack_require__("../../../../../src/app/examples/grid-headerbutton.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__examples_grid_headermenu_component__ = __webpack_require__("../../../../../src/app/examples/grid-headermenu.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__examples_grid_menu_component__ = __webpack_require__("../../../../../src/app/examples/grid-menu.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__examples_grid_additem_component__ = __webpack_require__("../../../../../src/app/examples/grid-additem.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__examples_grid_menu_component__ = __webpack_require__("../../../../../src/app/examples/grid-menu.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__examples_grid_basic_component__ = __webpack_require__("../../../../../src/app/examples/grid-basic.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__examples_grid_clientside_component__ = __webpack_require__("../../../../../src/app/examples/grid-clientside.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__examples_grid_editor_component__ = __webpack_require__("../../../../../src/app/examples/grid-editor.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__examples_grid_formatter_component__ = __webpack_require__("../../../../../src/app/examples/grid-formatter.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__examples_grid_headerbutton_component__ = __webpack_require__("../../../../../src/app/examples/grid-headerbutton.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__examples_grid_headermenu_component__ = __webpack_require__("../../../../../src/app/examples/grid-headermenu.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__examples_grid_odata_component__ = __webpack_require__("../../../../../src/app/examples/grid-odata.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__examples_grid_rowselection_component__ = __webpack_require__("../../../../../src/app/examples/grid-rowselection.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__examples_grid_graphql_component__ = __webpack_require__("../../../../../src/app/examples/grid-graphql.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__examples_grid_rowselection_component__ = __webpack_require__("../../../../../src/app/examples/grid-rowselection.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -52,26 +53,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 var routes = [
-    { path: 'basic', component: __WEBPACK_IMPORTED_MODULE_0__examples_grid_basic_component__["a" /* GridBasicComponent */] },
-    { path: 'editor', component: __WEBPACK_IMPORTED_MODULE_2__examples_grid_editor_component__["a" /* GridEditorComponent */] },
-    { path: 'formatter', component: __WEBPACK_IMPORTED_MODULE_3__examples_grid_formatter_component__["a" /* GridFormatterComponent */] },
-    { path: 'headerbutton', component: __WEBPACK_IMPORTED_MODULE_5__examples_grid_headerbutton_component__["a" /* GridHeaderButtonComponent */] },
-    { path: 'headermenu', component: __WEBPACK_IMPORTED_MODULE_6__examples_grid_headermenu_component__["a" /* GridHeaderMenuComponent */] },
-    { path: 'gridgraphql', component: __WEBPACK_IMPORTED_MODULE_4__examples_grid_graphql_component__["a" /* GridGraphqlComponent */] },
-    { path: 'gridmenu', component: __WEBPACK_IMPORTED_MODULE_7__examples_grid_menu_component__["a" /* GridMenuComponent */] },
-    { path: 'clientside', component: __WEBPACK_IMPORTED_MODULE_1__examples_grid_clientside_component__["a" /* GridClientSideComponent */] },
+    { path: 'additem', component: __WEBPACK_IMPORTED_MODULE_0__examples_grid_additem_component__["a" /* GridAddItemComponent */] },
+    { path: 'basic', component: __WEBPACK_IMPORTED_MODULE_2__examples_grid_basic_component__["a" /* GridBasicComponent */] },
+    { path: 'editor', component: __WEBPACK_IMPORTED_MODULE_4__examples_grid_editor_component__["a" /* GridEditorComponent */] },
+    { path: 'formatter', component: __WEBPACK_IMPORTED_MODULE_5__examples_grid_formatter_component__["a" /* GridFormatterComponent */] },
+    { path: 'headerbutton', component: __WEBPACK_IMPORTED_MODULE_6__examples_grid_headerbutton_component__["a" /* GridHeaderButtonComponent */] },
+    { path: 'headermenu', component: __WEBPACK_IMPORTED_MODULE_7__examples_grid_headermenu_component__["a" /* GridHeaderMenuComponent */] },
+    { path: 'gridgraphql', component: __WEBPACK_IMPORTED_MODULE_9__examples_grid_graphql_component__["a" /* GridGraphqlComponent */] },
+    { path: 'gridmenu', component: __WEBPACK_IMPORTED_MODULE_1__examples_grid_menu_component__["a" /* GridMenuComponent */] },
+    { path: 'clientside', component: __WEBPACK_IMPORTED_MODULE_3__examples_grid_clientside_component__["a" /* GridClientSideComponent */] },
     { path: 'odata', component: __WEBPACK_IMPORTED_MODULE_8__examples_grid_odata_component__["a" /* GridOdataComponent */] },
-    { path: 'selection', component: __WEBPACK_IMPORTED_MODULE_9__examples_grid_rowselection_component__["a" /* GridRowSelectionComponent */] },
+    { path: 'selection', component: __WEBPACK_IMPORTED_MODULE_10__examples_grid_rowselection_component__["a" /* GridRowSelectionComponent */] },
     { path: '', redirectTo: '/basic', pathMatch: 'full' }
 ];
 var AppRoutingRoutingModule = /** @class */ (function () {
     function AppRoutingRoutingModule() {
     }
     AppRoutingRoutingModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_10__angular_core__["M" /* NgModule */])({
-            imports: [__WEBPACK_IMPORTED_MODULE_11__angular_router__["b" /* RouterModule */].forRoot(routes, { useHash: true })],
-            exports: [__WEBPACK_IMPORTED_MODULE_11__angular_router__["b" /* RouterModule */]],
+        Object(__WEBPACK_IMPORTED_MODULE_11__angular_core__["M" /* NgModule */])({
+            imports: [__WEBPACK_IMPORTED_MODULE_12__angular_router__["a" /* RouterModule */].forRoot(routes, { useHash: true })],
+            exports: [__WEBPACK_IMPORTED_MODULE_12__angular_router__["a" /* RouterModule */]],
         })
     ], AppRoutingRoutingModule);
     return AppRoutingRoutingModule;
@@ -84,7 +87,7 @@ var AppRoutingRoutingModule = /** @class */ (function () {
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-default navbar-fixed-top\" role=\"navigation\">\n  <div class=\"navbar-header\">\n    <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\"#skeleton-navigation-navbar-collapse\">\n      <span class=\"sr-only\">Toggle Navigation</span>\n      <span class=\"icon-bar\"></span>\n      <span class=\"icon-bar\"></span>\n      <span class=\"icon-bar\"></span>\n    </button>\n    <a class=\"navbar-brand\" href=\"https://github.com/ghiscoding/Angular-Slickgrid\">\n      <i class=\"fa fa-home\"></i>\n      <span>{{title}}</span>\n    </a>\n  </div>\n</nav>\n\n<section class=\"au-animate body-content\">\n  <div class=\"col-sm-3 col-md-2\">\n    <ul class=\"nav nav-pills nav-stacked\">\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/basic']\">1- Basic Grid</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/formatter']\">2- Formatters</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/editor']\">3- Editors</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/clientside']\">4- Client Side Sort/Filter</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/odata']\">5- Backend Server with OData</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/gridgraphql']\">6- Backend Server with GraphQL</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/headerbutton']\">7- Header Button Plugin</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/headermenu']\">8- Header Menu Plugin</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/gridmenu']\">9- Grid Menu (hamburger menu)</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/selection']\">10- Row Selection</a>\n      </li>\n    </ul>\n  </div>\n</section>\n<div id=\"demo-container\" class=\"col-sm-9\">\n  <router-outlet></router-outlet>\n</div>\n"
+module.exports = "<nav class=\"navbar navbar-default navbar-fixed-top\" role=\"navigation\">\n  <div class=\"navbar-header\">\n    <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\"#skeleton-navigation-navbar-collapse\">\n      <span class=\"sr-only\">Toggle Navigation</span>\n      <span class=\"icon-bar\"></span>\n      <span class=\"icon-bar\"></span>\n      <span class=\"icon-bar\"></span>\n    </button>\n    <a class=\"navbar-brand\" href=\"https://github.com/ghiscoding/Angular-Slickgrid\">\n      <i class=\"fa fa-home\"></i>\n      <span>{{title}}</span>\n    </a>\n  </div>\n</nav>\n\n<section class=\"au-animate body-content\">\n  <div class=\"col-sm-3 col-md-2\">\n    <ul class=\"nav nav-pills nav-stacked\">\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/basic']\">1- Basic Grid</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/formatter']\">2- Formatters</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/editor']\">3- Editors</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/clientside']\">4- Client Side Sort/Filter</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/odata']\">5- Backend Server with OData</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/gridgraphql']\">6- Backend Server with GraphQL</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/headerbutton']\">7- Header Button Plugin</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/headermenu']\">8- Header Menu Plugin</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/gridmenu']\">9- Grid Menu (hamburger menu)</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/selection']\">10- Row Selection</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/additem']\">11- Add/Update/Highlight Datagrid Item</a>\n      </li>\n    </ul>\n  </div>\n</section>\n<div id=\"demo-container\" class=\"col-sm-9\">\n  <router-outlet></router-outlet>\n</div>\n"
 
 /***/ }),
 
@@ -142,9 +145,9 @@ var AppComponent = /** @class */ (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__examples_grid_rowselection_component__ = __webpack_require__("../../../../../src/app/examples/grid-rowselection.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_routing_module__ = __webpack_require__("../../../../../src/app/app-routing.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__ = __webpack_require__("../../../platform-browser/@angular/platform-browser.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__app_routing_module__ = __webpack_require__("../../../../../src/app/app-routing.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__("../../../platform-browser/@angular/platform-browser.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__examples_grid_additem_component__ = __webpack_require__("../../../../../src/app/examples/grid-additem.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__examples_grid_basic_component__ = __webpack_require__("../../../../../src/app/examples/grid-basic.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__examples_grid_clientside_component__ = __webpack_require__("../../../../../src/app/examples/grid-clientside.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__examples_grid_editor_component__ = __webpack_require__("../../../../../src/app/examples/grid-editor.component.ts");
@@ -155,9 +158,10 @@ var AppComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__examples_grid_menu_component__ = __webpack_require__("../../../../../src/app/examples/grid-menu.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_angular_slickgrid__ = __webpack_require__("../../../../angular-slickgrid/angular-slickgrid/angular-slickgrid.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__examples_grid_odata_component__ = __webpack_require__("../../../../../src/app/examples/grid-odata.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__angular_common_http__ = __webpack_require__("../../../common/@angular/common/http.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__examples_grid_rowselection_component__ = __webpack_require__("../../../../../src/app/examples/grid-rowselection.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__angular_common_http__ = __webpack_require__("../../../common/@angular/common/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -181,13 +185,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_14__angular_core__["M" /* NgModule */])({
+        Object(__WEBPACK_IMPORTED_MODULE_15__angular_core__["M" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_15__app_component__["a" /* AppComponent */],
+                __WEBPACK_IMPORTED_MODULE_16__app_component__["a" /* AppComponent */],
+                __WEBPACK_IMPORTED_MODULE_2__examples_grid_additem_component__["a" /* GridAddItemComponent */],
                 __WEBPACK_IMPORTED_MODULE_3__examples_grid_basic_component__["a" /* GridBasicComponent */],
                 __WEBPACK_IMPORTED_MODULE_5__examples_grid_editor_component__["a" /* GridEditorComponent */],
                 __WEBPACK_IMPORTED_MODULE_4__examples_grid_clientside_component__["a" /* GridClientSideComponent */],
@@ -197,22 +203,139 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_8__examples_grid_headermenu_component__["a" /* GridHeaderMenuComponent */],
                 __WEBPACK_IMPORTED_MODULE_10__examples_grid_menu_component__["a" /* GridMenuComponent */],
                 __WEBPACK_IMPORTED_MODULE_12__examples_grid_odata_component__["a" /* GridOdataComponent */],
-                __WEBPACK_IMPORTED_MODULE_0__examples_grid_rowselection_component__["a" /* GridRowSelectionComponent */]
+                __WEBPACK_IMPORTED_MODULE_13__examples_grid_rowselection_component__["a" /* GridRowSelectionComponent */]
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1__app_routing_module__["a" /* AppRoutingRoutingModule */],
-                __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__["a" /* BrowserModule */],
-                __WEBPACK_IMPORTED_MODULE_13__angular_common_http__["b" /* HttpClientModule */],
+                __WEBPACK_IMPORTED_MODULE_0__app_routing_module__["a" /* AppRoutingRoutingModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["a" /* BrowserModule */],
+                __WEBPACK_IMPORTED_MODULE_14__angular_common_http__["b" /* HttpClientModule */],
                 __WEBPACK_IMPORTED_MODULE_11_angular_slickgrid__["a" /* AngularSlickgridModule */]
             ],
             providers: [__WEBPACK_IMPORTED_MODULE_11_angular_slickgrid__["l" /* GridOdataService */]],
-            bootstrap: [__WEBPACK_IMPORTED_MODULE_15__app_component__["a" /* AppComponent */]]
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_16__app_component__["a" /* AppComponent */]]
         })
     ], AppModule);
     return AppModule;
 }());
 
 //# sourceMappingURL=app.module.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/examples/grid-additem.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<div class=\"container\">\n    <h2>{{title}}</h2>\n    <div class=\"subtitle\" [innerHTML]=\"subTitle\"></div>\n\n    <div class=\"col-sm-12\">\n        <span>\n            <button class=\"btn btn-sm btn-default\" (click)=\"addNewItem()\">Add New Mocked Item</button>\n            <button class=\"btn btn-sm btn-default\" (click)=\"updateSecondItem()\">Update 2nd Row Item with Random Duration</button>\n            <button class=\"btn btn-sm btn-default\" (click)=\"highlighFifthRow()\">Highlight 5th Row</button>\n        </span>\n        <hr/>\n    </div>\n\n    <div class=\"col-sm-12\">\n        <angular-slickgrid gridId=\"grid2\" [columnDefinitions]=\"columnDefinitions\" [gridOptions]=\"gridOptions\" [dataset]=\"dataset\">\n        </angular-slickgrid>\n    </div>\n</div>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/examples/grid-additem.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GridAddItemComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__ = __webpack_require__("../../../../angular-slickgrid/angular-slickgrid/angular-slickgrid.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var GridAddItemComponent = /** @class */ (function () {
+    function GridAddItemComponent(gridExtraService, resizer) {
+        this.gridExtraService = gridExtraService;
+        this.resizer = resizer;
+        this.title = 'Example 11: Add / Update / Highlight a Datagrid Item';
+        this.subTitle = "\n  Add / Update / Hightlight an Item from the Datagrid (<a href=\"https://github.com/ghiscoding/Angular-Slickgrid/wiki/Add,-Update-or-Highlight-a-Datagrid-Item\" target=\"_blank\">Wiki link</a>).\n  <ul>\n    <li><b>Note:</b> this demo is <b>only</b> on the datagrid (client) side, you still need to deal with the backend yourself</li>\n    <li>Adding an item, will always be showing as the 1st item in the grid because that is the best visual place to add it</li>\n    <li>Add/Update an item requires a valid Slickgrid Selection Model, you have 2 choices to deal with this:</li>\n    <ul><li>You can enable \"enableCheckboxSelector\" or \"enableRowSelection\" to True</li></ul>\n    <li>Click on any of the buttons below to test this out</li>\n    <li>You can change the highlighted color &amp; animation by changing the SASS variables:</li>\n    <ul>\n      <li>\"$row-highlight-background-color\" or \"$row-highlight-fade-animation\"</li>\n      <li>Take a look at the available <a href=\"https://github.com/ghiscoding/Angular-Slickgrid/blob/master/src/app/modules/angular-slickgrid/styles/_variables.scss\" target=\"_blank\">SASS Variables</a></li>\n    </ul>\n  </ul>\n  ";
+    }
+    GridAddItemComponent.prototype.ngOnInit = function () {
+        this.columnDefinitions = [
+            { id: 'title', name: 'Title', field: 'title', sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FieldType */].string, editor: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* Editors */].longText },
+            { id: 'duration', name: 'Duration (days)', field: 'duration', sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FieldType */].number, editor: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* Editors */].text,
+                onCellChange: function (args) {
+                    alert('onCellChange directly attached to the column definition');
+                    console.log(args);
+                }
+            },
+            { id: 'complete', name: '% Complete', field: 'percentComplete', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["h" /* Formatters */].percentCompleteBar, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FieldType */].number, editor: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* Editors */].integer },
+            { id: 'start', name: 'Start', field: 'start', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["h" /* Formatters */].dateIso, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FieldType */].date /*, editor: Editors.date*/ },
+            { id: 'finish', name: 'Finish', field: 'finish', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["h" /* Formatters */].dateIso, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FieldType */].date },
+            { id: 'effort-driven', name: 'Effort Driven', field: 'effortDriven', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["h" /* Formatters */].checkmark, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FieldType */].number, editor: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* Editors */].checkbox }
+        ];
+        this.gridOptions = {
+            asyncEditorLoading: false,
+            autoResize: {
+                containerId: 'demo-container',
+                sidePadding: 15
+            },
+            editable: true,
+            enableColumnPicker: true,
+            enableCellNavigation: true,
+            enableRowSelection: true
+        };
+        // mock a dataset
+        var mockedDataset = [];
+        for (var i = 0; i < 1000; i++) {
+            var randomYear = 2000 + Math.floor(Math.random() * 10);
+            var randomMonth = Math.floor(Math.random() * 11);
+            var randomDay = Math.floor((Math.random() * 29));
+            var randomPercent = Math.round(Math.random() * 100);
+            mockedDataset[i] = {
+                id: i,
+                title: 'Task ' + i,
+                duration: Math.round(Math.random() * 100) + '',
+                percentComplete: randomPercent,
+                percentCompleteNumber: randomPercent,
+                start: new Date(randomYear, randomMonth, randomDay),
+                finish: new Date(randomYear, (randomMonth + 1), randomDay),
+                effortDriven: (i % 5 === 0)
+            };
+        }
+        this.dataset = mockedDataset;
+    };
+    GridAddItemComponent.prototype.addNewItem = function () {
+        var randomId = Math.floor(Math.random() * (10000 - 1000) + 1000);
+        var randomYear = 2000 + Math.floor(Math.random() * 10);
+        var randomMonth = Math.floor(Math.random() * 11);
+        var randomDay = Math.floor((Math.random() * 29));
+        var randomPercent = Math.round(Math.random() * 100);
+        var newItem = {
+            id: randomId,
+            title: 'Task ' + randomId,
+            duration: Math.round(Math.random() * 100) + '',
+            percentComplete: randomPercent,
+            percentCompleteNumber: randomPercent,
+            start: new Date(randomYear, randomMonth, randomDay),
+            finish: new Date(randomYear, (randomMonth + 2), randomDay),
+            effortDriven: true
+        };
+        this.gridExtraService.addItemToDatagrid(newItem);
+    };
+    GridAddItemComponent.prototype.highlighFifthRow = function () {
+        this.gridExtraService.highlightRow(4, 1500);
+    };
+    GridAddItemComponent.prototype.updateSecondItem = function () {
+        var firstItem = this.gridExtraService.getDataItemByRowNumber(1);
+        firstItem.duration = Math.round(Math.random() * 100);
+        this.gridExtraService.updateDataGridItem(firstItem);
+    };
+    GridAddItemComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+            template: __webpack_require__("../../../../../src/app/examples/grid-additem.component.html")
+        }),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["j" /* GridExtraService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["j" /* GridExtraService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["m" /* ResizerService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["m" /* ResizerService */]) === "function" && _b || Object])
+    ], GridAddItemComponent);
+    return GridAddItemComponent;
+    var _a, _b;
+}());
+
+//# sourceMappingURL=grid-additem.component.js.map
 
 /***/ }),
 
@@ -239,7 +362,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var GridBasicComponent = /** @class */ (function () {
     function GridBasicComponent() {
         this.title = 'Example 1: Basic Grid';
-        this.subTitle = "\n    Basic Grid with fixed sizes (800 x 400) set by \"gridHeight\" &amp; \"gridWidth\"\n    <ul>\n      <li><a href=\"https://github.com/ghiscoding/angular-slickgrid/wiki/HOWTO---Step-by-Step\">Wiki HOWTO link</a></li>\n    </ul>\n  ";
+        this.subTitle = "\n    Basic Grid with fixed sizes (800 x 400) set by \"gridHeight\" &amp; \"gridWidth\"\n    <ul>\n      <li><a href=\"https://github.com/ghiscoding/angular-slickgrid/wiki/HOWTO---Step-by-Step\" target=\"_blank\">Wiki HOWTO link</a></li>\n    </ul>\n  ";
     }
     GridBasicComponent.prototype.ngOnInit = function () {
         this.columnDefinitions = [
@@ -311,7 +434,7 @@ function randomBetween(min, max) {
 var GridClientSideComponent = /** @class */ (function () {
     function GridClientSideComponent() {
         this.title = 'Example 4: Client Side Sort/Filter';
-        this.subTitle = "\n    Sort/Filter on client side only using SlickGrid DataView (<a href=\"https://github.com/ghiscoding/Angular-Slickgrid/wiki/Sorting\">Wiki link</a>)\n    <br/>\n    <ul class=\"small\">\n      <li>Support multi-sort (by default), hold \"Shift\" key and click on the next column to sort.\n      <li>All column types support the following operators: (>, >=, <, <=, <>, !=, =, ==, *)\n      <ul>\n        <li>Example: >100 ... >=2001-01-01 ... >02/28/17</li>\n        <li><b>Note:</b> For filters to work properly (default is string), make sure to provide a FieldType (type is against the dataset, not the Formatter)</li>\n      </ul>\n      <li>Date Filters</li>\n      <ul>\n        <li>FieldType of dateUtc/date (from dataset) can use an extra option of \"filterSearchType\" to let user filter more easily. For example, in the \"UTC Date\" field below, you can type \"&gt;02/28/2017\", also when dealing with UTC you have to take the time difference in consideration.</li>\n      </ul>\n      <li>On String filters, (*) can be used as startsWith (Hello* => matches \"Hello Word\") ... endsWith (*Doe => matches: \"John Doe\")</li>\n    </ul>\n  ";
+        this.subTitle = "\n    Sort/Filter on client side only using SlickGrid DataView (<a href=\"https://github.com/ghiscoding/Angular-Slickgrid/wiki/Sorting\" target=\"_blank\">Wiki link</a>)\n    <br/>\n    <ul class=\"small\">\n      <li>Support multi-sort (by default), hold \"Shift\" key and click on the next column to sort.\n      <li>All column types support the following operators: (>, >=, <, <=, <>, !=, =, ==, *)\n      <ul>\n        <li>Example: >100 ... >=2001-01-01 ... >02/28/17</li>\n        <li><b>Note:</b> For filters to work properly (default is string), make sure to provide a FieldType (type is against the dataset, not the Formatter)</li>\n      </ul>\n      <li>Date Filters</li>\n      <ul>\n        <li>FieldType of dateUtc/date (from dataset) can use an extra option of \"filterSearchType\" to let user filter more easily. For example, in the \"UTC Date\" field below, you can type \"&gt;02/28/2017\", also when dealing with UTC you have to take the time difference in consideration.</li>\n      </ul>\n      <li>On String filters, (*) can be used as startsWith (Hello* => matches \"Hello Word\") ... endsWith (*Doe => matches: \"John Doe\")</li>\n    </ul>\n  ";
     }
     GridClientSideComponent.prototype.ngOnInit = function () {
         this.columnDefinitions = [
@@ -380,7 +503,7 @@ var GridClientSideComponent = /** @class */ (function () {
 /***/ "../../../../../src/app/examples/grid-editor.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<div class=\"container\">\n    <h2>{{title}}</h2>\n    <div class=\"subtitle\" [innerHTML]=\"subTitle\"></div>\n\n    <div class=\"col-sm-4\">\n        <label>autoEdit setting</label>\n        <br/>\n        <span id=\"radioAutoEdit\">\n            <label class=\"radio-inline control-label\" for=\"radioTrue\">\n                <input type=\"radio\" name=\"inlineRadioOptions\" id=\"radioTrue\" checked [value]=\"isAutoEdit\" (change)=\"setAutoEdit(true)\"> ON (single-click)\n            </label>\n            <label class=\"radio-inline control-label\" for=\"radioFalse\">\n                <input type=\"radio\" name=\"inlineRadioOptions\" id=\"radioFalse\" [value]=\"isAutoEdit\" (change)=\"setAutoEdit(false)\"> OFF (double-click)\n            </label>\n        </span>\n    </div>\n\n    <div class=\"col-sm-8\">\n        <div class=\"alert alert-info\" *ngIf=\"updatedObject\">\n            <strong>Update Object:</strong> {{updatedObject | json}}\n        </div>\n    </div>\n\n    <div class=\"col-sm-12\">\n        <angular-slickgrid gridId=\"grid2\" (dataviewChanged)=\"dataviewReady($event)\" (gridChanged)=\"gridReady($event)\"\n            [columnDefinitions]=\"columnDefinitions\" [gridOptions]=\"gridOptions\" [dataset]=\"dataset\">\n        </angular-slickgrid>\n    </div>\n</div>\n"
+module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<div class=\"container\">\n    <h2>{{title}}</h2>\n    <div class=\"subtitle\" [innerHTML]=\"subTitle\"></div>\n\n    <div class=\"col-sm-4\">\n        <label>autoEdit setting</label>\n        <span id=\"radioAutoEdit\">\n            <label class=\"radio-inline control-label\" for=\"radioTrue\">\n                <input type=\"radio\" name=\"inlineRadioOptions\" id=\"radioTrue\" checked [value]=\"isAutoEdit\" (change)=\"setAutoEdit(true)\"> ON (single-click)\n            </label>\n            <label class=\"radio-inline control-label\" for=\"radioFalse\">\n                <input type=\"radio\" name=\"inlineRadioOptions\" id=\"radioFalse\" [value]=\"isAutoEdit\" (change)=\"setAutoEdit(false)\"> OFF (double-click)\n            </label>\n        </span>\n    </div>\n\n    <div class=\"col-sm-8\">\n        <div class=\"alert alert-info\" *ngIf=\"updatedObject\">\n            <strong>Update Object:</strong> {{updatedObject | json}}\n        </div>\n    </div>\n\n    <div class=\"col-sm-12\">\n        <angular-slickgrid gridId=\"grid2\" (dataviewChanged)=\"dataviewReady($event)\" (gridChanged)=\"gridReady($event)\"\n            [columnDefinitions]=\"columnDefinitions\" [gridOptions]=\"gridOptions\" [dataset]=\"dataset\">\n        </angular-slickgrid>\n    </div>\n</div>\n"
 
 /***/ }),
 
@@ -407,7 +530,7 @@ var GridEditorComponent = /** @class */ (function () {
         this.gridExtraService = gridExtraService;
         this.resizer = resizer;
         this.title = 'Example 3: Editors';
-        this.subTitle = "\n  Grid with Inline Editors and onCellClick actions (<a href=\"https://github.com/ghiscoding/Angular-Slickgrid/wiki/Editors\">Wiki link</a>).\n  <ul>\n    <li>When using \"enableCellNavigation: true\", clicking on a cell will automatically make it active &amp; selected.\n    <ul><li>If you don't want this behavior, then you should disable \"enableCellNavigation\"</li></ul>\n    <li>Inline Editors requires \"enableCellNavigation: true\" (not sure why though)</li>\n  </ul>\n  ";
+        this.subTitle = "\n  Grid with Inline Editors and onCellClick actions (<a href=\"https://github.com/ghiscoding/Angular-Slickgrid/wiki/Editors\" target=\"_blank\">Wiki link</a>).\n  <ul>\n    <li>When using \"enableCellNavigation: true\", clicking on a cell will automatically make it active &amp; selected.</li>\n    <ul><li>If you don't want this behavior, then you should disable \"enableCellNavigation\"</li></ul>\n    <li>Inline Editors requires \"enableCellNavigation: true\" (not sure why though)</li>\n  </ul>\n  ";
         this.isAutoEdit = true;
     }
     GridEditorComponent.prototype.ngOnInit = function () {
@@ -434,29 +557,31 @@ var GridEditorComponent = /** @class */ (function () {
                 // use onCellClick OR grid.onClick.subscribe which you can see down below
                 onCellClick: function (args) {
                     console.log(args);
-                    if (confirm('Are you sure?')) {
-                        _this.dataviewObj.deleteItem(args.dataContext.id);
-                        _this.dataviewObj.refresh();
-                    }
+                    alert("Deleting: " + args.dataContext.title);
                 }
             },
-            { id: 'title', name: 'Title', field: 'title', sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FieldType */].string, editor: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* Editors */].longText, minWidth: 100 },
-            { id: 'duration', name: 'Duration (days)', field: 'duration', sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FieldType */].number, editor: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* Editors */].text, minWidth: 100 },
-            { id: 'complete', name: '% Complete', field: 'percentComplete', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["h" /* Formatters */].percentCompleteBar, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FieldType */].number, editor: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* Editors */].integer, minWidth: 100 },
-            { id: 'start', name: 'Start', field: 'start', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["h" /* Formatters */].dateIso, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FieldType */].date, minWidth: 100 },
-            { id: 'finish', name: 'Finish', field: 'finish', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["h" /* Formatters */].dateIso, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FieldType */].date, minWidth: 100 },
-            { id: 'effort-driven', name: 'Effort Driven', field: 'effortDriven', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["h" /* Formatters */].checkmark, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FieldType */].number, editor: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* Editors */].checkbox, minWidth: 100 }
+            { id: 'title', name: 'Title', field: 'title', sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FieldType */].string, editor: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* Editors */].longText },
+            { id: 'duration', name: 'Duration (days)', field: 'duration', sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FieldType */].number, editor: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* Editors */].text,
+                onCellChange: function (args) {
+                    alert('onCellChange directly attached to the column definition');
+                    console.log(args);
+                }
+            },
+            { id: 'complete', name: '% Complete', field: 'percentComplete', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["h" /* Formatters */].percentCompleteBar, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FieldType */].number, editor: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* Editors */].integer },
+            { id: 'start', name: 'Start', field: 'start', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["h" /* Formatters */].dateIso, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FieldType */].date /*, editor: Editors.date*/ },
+            { id: 'finish', name: 'Finish', field: 'finish', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["h" /* Formatters */].dateIso, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FieldType */].date },
+            { id: 'effort-driven', name: 'Effort Driven', field: 'effortDriven', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["h" /* Formatters */].checkmark, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FieldType */].number, editor: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* Editors */].checkbox }
         ];
         this.gridOptions = {
+            asyncEditorLoading: false,
+            autoEdit: this.isAutoEdit,
             autoResize: {
                 containerId: 'demo-container',
                 sidePadding: 15
             },
             editable: true,
             enableColumnPicker: true,
-            enableCellNavigation: true,
-            asyncEditorLoading: false,
-            autoEdit: this.isAutoEdit
+            enableCellNavigation: true
         };
         // mock a dataset
         var mockedDataset = [];
@@ -557,7 +682,7 @@ var myCustomCheckboxFormatter = function (row, cell, value, columnDef, dataConte
 var GridFormatterComponent = /** @class */ (function () {
     function GridFormatterComponent() {
         this.title = 'Example 2: Grid with Formatters';
-        this.subTitle = "\n  Grid with Custom and/or included Slickgrid Formatters (<a href=\"https://github.com/ghiscoding/Angular-Slickgrid/wiki/Formatters\">Wiki link</a>).\n  ";
+        this.subTitle = "\n  Grid with Custom and/or included Slickgrid Formatters (<a href=\"https://github.com/ghiscoding/Angular-Slickgrid/wiki/Formatters\" target=\"_blank\">Wiki link</a>).\n  ";
     }
     GridFormatterComponent.prototype.ngOnInit = function () {
         this.columnDefinitions = [
@@ -642,7 +767,7 @@ var GridGraphqlComponent = /** @class */ (function () {
         this.http = http;
         this.graphqlService = graphqlService;
         this.title = 'Example 6: Grid connected to Backend Server with GraphQL';
-        this.subTitle = "\n    Sorting/Paging connected to a Backend GraphQL Service (<a href=\"https://github.com/ghiscoding/Angular-Slickgrid/wiki/GraphQL\">Wiki link</a>).\n    <br/>\n    <ul class=\"small\">\n      <li><span class=\"red\">(*) NO DATA SHOWING</span> - just change Filters &amp; Pages and look at the \"GraphQL Query\" changing :)</li>\n      <li>Only \"Name\" field is sortable for the demo (because we use JSON files), however \"multiColumnSort: true\" is also supported</li>\n      <li>String column also support operator (>, >=, <, <=, <>, !=, =, ==, *)\n      <ul>\n        <li>The (*) can be used as startsWith (ex.: \"abc*\" => startsWith \"abc\") / endsWith (ex.: \"*xyz\" => endsWith \"xyz\")</li>\n        <li>The other operators can be used on column type number for example: \">=100\" (bigger or equal than 100)</li>\n      </ul>\n    </ul>\n  ";
+        this.subTitle = "\n    Sorting/Paging connected to a Backend GraphQL Service (<a href=\"https://github.com/ghiscoding/Angular-Slickgrid/wiki/GraphQL\" target=\"_blank\">Wiki link</a>).\n    <br/>\n    <ul class=\"small\">\n      <li><span class=\"red\">(*) NO DATA SHOWING</span> - just change Filters &amp; Pages and look at the \"GraphQL Query\" changing :)</li>\n      <li>Only \"Name\" field is sortable for the demo (because we use JSON files), however \"multiColumnSort: true\" is also supported</li>\n      <li>String column also support operator (>, >=, <, <=, <>, !=, =, ==, *)\n      <ul>\n        <li>The (*) can be used as startsWith (ex.: \"abc*\" => startsWith \"abc\") / endsWith (ex.: \"*xyz\" => endsWith \"xyz\")</li>\n        <li>The other operators can be used on column type number for example: \">=100\" (bigger or equal than 100)</li>\n      </ul>\n    </ul>\n  ";
         this.dataset = [];
         this.graphqlQuery = '';
         this.processing = false;
@@ -912,7 +1037,7 @@ var highlightingFormatter = function (row, cell, value, columnDef, dataContext) 
 var GridHeaderButtonComponent = /** @class */ (function () {
     function GridHeaderButtonComponent() {
         this.title = 'Example 7: Header Button Plugin';
-        this.subTitle = "\n    This example demonstrates using the <b>Slick.Plugins.HeaderButtons</b> plugin to easily add buttons to colum headers.\n    These buttons can be specified directly in the column definition, and are very easy to configure and use.\n    (<a href=\"https://github.com/ghiscoding/Angular-Slickgrid/wiki/SlickGrid-Controls-&-Plugins\">Wiki link</a>)\n    <ul>\n      <li>Resize the 1st column to see all icon/command</li>\n      <li>Mouse hover the 2nd column to see it's icon/command</li>\n      <li>For all the other columns, click on top-right red circle icon to enable highlight of negative numbers.</li>\n    </ul>\n  ";
+        this.subTitle = "\n    This example demonstrates using the <b>Slick.Plugins.HeaderButtons</b> plugin to easily add buttons to colum headers.\n    These buttons can be specified directly in the column definition, and are very easy to configure and use.\n    (<a href=\"https://github.com/ghiscoding/Angular-Slickgrid/wiki/SlickGrid-Plugins\" target=\"_blank\">Wiki link</a>)\n    <ul>\n      <li>Resize the 1st column to see all icon/command</li>\n      <li>Mouse hover the 2nd column to see it's icon/command</li>\n      <li>For all the other columns, click on top-right red circle icon to enable highlight of negative numbers.</li>\n    </ul>\n  ";
     }
     GridHeaderButtonComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -1085,7 +1210,7 @@ var GridHeaderMenuComponent = /** @class */ (function () {
     function GridHeaderMenuComponent(controlService) {
         this.controlService = controlService;
         this.title = 'Example 8: Header Menu Plugin';
-        this.subTitle = "\n    This example demonstrates using the <b>Slick.Plugins.HeaderMenu</b> plugin to easily add menus to colum headers.<br/>\n    These menus can be specified directly in the column definition, and are very easy to configure and use.\n    (<a href=\"https://github.com/ghiscoding/Angular-Slickgrid/wiki/SlickGrid-Controls-&-Plugins\">Wiki link</a>)\n    <ul>\n      <li>Hover over any column header to see an arrow showing up on the right</li>\n      <li>Try Sorting (multi-sort) the 2 columns \"Duration\" and \"% Complete\" (the other ones are disabled)</li>\n      <li>Try hiding any columns (you use the \"Column Picker\" plugin by doing a right+click on the header to show the column back)</li>\n    </ul>\n  ";
+        this.subTitle = "\n    This example demonstrates using the <b>Slick.Plugins.HeaderMenu</b> plugin to easily add menus to colum headers.<br/>\n    These menus can be specified directly in the column definition, and are very easy to configure and use.\n    (<a href=\"https://github.com/ghiscoding/Angular-Slickgrid/wiki/SlickGrid-Plugins\" target=\"_blank\">Wiki link</a>)\n    <ul>\n      <li>Hover over any column header to see an arrow showing up on the right</li>\n      <li>Try Sorting (multi-sort) the 2 columns \"Duration\" and \"% Complete\" (the other ones are disabled)</li>\n      <li>Try hiding any columns (you use the \"Column Picker\" plugin by doing a right+click on the header to show the column back)</li>\n    </ul>\n  ";
     }
     GridHeaderMenuComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -1263,7 +1388,7 @@ var GridMenuComponent = /** @class */ (function () {
     function GridMenuComponent(filterService) {
         this.filterService = filterService;
         this.title = 'Example 9: Grid Menu Control';
-        this.subTitle = "\n    This example demonstrates using the <b>Slick.Controls.GridMenu</b> plugin to easily add a Grid Menu (aka hamburger menu) on the top right corner of the grid.\n    (<a href=\"https://github.com/ghiscoding/Angular-Slickgrid/wiki/Grid-Menu\">Wiki link</a>)\n    <br/>\n    <ul>\n      <li>The Grid Menu uses the following icon by default \"fa-bars\"&nbsp;&nbsp;<span class=\"fa fa-bars\"></span>&nbsp;&nbsp;(which looks like a hamburger, hence the name)</li>\n      <ul><li>Another icon which you could use is \"fa-ellipsis-v\"&nbsp;&nbsp;<span class=\"fa fa-ellipsis-v\"></span>&nbsp;&nbsp;(which is shown in this example)</li></ul>\n      <li>By default the Grid Menu shows all columns which you can show/hide</li>\n      <li>You can configure multiple \"commands\" to show up in the Grid Menu and use the \"onGridMenuCommand()\" callback</li>\n      <li>Doing a \"right+click\" over any column header will also provide a way to show/hide a column (via the Column Picker Plugin)</li>\n    </ul>\n  ";
+        this.subTitle = "\n    This example demonstrates using the <b>Slick.Controls.GridMenu</b> plugin to easily add a Grid Menu (aka hamburger menu) on the top right corner of the grid.\n    (<a href=\"https://github.com/ghiscoding/Angular-Slickgrid/wiki/Grid-Menu\" target=\"_blank\">Wiki link</a>)\n    <br/>\n    <ul>\n      <li>The Grid Menu uses the following icon by default \"fa-bars\"&nbsp;&nbsp;<span class=\"fa fa-bars\"></span>&nbsp;&nbsp;(which looks like a hamburger, hence the name)</li>\n      <ul><li>Another icon which you could use is \"fa-ellipsis-v\"&nbsp;&nbsp;<span class=\"fa fa-ellipsis-v\"></span>&nbsp;&nbsp;(which is shown in this example)</li></ul>\n      <li>By default the Grid Menu shows all columns which you can show/hide</li>\n      <li>You can configure multiple \"commands\" to show up in the Grid Menu and use the \"onGridMenuCommand()\" callback</li>\n      <li>Doing a \"right+click\" over any column header will also provide a way to show/hide a column (via the Column Picker Plugin)</li>\n    </ul>\n  ";
     }
     GridMenuComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -1422,7 +1547,7 @@ var GridOdataComponent = /** @class */ (function () {
         this.http = http;
         this.odataService = odataService;
         this.title = 'Example 5: Grid connected to Backend Server with OData';
-        this.subTitle = "\n    Sorting/Paging connected to a Backend OData Service (<a href=\"https://github.com/ghiscoding/Angular-Slickgrid/wiki/OData\">Wiki link</a>).\n    <br/>\n    <ul class=\"small\">\n      <li>Only \"Name\" field is sortable for the demo (because we use JSON files), however \"multiColumnSort: true\" is also supported</li>\n      <li>String column also support operator (>, >=, <, <=, <>, !=, =, ==, *)\n      <ul>\n        <li>The (*) can be used as startsWith (ex.: \"abc*\" => startsWith \"abc\") / endsWith (ex.: \"*xyz\" => endsWith \"xyz\")</li>\n        <li>The other operators can be used on column type number for example: \">=100\" (bigger or equal than 100)</li>\n      </ul>\n      <li>OData Service could be replaced by other Service type in the future (GraphQL or whichever you provide)</li>\n    </ul>\n  ";
+        this.subTitle = "\n    Sorting/Paging connected to a Backend OData Service (<a href=\"https://github.com/ghiscoding/Angular-Slickgrid/wiki/OData\" target=\"_blank\">Wiki link</a>).\n    <br/>\n    <ul class=\"small\">\n      <li>Only \"Name\" field is sortable for the demo (because we use JSON files), however \"multiColumnSort: true\" is also supported</li>\n      <li>String column also support operator (>, >=, <, <=, <>, !=, =, ==, *)\n      <ul>\n        <li>The (*) can be used as startsWith (ex.: \"abc*\" => startsWith \"abc\") / endsWith (ex.: \"*xyz\" => endsWith \"xyz\")</li>\n        <li>The other operators can be used on column type number for example: \">=100\" (bigger or equal than 100)</li>\n      </ul>\n      <li>OData Service could be replaced by other Service type in the future (GraphQL or whichever you provide)</li>\n    </ul>\n  ";
         this.dataset = [];
         this.odataQuery = '';
         this.processing = false;
@@ -1643,7 +1768,7 @@ var GridRowSelectionComponent = /** @class */ (function () {
     function GridRowSelectionComponent(gridExtraService) {
         this.gridExtraService = gridExtraService;
         this.title = 'Example 10: Grid with Row Selection';
-        this.subTitle = "\n    Row selection, single or multi-select (<a href=\"https://github.com/ghiscoding/Angular-Slickgrid/wiki/Row-Selection\">Wiki link</a>).\n  ";
+        this.subTitle = "\n    Row selection, single or multi-select (<a href=\"https://github.com/ghiscoding/Angular-Slickgrid/wiki/Row-Selection\" target=\"_blank\">Wiki link</a>).\n  ";
         this.isMultiSelect = true;
     }
     GridRowSelectionComponent.prototype.ngOnInit = function () {
