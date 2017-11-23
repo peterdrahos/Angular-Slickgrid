@@ -33,8 +33,9 @@ webpackEmptyAsyncContext.id = "../../../../../src/$$_gendir lazy recursive";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__examples_grid_odata_component__ = __webpack_require__("../../../../../src/app/examples/grid-odata.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__examples_grid_graphql_component__ = __webpack_require__("../../../../../src/app/examples/grid-graphql.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__examples_grid_rowselection_component__ = __webpack_require__("../../../../../src/app/examples/grid-rowselection.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__examples_home_component__ = __webpack_require__("../../../../../src/app/examples/home.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -54,7 +55,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 var routes = [
+    { path: 'home', component: __WEBPACK_IMPORTED_MODULE_11__examples_home_component__["a" /* HomeComponent */] },
     { path: 'additem', component: __WEBPACK_IMPORTED_MODULE_0__examples_grid_additem_component__["a" /* GridAddItemComponent */] },
     { path: 'basic', component: __WEBPACK_IMPORTED_MODULE_2__examples_grid_basic_component__["a" /* GridBasicComponent */] },
     { path: 'editor', component: __WEBPACK_IMPORTED_MODULE_4__examples_grid_editor_component__["a" /* GridEditorComponent */] },
@@ -72,9 +75,9 @@ var AppRoutingRoutingModule = /** @class */ (function () {
     function AppRoutingRoutingModule() {
     }
     AppRoutingRoutingModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_11__angular_core__["M" /* NgModule */])({
-            imports: [__WEBPACK_IMPORTED_MODULE_12__angular_router__["a" /* RouterModule */].forRoot(routes, { useHash: true })],
-            exports: [__WEBPACK_IMPORTED_MODULE_12__angular_router__["a" /* RouterModule */]],
+        Object(__WEBPACK_IMPORTED_MODULE_12__angular_core__["M" /* NgModule */])({
+            imports: [__WEBPACK_IMPORTED_MODULE_13__angular_router__["a" /* RouterModule */].forRoot(routes, { useHash: true })],
+            exports: [__WEBPACK_IMPORTED_MODULE_13__angular_router__["a" /* RouterModule */]],
         })
     ], AppRoutingRoutingModule);
     return AppRoutingRoutingModule;
@@ -87,7 +90,7 @@ var AppRoutingRoutingModule = /** @class */ (function () {
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-default navbar-fixed-top\" role=\"navigation\">\n  <div class=\"navbar-header\">\n    <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\"#skeleton-navigation-navbar-collapse\">\n      <span class=\"sr-only\">Toggle Navigation</span>\n      <span class=\"icon-bar\"></span>\n      <span class=\"icon-bar\"></span>\n      <span class=\"icon-bar\"></span>\n    </button>\n    <a class=\"navbar-brand\" href=\"https://github.com/ghiscoding/Angular-Slickgrid\">\n      <i class=\"fa fa-home\"></i>\n      <span>{{title}}</span>\n    </a>\n  </div>\n</nav>\n\n<section class=\"au-animate body-content\">\n  <div class=\"col-sm-3 col-md-2\">\n    <ul class=\"nav nav-pills nav-stacked\">\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/basic']\">1- Basic Grid</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/formatter']\">2- Formatters</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/editor']\">3- Editors</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/clientside']\">4- Client Side Sort/Filter</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/odata']\">5- Backend Server with OData</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/gridgraphql']\">6- Backend Server with GraphQL</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/headerbutton']\">7- Header Button Plugin</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/headermenu']\">8- Header Menu Plugin</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/gridmenu']\">9- Grid Menu (hamburger menu)</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/selection']\">10- Row Selection</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/additem']\">11- Add/Update/Highlight Datagrid Item</a>\n      </li>\n    </ul>\n  </div>\n</section>\n<div id=\"demo-container\" class=\"col-sm-9\">\n  <router-outlet></router-outlet>\n</div>\n"
+module.exports = "<nav class=\"navbar navbar-default navbar-fixed-top\" role=\"navigation\">\n  <div class=\"navbar-header\">\n      <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\".navbar-collapse\" menu-collapse>\n          <span class=\"icon-bar\"></span>\n          <span class=\"icon-bar\"></span>\n          <span class=\"icon-bar\"></span>\n      </button>\n      <a class=\"navbar-brand\" href=\"https://github.com/ghiscoding/Angular-Slickgrid\">\n          <i class=\"fa fa-github\"></i>\n          <span>{{title}}</span>\n      </a>\n  </div>\n  <div class=\"navbar-collapse collapse\">\n      <ul class=\"nav navbar-nav\">\n          <li>\n              <a [routerLink]=\"['/home']\">\n                  <i class=\"fa fa-lg fa-home\"></i> Home\n              </a>\n          </li>\n      </ul>\n  </div>\n</nav>\n\n<section class=\"au-animate body-content\">\n  <div class=\"col-sm-3 col-md-2\">\n    <ul class=\"nav nav-pills nav-stacked\">\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/basic']\">1- Basic Grid</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/formatter']\">2- Formatters</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/editor']\">3- Editors</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/clientside']\">4- Client Side Sort/Filter</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/odata']\">5- Backend Server with OData</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/gridgraphql']\">6- Backend Server with GraphQL</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/headerbutton']\">7- Header Button Plugin</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/headermenu']\">8- Header Menu Plugin</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/gridmenu']\">9- Grid Menu (hamburger menu)</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/selection']\">10- Row Selection</a>\n      </li>\n      <li routerLinkActive=\"active\">\n        <a [routerLink]=\"['/additem']\">11- Add/Update/Highlight Datagrid Item</a>\n      </li>\n    </ul>\n  </div>\n</section>\n<div id=\"demo-container\" class=\"col-sm-9\">\n  <router-outlet></router-outlet>\n</div>\n"
 
 /***/ }),
 
@@ -156,12 +159,13 @@ var AppComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__examples_grid_headermenu_component__ = __webpack_require__("../../../../../src/app/examples/grid-headermenu.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__examples_grid_headerbutton_component__ = __webpack_require__("../../../../../src/app/examples/grid-headerbutton.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__examples_grid_menu_component__ = __webpack_require__("../../../../../src/app/examples/grid-menu.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_angular_slickgrid__ = __webpack_require__("../../../../angular-slickgrid/angular-slickgrid/angular-slickgrid.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__examples_grid_odata_component__ = __webpack_require__("../../../../../src/app/examples/grid-odata.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__examples_grid_rowselection_component__ = __webpack_require__("../../../../../src/app/examples/grid-rowselection.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__examples_grid_odata_component__ = __webpack_require__("../../../../../src/app/examples/grid-odata.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__examples_grid_rowselection_component__ = __webpack_require__("../../../../../src/app/examples/grid-rowselection.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__examples_home_component__ = __webpack_require__("../../../../../src/app/examples/home.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__angular_common_http__ = __webpack_require__("../../../common/@angular/common/http.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17_angular_slickgrid__ = __webpack_require__("../../../../angular-slickgrid/angular-slickgrid.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -202,16 +206,17 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_9__examples_grid_headerbutton_component__["a" /* GridHeaderButtonComponent */],
                 __WEBPACK_IMPORTED_MODULE_8__examples_grid_headermenu_component__["a" /* GridHeaderMenuComponent */],
                 __WEBPACK_IMPORTED_MODULE_10__examples_grid_menu_component__["a" /* GridMenuComponent */],
-                __WEBPACK_IMPORTED_MODULE_12__examples_grid_odata_component__["a" /* GridOdataComponent */],
-                __WEBPACK_IMPORTED_MODULE_13__examples_grid_rowselection_component__["a" /* GridRowSelectionComponent */]
+                __WEBPACK_IMPORTED_MODULE_11__examples_grid_odata_component__["a" /* GridOdataComponent */],
+                __WEBPACK_IMPORTED_MODULE_12__examples_grid_rowselection_component__["a" /* GridRowSelectionComponent */],
+                __WEBPACK_IMPORTED_MODULE_13__examples_home_component__["a" /* HomeComponent */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__app_routing_module__["a" /* AppRoutingRoutingModule */],
                 __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_14__angular_common_http__["b" /* HttpClientModule */],
-                __WEBPACK_IMPORTED_MODULE_11_angular_slickgrid__["a" /* AngularSlickgridModule */]
+                __WEBPACK_IMPORTED_MODULE_17_angular_slickgrid__["a" /* AngularSlickgridModule */]
             ],
-            providers: [__WEBPACK_IMPORTED_MODULE_11_angular_slickgrid__["l" /* GridOdataService */]],
+            providers: [],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_16__app_component__["a" /* AppComponent */]]
         })
     ], AppModule);
@@ -235,7 +240,7 @@ module.exports = "<!--The content below is only a placeholder and can be replace
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GridAddItemComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__ = __webpack_require__("../../../../angular-slickgrid/angular-slickgrid/angular-slickgrid.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__ = __webpack_require__("../../../../angular-slickgrid/angular-slickgrid.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -300,14 +305,14 @@ var GridAddItemComponent = /** @class */ (function () {
         this.dataset = mockedDataset;
     };
     GridAddItemComponent.prototype.addNewItem = function () {
-        var randomId = Math.floor(Math.random() * (10000 - 1000) + 1000);
+        var newId = this.dataset.length;
         var randomYear = 2000 + Math.floor(Math.random() * 10);
         var randomMonth = Math.floor(Math.random() * 11);
         var randomDay = Math.floor((Math.random() * 29));
         var randomPercent = Math.round(Math.random() * 100);
         var newItem = {
-            id: randomId,
-            title: 'Task ' + randomId,
+            id: newId,
+            title: 'Task ' + newId,
             duration: Math.round(Math.random() * 100) + '',
             percentComplete: randomPercent,
             percentCompleteNumber: randomPercent,
@@ -329,6 +334,7 @@ var GridAddItemComponent = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
             template: __webpack_require__("../../../../../src/app/examples/grid-additem.component.html")
         }),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])(),
         __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["j" /* GridExtraService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["j" /* GridExtraService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["m" /* ResizerService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["m" /* ResizerService */]) === "function" && _b || Object])
     ], GridAddItemComponent);
     return GridAddItemComponent;
@@ -419,7 +425,7 @@ module.exports = "<!--The content below is only a placeholder and can be replace
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GridClientSideComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__ = __webpack_require__("../../../../angular-slickgrid/angular-slickgrid/angular-slickgrid.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__ = __webpack_require__("../../../../angular-slickgrid/angular-slickgrid.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -513,7 +519,7 @@ module.exports = "<!--The content below is only a placeholder and can be replace
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GridEditorComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__ = __webpack_require__("../../../../angular-slickgrid/angular-slickgrid/angular-slickgrid.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__ = __webpack_require__("../../../../angular-slickgrid/angular-slickgrid.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -568,8 +574,8 @@ var GridEditorComponent = /** @class */ (function () {
                 }
             },
             { id: 'complete', name: '% Complete', field: 'percentComplete', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["h" /* Formatters */].percentCompleteBar, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FieldType */].number, editor: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* Editors */].integer },
-            { id: 'start', name: 'Start', field: 'start', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["h" /* Formatters */].dateIso, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FieldType */].date /*, editor: Editors.date*/ },
-            { id: 'finish', name: 'Finish', field: 'finish', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["h" /* Formatters */].dateIso, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FieldType */].date },
+            { id: 'start', name: 'Start', field: 'start', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["h" /* Formatters */].dateIso, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FieldType */].date, outputType: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FieldType */].dateUtc, editor: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* Editors */].date },
+            { id: 'finish', name: 'Finish', field: 'finish', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["h" /* Formatters */].dateIso, sortable: true, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FieldType */].date, outputType: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FieldType */].dateUtc, editor: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* Editors */].date },
             { id: 'effort-driven', name: 'Effort Driven', field: 'effortDriven', formatter: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["h" /* Formatters */].checkmark, type: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["e" /* FieldType */].number, editor: __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["d" /* Editors */].checkbox }
         ];
         this.gridOptions = {
@@ -609,7 +615,8 @@ var GridEditorComponent = /** @class */ (function () {
         grid.onCellChange.subscribe(function (e, args) {
             console.log('onCellChange', args);
             _this.updatedObject = args.item;
-            _this.resizer.resizeGrid(_this.gridObj, _this.gridOptions, 10);
+            // resize the grid viewport since the Alert-Info (with updatedObject property) might be showing up now
+            _this.resizer.resizeGrid(10);
         });
         // You could also subscribe to grid.onClick
         // Note that if you had already setup "onCellClick" in the column definition, you cannot use grid.onClick
@@ -643,6 +650,7 @@ var GridEditorComponent = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
             template: __webpack_require__("../../../../../src/app/examples/grid-editor.component.html")
         }),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])(),
         __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["j" /* GridExtraService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["j" /* GridExtraService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["m" /* ResizerService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["m" /* ResizerService */]) === "function" && _b || Object])
     ], GridEditorComponent);
     return GridEditorComponent;
@@ -666,7 +674,7 @@ module.exports = "<!--The content below is only a placeholder and can be replace
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GridFormatterComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__ = __webpack_require__("../../../../angular-slickgrid/angular-slickgrid/angular-slickgrid.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__ = __webpack_require__("../../../../angular-slickgrid/angular-slickgrid.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -746,7 +754,7 @@ module.exports = "<!--The content below is only a placeholder and can be replace
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GridGraphqlComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__ = __webpack_require__("../../../../angular-slickgrid/angular-slickgrid/angular-slickgrid.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__ = __webpack_require__("../../../../angular-slickgrid/angular-slickgrid.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__("../../../common/@angular/common/http.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1181,7 +1189,7 @@ module.exports = "<!--The content below is only a placeholder and can be replace
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GridHeaderMenuComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__ = __webpack_require__("../../../../angular-slickgrid/angular-slickgrid/angular-slickgrid.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__ = __webpack_require__("../../../../angular-slickgrid/angular-slickgrid.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery__ = __webpack_require__("../../../../jquery/dist/jquery.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_jquery__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -1362,7 +1370,7 @@ module.exports = "<!--The content below is only a placeholder and can be replace
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GridMenuComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__ = __webpack_require__("../../../../angular-slickgrid/angular-slickgrid/angular-slickgrid.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__ = __webpack_require__("../../../../angular-slickgrid/angular-slickgrid.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1526,7 +1534,7 @@ module.exports = "<!--The content below is only a placeholder and can be replace
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GridOdataComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__ = __webpack_require__("../../../../angular-slickgrid/angular-slickgrid/angular-slickgrid.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__ = __webpack_require__("../../../../angular-slickgrid/angular-slickgrid.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__("../../../common/@angular/common/http.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1752,7 +1760,7 @@ module.exports = "<!--The content below is only a placeholder and can be replace
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GridRowSelectionComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__ = __webpack_require__("../../../../angular-slickgrid/angular-slickgrid/angular-slickgrid.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__ = __webpack_require__("../../../../angular-slickgrid/angular-slickgrid.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1843,6 +1851,7 @@ var GridRowSelectionComponent = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
             template: __webpack_require__("../../../../../src/app/examples/grid-rowselection.component.html")
         }),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])(),
         __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["j" /* GridExtraService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_angular_slickgrid__["j" /* GridExtraService */]) === "function" && _a || Object])
     ], GridRowSelectionComponent);
     return GridRowSelectionComponent;
@@ -1850,6 +1859,43 @@ var GridRowSelectionComponent = /** @class */ (function () {
 }());
 
 //# sourceMappingURL=grid-rowselection.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/examples/home.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"container\">\n    <h2>{{title}}</h2>\n    <div class=\"subtitle\" [innerHTML]=\"subTitle\"></div>\n</div>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/examples/home.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomeComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var HomeComponent = /** @class */ (function () {
+    function HomeComponent() {
+        this.title = 'Angular-Slickgrid - Demo Site';
+        this.subTitle = 'This site is to demo multiple usage of Angular-Slickgrid, choose an example from left side menu';
+    }
+    HomeComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+            template: __webpack_require__("../../../../../src/app/examples/home.component.html")
+        })
+    ], HomeComponent);
+    return HomeComponent;
+}());
+
+//# sourceMappingURL=home.component.js.map
 
 /***/ }),
 
@@ -1888,6 +1934,78 @@ if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment *
 Object(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_2__app_app_module__["a" /* AppModule */])
     .catch(function (err) { return console.log(err); });
 //# sourceMappingURL=main.js.map
+
+/***/ }),
+
+/***/ "../../../../flatpickr/dist/l10n recursive ^\\.\\/.*\\.js$":
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"./ar.js": "../../../../flatpickr/dist/l10n/ar.js",
+	"./bg.js": "../../../../flatpickr/dist/l10n/bg.js",
+	"./bn.js": "../../../../flatpickr/dist/l10n/bn.js",
+	"./cat.js": "../../../../flatpickr/dist/l10n/cat.js",
+	"./cs.js": "../../../../flatpickr/dist/l10n/cs.js",
+	"./cy.js": "../../../../flatpickr/dist/l10n/cy.js",
+	"./da.js": "../../../../flatpickr/dist/l10n/da.js",
+	"./de.js": "../../../../flatpickr/dist/l10n/de.js",
+	"./default.js": "../../../../flatpickr/dist/l10n/default.js",
+	"./eo.js": "../../../../flatpickr/dist/l10n/eo.js",
+	"./es.js": "../../../../flatpickr/dist/l10n/es.js",
+	"./et.js": "../../../../flatpickr/dist/l10n/et.js",
+	"./fa.js": "../../../../flatpickr/dist/l10n/fa.js",
+	"./fi.js": "../../../../flatpickr/dist/l10n/fi.js",
+	"./fr.js": "../../../../flatpickr/dist/l10n/fr.js",
+	"./gr.js": "../../../../flatpickr/dist/l10n/gr.js",
+	"./he.js": "../../../../flatpickr/dist/l10n/he.js",
+	"./hi.js": "../../../../flatpickr/dist/l10n/hi.js",
+	"./hr.js": "../../../../flatpickr/dist/l10n/hr.js",
+	"./hu.js": "../../../../flatpickr/dist/l10n/hu.js",
+	"./id.js": "../../../../flatpickr/dist/l10n/id.js",
+	"./index.js": "../../../../flatpickr/dist/l10n/index.js",
+	"./it.js": "../../../../flatpickr/dist/l10n/it.js",
+	"./ja.js": "../../../../flatpickr/dist/l10n/ja.js",
+	"./ko.js": "../../../../flatpickr/dist/l10n/ko.js",
+	"./lt.js": "../../../../flatpickr/dist/l10n/lt.js",
+	"./lv.js": "../../../../flatpickr/dist/l10n/lv.js",
+	"./mk.js": "../../../../flatpickr/dist/l10n/mk.js",
+	"./mn.js": "../../../../flatpickr/dist/l10n/mn.js",
+	"./ms.js": "../../../../flatpickr/dist/l10n/ms.js",
+	"./my.js": "../../../../flatpickr/dist/l10n/my.js",
+	"./nl.js": "../../../../flatpickr/dist/l10n/nl.js",
+	"./no.js": "../../../../flatpickr/dist/l10n/no.js",
+	"./pa.js": "../../../../flatpickr/dist/l10n/pa.js",
+	"./pl.js": "../../../../flatpickr/dist/l10n/pl.js",
+	"./pt.js": "../../../../flatpickr/dist/l10n/pt.js",
+	"./ro.js": "../../../../flatpickr/dist/l10n/ro.js",
+	"./ru.js": "../../../../flatpickr/dist/l10n/ru.js",
+	"./si.js": "../../../../flatpickr/dist/l10n/si.js",
+	"./sk.js": "../../../../flatpickr/dist/l10n/sk.js",
+	"./sl.js": "../../../../flatpickr/dist/l10n/sl.js",
+	"./sq.js": "../../../../flatpickr/dist/l10n/sq.js",
+	"./sr.js": "../../../../flatpickr/dist/l10n/sr.js",
+	"./sv.js": "../../../../flatpickr/dist/l10n/sv.js",
+	"./th.js": "../../../../flatpickr/dist/l10n/th.js",
+	"./tr.js": "../../../../flatpickr/dist/l10n/tr.js",
+	"./uk.js": "../../../../flatpickr/dist/l10n/uk.js",
+	"./vn.js": "../../../../flatpickr/dist/l10n/vn.js",
+	"./zh.js": "../../../../flatpickr/dist/l10n/zh.js"
+};
+function webpackContext(req) {
+	return __webpack_require__(webpackContextResolve(req));
+};
+function webpackContextResolve(req) {
+	var id = map[req];
+	if(!(id + 1)) // check for number or string
+		throw new Error("Cannot find module '" + req + "'.");
+	return id;
+};
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = "../../../../flatpickr/dist/l10n recursive ^\\.\\/.*\\.js$";
 
 /***/ }),
 
