@@ -8,9 +8,9 @@
       "problemMatcher": []
     },
     {
-      "label": "Publish Library to NPM",
+      "label": "Publish Library to NPM (tag: previous)",
       "type": "shell",
-      "command": "npm publish dist",
+      "command": "npm publish dist --tag previous",
       "problemMatcher": []
     },
     {
