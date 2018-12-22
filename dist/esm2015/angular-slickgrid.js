@@ -2193,7 +2193,7 @@ const dateUtcFilterCondition = (options) => {
     const /** @type {?} */ searchTerm = Array.isArray(options.searchTerms) && options.searchTerms[0] || '';
     const /** @type {?} */ searchDateFormat = mapMomentDateFormatWithFieldType(options.filterSearchType || options.fieldType);
     if (!moment$7(options.cellValue, moment$7.ISO_8601).isValid() || !moment$7(searchTerm, searchDateFormat, true).isValid()) {
-        return true;
+        return false;
     }
     const /** @type {?} */ dateCell = moment$7(options.cellValue, moment$7.ISO_8601, true);
     const /** @type {?} */ dateSearch = moment$7(searchTerm, searchDateFormat, true);
@@ -5848,9 +5848,9 @@ class ExtensionService {
                 this.extensionList.push({ name: ExtensionName.gridMenu, class: this.gridMenuExtension, extension: this.gridMenuExtension.register() });
             }
         }
-        // Grouping Plugin
+        // Grouping Plugin & Draggable Grouping Plugin
         // register the group item metadata provider to add expand/collapse group handlers
-        if (this.sharedService.gridOptions.enableGrouping) {
+        if (this.sharedService.gridOptions.enableDraggableGrouping || this.sharedService.gridOptions.enableGrouping) {
             if (this.groupItemMetaExtension && this.groupItemMetaExtension.register) {
                 this.extensionList.push({ name: ExtensionName.groupItemMetaProvider, class: this.groupItemMetaExtension, extension: this.groupItemMetaExtension.register() });
             }

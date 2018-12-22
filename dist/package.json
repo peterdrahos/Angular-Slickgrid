@@ -1,6 +1,6 @@
 {
   "name": "angular-slickgrid",
-  "version": "1.9.2",
+  "version": "1.9.3",
   "description": "Slickgrid components made available in Angular",
   "keywords": [
     "angular",
@@ -19,7 +19,7 @@
   "dependencies": {
     "@ngx-translate/core": "^9.1.1",
     "@ngx-translate/http-loader": "^2.0.0",
-    "bootstrap": "^3.3.7",
+    "bootstrap": "^3.4.0",
     "core-js": "^2.5.1",
     "dompurify": "^1.0.7",
     "flatpickr": "^4.5.0",

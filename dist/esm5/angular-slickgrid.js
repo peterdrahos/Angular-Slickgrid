@@ -1507,7 +1507,7 @@ var dateUtcFilterCondition = function (options) {
     var searchTerm = Array.isArray(options.searchTerms) && options.searchTerms[0] || '';
     var searchDateFormat = mapMomentDateFormatWithFieldType(options.filterSearchType || options.fieldType);
     if (!moment$7(options.cellValue, moment$7.ISO_8601).isValid() || !moment$7(searchTerm, searchDateFormat, true).isValid()) {
-        return true;
+        return false;
     }
     var dateCell = moment$7(options.cellValue, moment$7.ISO_8601, true);
     var dateSearch = moment$7(searchTerm, searchDateFormat, true);
@@ -4165,7 +4165,7 @@ var ExtensionService = /** @class */ (function () {
                 this.extensionList.push({ name: ExtensionName.gridMenu, class: this.gridMenuExtension, extension: this.gridMenuExtension.register() });
             }
         }
-        if (this.sharedService.gridOptions.enableGrouping) {
+        if (this.sharedService.gridOptions.enableDraggableGrouping || this.sharedService.gridOptions.enableGrouping) {
             if (this.groupItemMetaExtension && this.groupItemMetaExtension.register) {
                 this.extensionList.push({ name: ExtensionName.groupItemMetaProvider, class: this.groupItemMetaExtension, extension: this.groupItemMetaExtension.register() });
             }
