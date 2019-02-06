@@ -209,7 +209,7 @@
     this.selectItemName = 'data-name="selectItem' + name + '"';
 
     if (!this.options.keepOpen) {
-      $(document).click(function (e) {
+      $(document).off('click').click(function (e) {
         if ($(e.target)[0] === that.$choice[0] ||
           $(e.target).parents('.ms-choice')[0] === that.$choice[0]) {
           return;
@@ -264,8 +264,6 @@
       if (this.options.okButton) {
         this.$okButton = $('<button type="button" class="ms-ok-button">' + this.options.okButtonText + '</button>');
         this.$drop.append(this.$okButton);
-
-
       }
 
       var dropWidth = isNaN(this.options.width) ? this.options.width : this.options.width + 'px';
